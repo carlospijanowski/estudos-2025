@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cascao-deployment
+  labels:
+    app: cascao
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cascao
+  template:
+    metadata:
+      labels:
+        app: cascao
+    spec:
+      containers:
+        - name: cascao
+          image: busybox
+          args:
+            - /bin/sh
+            - -c
+            - |
+              echo "Cascão acordando e se secando..."
+              sleep 15
+              echo "Cascão pronto!"; while true; do echo "Tudo limpo"; sleep 10; done
+          livenessProbe:
+            exec:
+              command:
+                - cat
+                - /etc/hosts
+            initialDelaySeconds: 20
+            periodSeconds: 5
+          readinessProbe:
+            exec:
+              command:
+                - cat
+                - /etc/hosts
+            initialDelaySeconds: 10
+            periodSeconds: 5

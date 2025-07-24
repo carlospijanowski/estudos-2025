@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cascao-falha
+  labels:
+    app: cascao-falha
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cascao-falha
+  template:
+    metadata:
+      labels:
+        app: cascao-falha
+    spec:
+      containers:
+        - name: cascao
+          image: busybox
+          args:
+            - /bin/sh
+            - -c
+            - |
+              echo "Cascão tentando não escorregar..."; while true; do echo "Tudo limpo"; sleep 10; done
+          livenessProbe:
+            exec:
+              command:
+                - cat
+                - /arquivo/inexistente
+            initialDelaySeconds: 5
+            periodSeconds: 5
