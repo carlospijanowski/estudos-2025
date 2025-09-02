@@ -6,7 +6,6 @@ public class Exceptions {
 
  public static class InvalidAmountException extends Exception {
 
-     throw new IOException
 
  }
 
