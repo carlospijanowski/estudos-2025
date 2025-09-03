@@ -1,4 +1,10 @@
 ## Livro do Conhecimento
+
+### Objetivo do material
+    Esse material tem como foco organizar tecnicamente a  estrutura de um ecosistema em TI.
+    Com foco em preparação a entervistas de emprego com arquiteto ou senior
+
+### Tópicos
     * capitulo 1 - o que é arquitetura?
     * capitulo 2 - o que é system design ou lousa branca? - entrevista de conhecimento
 
@@ -6,15 +12,23 @@
     Arquitetura é um conceito muito amplo. Podemos estar falando de muita coisa no mundo de TI. É um grande guarda-chuva 
     de conhecimentos. Pode ser:
     1 - arquitetura de negócios: processos, regras e objetivos;
+
     2 - arquitetura de software: como será construido, organizado e mantido. Sendo:
         1 - monólito;
         2 - serviços distribuídos (ex framework de processamento distribuído de dados);
         3 - micro serviços (pois nem todo serviço distribuiído é um MS!)
         4 - Serverless
+
     3 - arquitetura de sistemas/aplicações: como os sistemas se conversam (integração entre sistemas). Sendo:
         1 - SOA
         2 - EDA (Event-Driven Architecture)
         3 - Service Mesh 
+        4 - API-Driven Architecture (API Gateway, API First, REST, gRPC, GraphQL);
+        5 - Client-Server (modelo clássico de integração);
+        6 - Peer-to-Peer (P2P, blockchain, torrents, WebRTC);
+        7 - Message-Driven (integração via filas e mensageria);
+        8 - Choreography e Orchestration (padrões de coordenação em microsserviços).
+
     4 - Princípios e Boas Práticas de Arquitetura: abordagens que guiam como projetar e implementar. Sendo:
         1 - API-First
 
@@ -68,21 +82,26 @@
                 Facilita testes e manutenção.
                 ❌ Errado: uma classe Relatorio que gera PDF, envia e-mails e salva no banco.
                 ✅ Certo: GeradorRelatorio, EmailService, RelatorioRepository.
+                DICA BONUS -> S (SRP) e C (SRP + coesão) → deixam as classes menores e focadas (isso indiretamente reduz acoplamento).
             O – Open/Closed Principle (OCP)
                 Classes devem estar abertas para extensão, mas fechadas para modificação.
                 Usar abstrações para permitir adicionar novas regras sem alterar código existente.
                 Exemplo: estratégia de cálculo de imposto com Imposto (interface) → ICMS, ISS.
+                DICA BONUS -> O (OCP) → aberto para extensão, fechado para modificação → incentiva baixo acoplamento via herança/polimorfismo.
             L – Liskov Substitution Principle (LSP)
                 Subtipos devem poder substituir seus tipos base sem quebrar o programa.
                 ❌ Errado: Ave com método voar(), e Pinguim herdando Ave.
                 ✅ Certo: separar em AveQueVoa e AveQueNaoVoa.
+                DICA BONUS -> L (LSP) → reforça a substituição sem quebrar dependências → acoplamento saudável.
             I – Interface Segregation Principle (ISP)
                 Interfaces devem ser pequenas e específicas.
                 ❌ Errado: interface Funcionario com métodos dirigir(), programar(), cozinhar().
                 ✅ Certo: Motorista, Programador, Cozinheiro.
+                DICA BONUS -> I (ISP) → divide interfaces para evitar dependência desnecessária.
             D – Dependency Inversion Principle (DIP)
                 Depender de abstrações, não de implementações.
                 Exemplo: PagamentoService deve depender de uma interface GatewayPagamento, não diretamente de PaypalAPI.
+                DICA BONUS -> D (DIP) → o mais ligado diretamente a baixo acoplamento.
 
         5 - Clean Architecture
             Clean Architecture é uma abordagem de arquitetura em camadas proposta pelo Uncle Bob, 
@@ -208,156 +227,89 @@
             👉 Exemplo: Quando o Chaves some da vila, a Chiquinha junta pistas (barulho, rastros de comida, vizinhos falando) para descobrir o que está acontecendo. Ela não tinha um alarme pronto para isso, mas usa sinais para observar.
             
             🔑 Diferença:
-            
             Monitoramento = detectar problemas conhecidos.
-            
             Observabilidade = investigar causas, mesmo de problemas imprevistos.
         
-        2. Pilares de Observabilidade (The Three Pillars)
-        
-        Logs
-        
-        Registro de eventos (texto estruturado ou não).
-        
-        Ex.: erro no login, status de uma requisição, exception.
-        
-        Chaves: correlação, nível de severidade, estruturados (JSON).
-        
-        👉 Exemplo: O Kiko anota no caderninho cada vez que o Chaves bate nele. Isso é log.
-        
-        Métricas
-        
-        Valores numéricos que indicam saúde e performance.
-        
-        Ex.: latência, CPU, throughput, TPS, Apdex.
-        
-        Boa prática: definir SLOs e SLIs.
-        
-        👉 Exemplo: O Sr. Barriga mede quantos meses sem receber aluguel = métrica.
-        
-        Traces
-        
-        Rastreamento de requisições distribuídas.
-        
-        Ex.: request entra pelo BFF, passa pelo SRV, vai para o DB. Cada etapa gera spans.
-        
-        Ferramentas: OpenTelemetry, Jaeger, Zipkin.
-        
-        👉 Exemplo: Descobrir por onde passou o sanduba de presunto da Dona Florinda até chegar ao Chaves = trace.
+        2. Pilares de Observabilidade (The Three Pillars) 
+            Logs
+                Registro de eventos (texto estruturado ou não).
+                Ex.: erro no login, status de uma requisição, exception.
+                Chaves: correlação, nível de severidade, estruturados (JSON).
+                👉 Exemplo: O Kiko anota no caderninho cada vez que o Chaves bate nele. Isso é log.
+                Ferramentas Comuns: Logs: ELK Stack, Loki, Splunk.
+            
+            Métricas
+                Valores numéricos que indicam saúde e performance.
+                Ex.: latência, CPU, throughput, TPS, Apdex.
+                Boa prática: definir SLOs e SLIs.
+                👉 Exemplo: O Sr. Barriga mede quantos meses sem receber aluguel = métrica.
+                Ferramentas Comuns: Métricas: Prometheus, CloudWatch, Datadog, New Relic, Micrometer.
+            
+            Traces
+                Rastreamento de requisições distribuídas.
+                Ex.: request entra pelo BFF, passa pelo SRV, vai para o DB. Cada etapa gera spans.
+                👉 Exemplo: Descobrir por onde passou o sanduba de presunto da Dona Florinda até chegar ao Chaves = trace.
+                Ferramentas: OpenTelemetry, Jaeger, Zipkin.
         
         3. Práticas Essenciais
-        
-        Dashboards: visualizações (Grafana, Kibana).
-        
-        Alertas: thresholds e regras (Prometheus Alertmanager, PagerDuty, OpsGenie).
-        
-        Acompanhamento de Logs: ELK Stack, Loki.
-        
-        Tracing distribuído: OpenTelemetry + Jaeger.
-        
-        Correlações: logs, métricas e traces precisam conversar.
+            Dashboards: visualizações (Grafana, Kibana).
+            Alertas: thresholds e regras (Prometheus Alertmanager, PagerDuty, OpsGenie).
+            Acompanhamento de Logs: ELK Stack, Loki.
+            Tracing distribuído: OpenTelemetry + Jaeger.
+            Correlações: logs, métricas e traces precisam conversar.
         
         4. Conceitos Avançados
-        
-        Golden Signals (Google SRE book):
-        
-        Latência
-        
-        Tráfego
-        
-        Erros
-        
-        Saturação
-        
-        RED Method (para microserviços):
-        
-        Requests, Errors, Duration.
-        
-        USE Method (para infraestrutura):
-        
-        Utilization, Saturation, Errors.
-        
-        👉 Exemplo na vila:
-        
-        Golden signals:
-        
-        Latência = quanto demora pro Sr. Barriga chegar.
-        
-        Tráfego = quantas pessoas na vila.
-        
-        Erros = vezes que o Chaves bate sem querer em alguém.
-        
-        Saturação = a paciência do Seu Madruga no limite.
+            four Golden Signals (Google SRE book) (para a experiencia como um todo):
+                Latência = quanto demora pra responder?!
+                Tráfego = quantas requests estao acontecendo?! Uma black friday é uma boa. Mas subir do nada?! ae nao!
+                Erros = erros na visao do usuário
+                Saturação = fila na cpu, mais consumo... saturou!!!
+            
+            RED Method (para microserviços):
+                Rate =  quantidade de erros por segundo!
+                Errors = erros na aplicacao
+                Duration = quanto tempo pro componente responder?
+            
+            USE Method (para infraestrutura):
+                Utilization = cpu 60%, ex. Tamanho de banda, ex.
+                Saturation =  o mesmo do 4 golden signals
+                Errors = pacotes, erros, recursos etc
         
         5. Ferramentas Comuns
-        
-        Métricas: Prometheus, CloudWatch, Datadog, New Relic, Micrometer.
-        
-        Logs: ELK Stack, Loki, Splunk.
-        
-        Tracing: Jaeger, Zipkin, OpenTelemetry.
-        
-        Dashboards: Grafana, Kibana.
-        
-        Alertas: PagerDuty, OpsGenie, VictorOps.
+            Dashboards: Grafana, Kibana.
+            Alertas: PagerDuty, OpsGenie, VictorOps.
         
         6. Práticas de Engenharia
-        
-        SLO / SLI / SLA
-        
-        SLA = contrato (comercial).
-        
-        SLO = objetivo (técnico).
-        
-        SLI = métrica medida.
-        
-        👉 Exemplo:
-        
-        SLA: O Chaves pode comer no máximo 1 sanduba por dia.
-        
-        SLO: Meta é que ele coma em 95% dos dias só 1.
-        
-        SLI: Monitorar a quantidade real de sandubas comidos.
-        
-        Chaos Engineering: testar a resiliência quebrando partes do sistema.
-        
-        Budgets de Erro: medir quanto erro é aceitável antes de frear deploys.
-        
-        Circuit Breakers: cortar chamadas em cascata.
-        
-        Backpressure: controlar fluxo de dados.
+            SLO / SLI / SLA
+                SLA = contrato (comercial).
+                SLO = objetivo (técnico).
+                SLI = métrica medida.
+            
+            👉 Exemplo:
+            SLA: O Chaves pode comer no máximo 1 sanduba por dia.
+            SLO: Meta é que ele coma em 95% dos dias só 1.
+            SLI: Monitorar a quantidade real de sandubas comidos.
+            
+            Chaos Engineering: testar a resiliência quebrando partes do sistema.
+            Budgets de Erro: medir quanto erro é aceitável antes de frear deploys.
+            Circuit Breakers: cortar chamadas em cascata.
+            Backpressure: controlar fluxo de dados.
         
         7. Diferença na Prática
+            Monitoramento tradicional: "Está UP ou DOWN?"
+            Métricas prontas.
+            Observabilidade moderna: "Por que ficou lento ontem só às 17h?"
+            Permite investigar.
         
-        Monitoramento tradicional:
-        
-        "Está UP ou DOWN?"
-        
-        Métricas prontas.
-        
-        Observabilidade moderna:
-        
-        "Por que ficou lento ontem só às 17h?"
-        
-        Permite investigar.
-        
-        8. Perguntas Frequentes em Entrevista
-        
-        O que é observabilidade?
-        
-        Qual a diferença entre logs, métricas e traces?
-        
-        O que são Golden Signals?
-        
-        Como implementar tracing distribuído em microserviços?
-        
-        Como definir SLOs e SLIs?
-        
-        Quais ferramentas você já usou para monitoramento e observabilidade?
-        
-        Como correlacionar logs, métricas e traces num incidente?
-        
-        Como funciona o RED Method?
+        8. Perguntas Frequentes em Entrevista 
+            O que é observabilidade? 
+            Qual a diferença entre logs, métricas e traces?
+            O que são Golden Signals?
+            Como implementar tracing distribuído em microserviços?
+            Como definir SLOs e SLIs?
+            Quais ferramentas você já usou para monitoramento e observabilidade?
+            Como correlacionar logs, métricas e traces num incidente?
+            Como funciona o RED Method?
 
 #### <font color = orange><b> Orquestração de Containers e Service Meshes </b></font>
     Introdução ao gerenciamento de containers e à orquestração com Kubernetes para ambientes escaláveis. Entenda como os service meshes facilitam a comunicação, segurança e observabilidade entre microserviços.
@@ -366,7 +318,23 @@
     Compreenda o protocolo Two-Phase Commit e seu papel na garantia da integridade em transações distribuídas.
 
 #### <font color = orange><b> Patterns de Resiliência </b></font>
-    Introdução aos padrões de resiliência, com foco em estratégias como retry e fallback para manter a estabilidade dos sistemas. Vamos também explorar mecanismos avançados como circuit breakers e bulkheads.
+    Introdução aos padrões de resiliência, com foco em estratégias como retry e fallback para manter a estabilidade dos sistemas. 
+    Vamos também explorar mecanismos avançados como circuit breakers e bulkheads.   
+
+    Quando falamos de resiliência em sistemas distribuídos, a ideia é simples:
+        👉 garantir que mesmo diante de falhas inevitáveis (rede instável, serviços lentos, APIs externas indisponíveis), a aplicação continue funcionando de forma estável e recuperável.
+        
+    Esses padrões são fundamentais em arquiteturas modernas (como microsserviços) porque ajudam a evitar cascatas de falhas.
+
+    1. Retry (Tentativas Repetidas)
+    2. Fallback (Plano B)
+    3. Circuit Breaker (Disjuntor) = O que é: Evita sobrecarregar um sistema que já está falhando. 
+        Funcionamento: 
+        🔴 Aberto: Falhou muitas vezes → bloqueia chamadas diretas. 
+        🟡 Meia-aberto: Permite algumas tentativas para ver se voltou. 
+        🟢 Fechado: Normal, todas as requisições passam. 
+        Exemplo: Igual ao disjuntor da casa da Dona Clotilde. Se sobrecarregar, ele desarma para não queimar tudo.
+    4. Bulkhead (Compartimentos)
 
 #### <font color = orange><b> Testes de Carga e Estresse </b></font>
     Técnicas para validar a performance e a resiliência dos sistemas sob condições extremas de uso.
