@@ -9,8 +9,8 @@
     * capitulo 2 - o que é system design ou lousa branca? - entrevista de conhecimento
 
 ## capitulo 1 - o que é arquitetura?
-    Arquitetura é um conceito muito amplo. Podemos estar falando de muita coisa no mundo de TI. É um grande guarda-chuva 
-    de conhecimentos. Pode ser:
+    Arquitetura é um conceito muito amplo. Podemos estar falando de muita coisa no mundo de TI. 
+    É um grande guarda-chuva de conhecimentos. Pode ser:
     1 - arquitetura de negócios: processos, regras e objetivos;
 
     2 - arquitetura de software: como será construido, organizado e mantido. Sendo:
@@ -312,29 +312,40 @@
             Como funciona o RED Method?
 
 #### <font color = orange><b> Orquestração de Containers e Service Meshes </b></font>
-    Introdução ao gerenciamento de containers e à orquestração com Kubernetes para ambientes escaláveis. Entenda como os service meshes facilitam a comunicação, segurança e observabilidade entre microserviços.
+    Introdução ao gerenciamento de containers e à orquestração com Kubernetes para ambientes escaláveis. 
+    Entenda como os service meshes facilitam a comunicação, segurança e observabilidade entre microserviços.
 
 #### <font color = orange><b> Two-Phase Commit </b></font>
     Compreenda o protocolo Two-Phase Commit e seu papel na garantia da integridade em transações distribuídas.
 
-#### <font color = orange><b> Patterns de Resiliência </b></font>
-    Introdução aos padrões de resiliência, com foco em estratégias como retry e fallback para manter a estabilidade dos sistemas. 
-    Vamos também explorar mecanismos avançados como circuit breakers e bulkheads.   
+#### <font color = orange><b> Patterns de Resiliência </b></font> 
 
-    Quando falamos de resiliência em sistemas distribuídos, a ideia é simples:
-        👉 garantir que mesmo diante de falhas inevitáveis (rede instável, serviços lentos, APIs externas indisponíveis), a aplicação continue funcionando de forma estável e recuperável.
+https://www.youtube.com/watch?v=LnOK32zvxVg&list=PLZTjHbp2Y7809w3PLM0UE_LgQq6vk49q0
+
+    Resiliência em sistemas distribuídos significa que falhas não são exceção, são a regra. 
+    O papel da arquitetura é garantir que, mesmo diante de falhas inevitáveis (rede instável, serviços lentos, 
+    APIs externas indisponíveis), o sistema continue útil, estável e recuperável.
+    📌 Em resumo: resiliência = tolerar falhas + se recuperar rápido.
+    
+    Três pilares da resiliência: 
+        1 - Tolerância a falhas → o sistema aguenta quando algo quebra (um serviço externo lento, um banco indisponível).
+            Ex.: o Chaves tenta comprar um sanduíche, mas se a venda do Seu Madruga caiu, ele busca em outro lugar sem travar a vila. 
+        2 - Degradação controlada → melhor entregar uma experiência reduzida do que nada.
+            Ex.: se a API de recomendação cai, o e-commerce ainda mostra produtos básicos. 
+        3 - Recuperação rápida → o sistema volta ao normal sozinho quando o problema é resolvido, sem precisar de intervenção manual.
         
-    Esses padrões são fundamentais em arquiteturas modernas (como microsserviços) porque ajudam a evitar cascatas de falhas.
-
-    1. Retry (Tentativas Repetidas)
-    2. Fallback (Plano B)
-    3. Circuit Breaker (Disjuntor) = O que é: Evita sobrecarregar um sistema que já está falhando. 
-        Funcionamento: 
-        🔴 Aberto: Falhou muitas vezes → bloqueia chamadas diretas. 
-        🟡 Meia-aberto: Permite algumas tentativas para ver se voltou. 
-        🟢 Fechado: Normal, todas as requisições passam. 
-        Exemplo: Igual ao disjuntor da casa da Dona Clotilde. Se sobrecarregar, ele desarma para não queimar tudo.
-    4. Bulkhead (Compartimentos)
+    Padrões comuns de resiliência: 
+        1 - Retry (Tentativas Repetidas) → tentar de novo de forma controlada. 
+        2 - Fallback (Plano B) → resposta alternativa quando o serviço principal falhar. 
+        3 - Circuit Breaker (Disjuntor) → evita sobrecarregar um sistema instável. 
+            🔴 Aberto: falhou muitas vezes → bloqueia chamadas. 
+            🟡 Meio-aberto: permite algumas tentativas para testar se voltou. 
+            🟢 Fechado: normal, todas as requisições passam.
+            Ex.: Igual ao disjuntor da casa da Dona Clotilde: se sobrecarregar, ele desarma para não queimar tudo. 
+        4 - Bulkhead (Compartimentos) → isola recursos para que uma falha não derrube o todo. 
+        5 - Timeouts curtos → não deixar requisições travarem indefinidamente. 
+        6 - Idempotência → garantir que operações repetidas tenham o mesmo efeito, evitando inconsistências em retries. 
+        7 - Backpressure → controlar o fluxo de requisições quando o sistema está sob sobrecarga.
 
 #### <font color = orange><b> Testes de Carga e Estresse </b></font>
     Técnicas para validar a performance e a resiliência dos sistemas sob condições extremas de uso.
@@ -349,7 +360,8 @@
     Mergulhe nos mecanismos de segurança que protegem o acesso e a integridade dos dados nos sistemas distribuídos.
 
 #### <font color = orange><b> Zero-Trust,. Bulkheads e Particionamento </b></font>
-    Explore o modelo de segurança Zero-Trust e sua aplicação para fortalecer a proteção dos sistemas modernos. Estudo do padrão Bulkheads para isolar falhas e evitar que problemas em uma parte do sistema afetem o todo.
+    Explore o modelo de segurança Zero-Trust e sua aplicação para fortalecer a proteção dos sistemas modernos. 
+    Estudo do padrão Bulkheads para isolar falhas e evitar que problemas em uma parte do sistema afetem o todo.
 
 #### <font color = orange><b> Arquiteturas Celulares e Big Data </b></font>
     Abordagem inovadora das arquiteturas celulares para organizar sistemas complexos de forma escalável e resiliente. Introdução aos conceitos de Big Data e aos desafios de processar e analisar grandes volumes de dados.

@@ -1,44 +1,45 @@
-## 1. Se você tivesse que escolher entre RabbitMQ e Kafka para um novo sistema, quais critérios levaria em consideração? Quais cenários favorecem cada tecnologia e por quê? Explique também as principais diferenças entre filas e tópicos em sistemas de mensageria.
+## 1. Se você tivesse que escolher entre RabbitMQ e Kafka para um novo sistema, quais critérios levaria em consideração? 
+Quais cenários favorecem cada tecnologia e por quê? Explique também as principais diferenças entre filas e tópicos em sistemas de mensageria.
 
-**Resposta:**
-
-A escolha depende de requisitos como latência, throughput, garantia de entrega e retenção.
-
-**RabbitMQ:** ótimo para cenários command/task-based, baixa latência, roteamento flexível (direct, topic, fanout). Ideal para workloads moderadas que exigem ACK por mensagem e flexibilidade no consumo.
-
-**Kafka:** indicado para event streaming em larga escala, retenção longa, reprocessamento e integração de múltiplos consumidores. Alta taxa de transferência e ordenação por partição.
-
-**Fila:** cada mensagem é consumida por apenas um consumidor de um grupo (trabalho único).
-
-**Tópico:** permite múltiplos grupos de consumidores receberem a mesma mensagem (notificação/evento).
+    **Resposta:**
+    
+    A escolha depende de requisitos como latência, throughput, garantia de entrega e retenção.
+    
+    **RabbitMQ:** ótimo para cenários command/task-based, baixa latência, roteamento flexível (direct, topic, fanout). Ideal para workloads moderadas que exigem ACK por mensagem e flexibilidade no consumo.
+    
+    **Kafka:** indicado para event streaming em larga escala, retenção longa, reprocessamento e integração de múltiplos consumidores. Alta taxa de transferência e ordenação por partição.
+    
+    **Fila:** cada mensagem é consumida por apenas um consumidor de um grupo (trabalho único).
+    
+    **Tópico:** permite múltiplos grupos de consumidores receberem a mesma mensagem (notificação/evento).
 
 ---
 
 ## 2. Como você utilizaria os serviços AWS (SNS, SQS, S3) para criar uma arquitetura escalável e tolerante a falhas?
 
-**Resposta:**
-
-**SNS:** pub/sub para difundir eventos a múltiplos consumidores.
-
-**SQS:** filas desacopladas para processar eventos no próprio ritmo, usando DLQ para falhas e filas FIFO quando houver necessidade de ordenação.
-
-**S3:** armazenar dados grandes, históricos ou logs de eventos, e servir de gatilho para processamento (Lambda).
-
-**Combinação:** SNS publica → SQS assina → consumidores processam. Multi-AZ, DLQ e escalonamento automático garantem tolerância a falhas.
+    **Resposta:**
+    
+    **SNS:** pub/sub para difundir eventos a múltiplos consumidores.
+    
+    **SQS:** filas desacopladas para processar eventos no próprio ritmo, usando DLQ para falhas e filas FIFO quando houver necessidade de ordenação.
+    
+    **S3:** armazenar dados grandes, históricos ou logs de eventos, e servir de gatilho para processamento (Lambda).
+    
+    **Combinação:** SNS publica → SQS assina → consumidores processam. Multi-AZ, DLQ e escalonamento automático garantem tolerância a falhas.
 
 ---
 
 ## 3. Quais métricas você considera essenciais para monitorar em um ambiente de microserviços? Como implementaria a observabilidade? Com quais ferramentas você já trabalhou?
 
-**Resposta:**
-
-**Métricas técnicas:** latência p95/p99, throughput, erros por tipo, uso de CPU/memória, pool de conexões, filas internas, lag de mensageria.
-
-**Métricas de negócio:** taxa de conversão, pedidos aprovados, tempo médio de checkout.
-
-**Ferramentas:** Prometheus/Grafana, OpenTelemetry para traces, logs estruturados em ELK/OpenSearch, integração com PagMon.
-
-**Boas práticas:** correlação de logs por traceId, dashboards unificados, alertas proativos.
+    **Resposta:**
+    
+    **Métricas técnicas:** latência p95/p99, throughput, erros por tipo, uso de CPU/memória, pool de conexões, filas internas, lag de mensageria.
+    
+    **Métricas de negócio:** taxa de conversão, pedidos aprovados, tempo médio de checkout.
+    
+    **Ferramentas:** Prometheus/Grafana, OpenTelemetry para traces, logs estruturados em ELK/OpenSearch, integração com PagMon.
+    
+    **Boas práticas:** correlação de logs por traceId, dashboards unificados, alertas proativos.
 
 ---
 
