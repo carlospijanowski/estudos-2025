@@ -69,6 +69,10 @@
         Em um canal de TV, várias pessoas (consumidores) podem assistir ao mesmo programa (mensagem) ao mesmo tempo. 
         Se o programa for interessante, muitas pessoas podem estar assistindo simultaneamente. 
         Isso é como um tópico, onde cada mensagem é entregue a todos os consumidores inscritos.
+
+    no rabbitmq é possivel criar uma fila com varios consumidores?
+        sim, mas cada mensagem sera entregue a apenas um consumidor. 
+        se voce quiser que todas as mensagens sejam entregues a todos os consumidores, voce deve usar um tópico (exchange do tipo fanout).
  
 ### 2. o que é garantia de entrega at-least-once, at-most-once, exactly-once?
     At-least-once: cada mensagem é entregue pelo menos uma vez, mas pode ser duplicada. 
@@ -77,8 +81,7 @@
 
 ### 3. o que é idempotência?
     Idempotência é a propriedade de uma operação que pode ser aplicada múltiplas vezes sem alterar o resultado além da aplicação inicial. 
-    Em sistemas distribuídos, isso significa que se uma mensagem for processada mais de uma vez (devido a falhas ou retries), 
-    o resultado final permanece o mesmo, evitando efeitos colaterais indesejados.
+    Em sistemas distribuídos, isso significa que se uma mensagem for processada mais de uma vez (devido a falhas ou retries), o resultado final permanece o mesmo, evitando efeitos colaterais indesejados.
 
 ### 4. o que é DLQ?
     DLQ (Dead Letter Queue) é uma fila especial onde mensagens que não puderam ser processadas com sucesso são enviadas. 
