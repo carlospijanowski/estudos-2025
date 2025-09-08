@@ -1,5 +1,11 @@
 ## Livro do Conhecimento
 
+### O que caem nas entrevistas, via de regra:
+    1 - arquitetura de software (monólito, microsserviços, serverless, etc);
+    2 - arquitetura de sistemas (integração entre sistemas, SOA, EDA, API-First, etc);
+    3 - princípios e boas práticas de arquitetura (DDD, SOLID, Clean Architecture, Twelve-Factor App, etc);
+    4 - system design (lousa branca).
+
 ### Objetivo do material
     Esse material tem como foco organizar tecnicamente a  estrutura de um ecosistema em TI.
     Com foco em preparação a entervistas de emprego com arquiteto ou senior
@@ -14,23 +20,110 @@
     1 - arquitetura de negócios: processos, regras e objetivos;
 
     2 - arquitetura de software: como será construido, organizado e mantido. Sendo:
-        1 - monólito;
-        2 - serviços distribuídos (ex framework de processamento distribuído de dados);
-        3 - micro serviços (pois nem todo serviço distribuiído é um MS!)
-        4 - Serverless
+        1 - monólito - uma única aplicação (ex framework web tradicional);
+        2 - serviços distribuídos (ex framework de processamento distribuído de dados) - SOA (Service Oriented Architecture) - serviços maiores, mais acoplados, menos independentes;
+        3 - micro serviços (pois nem todo serviço distribuiído é um MS!) - serviços pequenos, independentes, focados em um domínio (ex Spring Boot, Micronaut, Quarkus, Node.js, etc);
+        4 - Serverless - funções pequenas, independentes, focadas em um domínio, sem servidor (ex AWS Lambda, Azure Functions, Google Cloud Functions, etc);
+        5 - FaaS (Function as a Service) - similar ao serverless, mas com mais controle sobre o ambiente (ex AWS Lambda com container, Google Cloud Run, etc);
+        6 - arquitetura orientada a eventos (Event-Driven Architecture) - sistemas que se comunicam via eventos (ex Apache Kafka, RabbitMQ, AWS SNS/SQS, etc);
+        7 - arquitetura hexagonal (Ports & Adapters) - separa o núcleo da aplicação dos detalhes técnicos (ex DDD, Clean Architecture, etc);
+        8 - arquitetura em camadas (Layered Architecture) - separa a aplicação em camadas (ex apresentação, negócio, dados);
+        9 - arquitetura baseada em componentes (Component-Based Architecture) - divide a aplicação em componentes reutilizáveis (ex React, Angular, Vue.js, etc);
+        10 - arquitetura orientada a domínio (Domain-Driven Design) - foca no domínio do negócio e na linguagem ubíqua (ex DDD, Event Storming, etc);
+        11 - arquitetura de microsserviços baseada em eventos (Event-Driven Microservices) - combina microserviços e eventos (ex Apache Kafka, AWS EventBridge, etc);
+        12 - arquitetura de microsserviços baseada em APIs (API-Driven Microservices) - combina microserviços e APIs (ex REST, GraphQL, gRPC, etc);
+        13 - arquitetura de microsserviços baseada em containers (Container-Based Microservices) - combina microserviços e containers (ex Docker, Kubernetes, etc);
+        14 - arquitetura de microsserviços baseada em serverless (Serverless Microservices) - combina microserviços e serverless (ex AWS Lambda, Azure Functions, etc);  
+
+        Eu ainda nao entendi o que é o SOA (Service Oriented Architecture)?
+        R: SOA (Service Oriented Architecture) é uma abordagem de arquitetura de software onde os sistemas são compostos por serviços independentes que se comunicam entre si.
+        Cada serviço é responsável por uma funcionalidade específica e pode ser desenvolvido, implantado e escalado de forma independente.
+        exemplo: um sistema de e-commerce pode ter serviços separados para gerenciamento de produtos, processamento de pagamentos e envio de pedidos.
+                SOA é diferente de microsserviços porque os serviços em SOA tendem a ser maiores e mais acoplados, enquanto os microsserviços são menores, mais focados e independentes.
+                SOA geralmente usa protocolos padrão como SOAP ou REST para comunicação, enquanto microsserviços podem usar uma variedade de protocolos, incluindo REST, gRPC, eventos, etc.
+                SOA pode envolver um barramento de serviço (ESB) para mediar a comunicação entre serviços, enquanto microsserviços geralmente evitam esse tipo de centralização para manter o desacoplamento.
+
+        um SOA é um microsserviço?
+        R: Não, SOA (Service Oriented Architecture) e microsserviços são abordagens diferentes de arquitetura de software.
+        SOA é uma abordagem mais ampla que envolve a criação de serviços independentes que se comunicam entre si, mas esses serviços podem ser maiores e mais acoplados.
+        Microsserviços, por outro lado, são uma forma específica de SOA onde os serviços são menores, mais focados e independentes.
+        Em resumo, todos os microsserviços podem ser considerados parte de uma arquitetura SOA, mas nem todos os serviços em uma arquitetura SOA são microsserviços.
 
     3 - arquitetura de sistemas/aplicações: como os sistemas se conversam (integração entre sistemas). Sendo:
-        1 - SOA
-        2 - EDA (Event-Driven Architecture)
-        3 - Service Mesh 
-        4 - API-Driven Architecture (API Gateway, API First, REST, gRPC, GraphQL);
-        5 - Client-Server (modelo clássico de integração);
-        6 - Peer-to-Peer (P2P, blockchain, torrents, WebRTC);
-        7 - Message-Driven (integração via filas e mensageria);
-        8 - Choreography e Orchestration (padrões de coordenação em microsserviços).
+        1 - SOA - Service Oriented Architecture
+            Uma abordagem de arquitetura de software onde os sistemas são compostos por serviços independentes que se comunicam entre si.
+            Cada serviço é responsável por uma funcionalidade específica e pode ser desenvolvido, implantado e escalado de forma independente.
+            Os serviços se comunicam através de protocolos padrão, como HTTP, SOAP ou REST, permitindo a interoperabilidade entre diferentes tecnologias e plataformas.
+            👉 Exemplo: um sistema de e-commerce pode ter serviços separados para gerenciamento de produtos, processamento de pagamentos e envio de pedidos.
+            🔑 Características principais:
+                Interoperabilidade: serviços podem ser desenvolvidos em diferentes linguagens e plataformas.
+                Reutilização: serviços podem ser reutilizados em diferentes aplicações.
+                Escalabilidade: serviços podem ser escalados independentemente conforme a demanda.
+                Manutenção facilitada: mudanças em um serviço não afetam outros serviços.
+            🎯 Resposta de entrevista:
+            "SOA é uma arquitetura onde sistemas são compostos por serviços independentes que se comunicam via protocolos padrão. 
+            Isso permite interoperabilidade, reutilização e escalabilidade, facilitando a manutenção e evolução dos sistemas."
+        2 - EDA (Event-Driven Architecture) - Arquitetura Orientada a Eventos
+            Uma abordagem de arquitetura de software onde os sistemas são projetados para reagir a eventos.
+            Um evento é uma mudança de estado ou uma ação que ocorre em um sistema, como a criação de um novo pedido ou a atualização de um perfil de usuário.
+            Os componentes do sistema se comunicam através da publicação e assinatura de eventos, permitindo um alto grau de desacoplamento e escalabilidade.
+            👉 Exemplo: em um sistema de e-commerce, quando um pedido é criado, um evento "PedidoCriado" é publicado. Outros serviços, como o serviço de pagamento e o serviço de envio, podem assinar esse evento e reagir a ele de forma independente.
+            🔑 Características principais:
+                Desacoplamento: componentes não dependem diretamente uns dos outros.
+                Escalabilidade: componentes podem ser escalados independentemente.
+                Resiliência: falhas em um componente não afetam todo o sistema.
+                Flexibilidade: novos componentes podem ser adicionados facilmente.
+            🎯 Resposta de entrevista:
+            "EDA é uma arquitetura onde sistemas reagem a eventos, permitindo desacoplamento, escalabilidade e resiliência. 
+            Componentes se comunicam via publicação e assinatura de eventos, facilitando a evolução do sistema."
+        3 - Service Mesh - uma camada de infraestrutura dedicada para gerenciar a comunicação entre serviços em uma arquitetura de microsserviços.
+            Ele fornece funcionalidades como descoberta de serviços, balanceamento de carga, autenticação, autorização, criptografia, monitoramento e rastreamento distribuído.
+            O service mesh atua como um intermediário entre os serviços, interceptando e gerenciando o tráfego de rede.
+            👉 Exemplo: Istio, Linkerd e Consul são exemplos populares de service meshes.
+            🔑 Características principais:
+                Descoberta de serviços: localiza serviços dinamicamente.
+                Balanceamento de carga: distribui tráfego entre instâncias de serviço.
+                Segurança: autenticação e autorização entre serviços.
+                Monitoramento: coleta métricas e logs de tráfego.
+                Rastreio distribuído: acompanha requisições através de múltiplos serviços.
+            🎯 Resposta de entrevista:
+            "Service mesh é uma camada de infraestrutura que gerencia a comunicação entre microsserviços, 
+            fornecendo descoberta, balanceamento, segurança e monitoramento. 
+            Ele facilita a gestão do tráfego e melhora a resiliência do sistema."
+        4 - API-Driven Architecture (API Gateway, API First, REST, gRPC, GraphQL) - Uma abordagem de arquitetura onde APIs são o principal meio de comunicação entre sistemas e componentes.
+            As APIs expõem funcionalidades e dados de forma padronizada, permitindo que diferentes aplicações e serviços interajam de maneira consistente.
+            👉 Exemplo: um sistema de e-commerce pode expor APIs para gerenciamento de produtos, processamento de pagamentos e envio de pedidos.
+            🔑 Características principais:
+                Padronização: APIs seguem padrões como REST, gRPC ou GraphQL.
+                Desacoplamento: sistemas podem evoluir independentemente.
+                Reutilização: APIs podem ser consumidas por múltiplas aplicações.
+                Segurança: controle de acesso e autenticação via tokens, OAuth, etc.
+            🎯 Resposta de entrevista:
+            "API-Driven Architecture é uma abordagem onde APIs são o principal meio de comunicação entre sistemas. 
+            Isso promove padronização, desacoplamento e reutilização, facilitando a integração e evolução dos sistemas."
+        5 - Event-Driven Microservices - Combina a arquitetura de microsserviços com a orientação a eventos.
+            Cada microsserviço é projetado para reagir a eventos, permitindo um alto grau de desacoplamento e escalabilidade.
+            Os microsserviços se comunicam através da publicação e assinatura de eventos, facilitando a integração e a evolução do sistema.
+            👉 Exemplo: em um sistema de e-commerce, quando um pedido é criado, um evento "PedidoCriado" é publicado. Outros microsserviços, como o serviço de pagamento e o serviço de envio
+        5 - Client-Server (modelo clássico de integração) - REST, SOAP, gRPC;
+        6 - Peer-to-Peer (P2P, blockchain, torrents, WebRTC) - comunicação direta entre sistemas;
+        7 - Message-Driven (integração via filas e mensageria) - RabbitMQ, Kafka, SQS, etc;
+        8 - Choreography e Orchestration (padrões de coordenação em microsserviços) - Saga Pattern, BPMN, Camunda, etc;
+        9 - ESB (Enterprise Service Bus) - uma abordagem centralizada para integração de sistemas empresariais.
+            O ESB atua como um barramento de comunicação que conecta diferentes aplicações e serviços, facilitando a troca de mensagens e a orquestração de processos.
 
     4 - Princípios e Boas Práticas de Arquitetura: abordagens que guiam como projetar e implementar. Sendo:
-        1 - API-First
+        1 - API-First - uma abordagem de design de APIs onde a API é projetada e documentada antes do desenvolvimento da aplicação.
+            Isso garante que a API atenda às necessidades dos consumidores e facilite a integração entre sistemas.
+            👉 Exemplo: usar OpenAPI/Swagger para definir endpoints, métodos, parâmetros e respostas antes de codificar.
+            🔑 Benefícios principais:
+                Foco no consumidor: API projetada com base nas necessidades dos usuários.
+                Documentação clara: especificação serve como contrato entre equipes.
+                Consistência: padrões e convenções são definidos antecipadamente.
+                Facilita testes: APIs podem ser testadas independentemente da aplicação.
+            🎯 Resposta de entrevista:
+            "API-First é uma abordagem onde a API é projetada e documentada antes do desenvolvimento da aplicação. 
+            Isso garante foco no consumidor, documentação clara e consistência, facilitando a integração entre sistemas."
 
         2 - Domain-Driven Design (DDD);
             Uma abordagem de design de software criada por Eric Evans (2003) que tem como foco o domínio do negócio.
@@ -61,20 +154,47 @@
                 Domain Services 
                     Regras de negócio que não pertencem a uma única entidade. 
                     Exemplo: cálculo de frete que depende de pedido + localização.
+            🎯 resposta de entrevista:
+                    "DDD é uma abordagem que foca no domínio do negócio, alinhando código e linguagem com as regras reais da empresa. 
+                    Conceitos como Linguagem Ubíqua, Contextos Delimitados e Agregados ajudam a criar sistemas mais claros, 
+                    flexíveis e alinhados com o negócio."
 
-        3 - Twelve-Factor App
-            01 - Codebase – uma base de código, versionada em Git. 
-            02 - Dependencies – dependências declaradas (não embutidas no sistema). 
-            03 - Config – configurações devem ficar no ambiente, não no código. 
-            04 - Backing services – tratar bancos, filas, caches como recursos externos plugáveis. 
-            05 - Build, release, run – separar bem o que é build, release e execução. 
-            06 - Processes – aplicação executada como processos stateless. 
-            07 - Port binding – expor serviços via porta, sem depender de servidor de aplicação externo. 
-            08 - Concurrency – escalar clonando processos, não aumentando threads. 
-            09 - Disposability – inicializar e encerrar rápido (facilita deploy/rollback). 
-            10 - Dev/prod parity – ambiente de dev o mais próximo possível do prod. 
-            11 - Logs – logs tratados como fluxo contínuo de eventos. 
-            12 - Admin processes – tarefas administrativas como processos pontuais.
+        3 - Twelve-Factor App - um conjunto de boas práticas para construir aplicações SaaS (Software as a Service) escaláveis e resilientes.
+            Por que usar o Twelve-Factor?
+                Desenvolvido por Heroku, é um guia prático para criar apps que funcionam bem em ambientes cloud.
+                Ajuda a evitar armadilhas comuns em desenvolvimento e deployment.
+                Promove consistência, portabilidade e facilidade de manutenção.
+            Os 12 fatores:
+                01 - Codebase – uma base de código, versionada em Git. 
+                02 - Dependencies – dependências declaradas (não embutidas no sistema). 
+                03 - Config – configurações devem ficar no ambiente, não no código. 
+                04 - Backing services – tratar bancos, filas, caches como recursos externos plugáveis. 
+                05 - Build, release, run – separar bem o que é build, release e execução. 
+                06 - Processes – aplicação executada como processos stateless. 
+                07 - Port binding – expor serviços via porta, sem depender de servidor de aplicação externo. 
+                08 - Concurrency – escalar clonando processos, não aumentando threads. 
+                09 - Disposability – inicializar e encerrar rápido (facilita deploy/rollback). 
+                10 - Dev/prod parity – ambiente de dev o mais próximo possível do prod. 
+                11 - Logs – logs tratados como fluxo contínuo de eventos. 
+                12 - Admin processes – tarefas administrativas como processos pontuais. 
+
+        quando falamos de build, release e run, o que é cada um?
+            R: 
+                Build: processo de transformar o código fonte em um artefato executável. Inclui compilação, testes e empacotamento.
+                Release: combinação do artefato de build com a configuração específica do ambiente. Prepara a aplicação para ser executada.
+                Run: execução da aplicação no ambiente de produção ou outro ambiente. A aplicação deve ser stateless e escalável.
+
+            usamos algumas ferramentas para cada etapa?
+                R: 
+                    Build: ferramentas como Maven, Gradle, npm, Docker.
+                    Release: ferramentas como Jenkins, GitLab CI/CD, Spinnaker.
+                    Run: plataformas como Kubernetes, AWS ECS, Heroku.
+
+            quanto ao jenkins, gitlab ci/cd e spinnaker, o que cada um faz?
+                R: 
+                    Jenkins: ferramenta de automação de código aberto para integração contínua e entrega contínua (CI/CD). Permite criar pipelines personalizadas para build, teste e deploy.
+                    GitLab CI/CD: parte do GitLab que oferece funcionalidades integradas de CI/CD. Permite definir pipelines diretamente no repositório GitLab, facilitando a automação do ciclo de vida do desenvolvimento.
+                    Spinnaker: plataforma de entrega contínua focada em deploys multi-cloud. Facilita a gestão de releases, rollbacks e estratégias de deploy como blue-green e canary.
 
         4 - SOLID;
             S – Single Responsibility Principle (SRP)
@@ -83,25 +203,30 @@
                 ❌ Errado: uma classe Relatorio que gera PDF, envia e-mails e salva no banco.
                 ✅ Certo: GeradorRelatorio, EmailService, RelatorioRepository.
                 DICA BONUS -> S (SRP) e C (SRP + coesão) → deixam as classes menores e focadas (isso indiretamente reduz acoplamento).
+                Por que não usar SRP? Às vezes, dividir demais pode complicar a navegação no código.
             O – Open/Closed Principle (OCP)
                 Classes devem estar abertas para extensão, mas fechadas para modificação.
                 Usar abstrações para permitir adicionar novas regras sem alterar código existente.
                 Exemplo: estratégia de cálculo de imposto com Imposto (interface) → ICMS, ISS.
                 DICA BONUS -> O (OCP) → aberto para extensão, fechado para modificação → incentiva baixo acoplamento via herança/polimorfismo.
+                Por que não usar OCP? Pode levar a hierarquias complexas se exagerar.
             L – Liskov Substitution Principle (LSP)
                 Subtipos devem poder substituir seus tipos base sem quebrar o programa.
                 ❌ Errado: Ave com método voar(), e Pinguim herdando Ave.
                 ✅ Certo: separar em AveQueVoa e AveQueNaoVoa.
                 DICA BONUS -> L (LSP) → reforça a substituição sem quebrar dependências → acoplamento saudável.
+                Por que não usar LSP? Às vezes, a modelagem do domínio não se encaixa perfeitamente.
             I – Interface Segregation Principle (ISP)
                 Interfaces devem ser pequenas e específicas.
                 ❌ Errado: interface Funcionario com métodos dirigir(), programar(), cozinhar().
                 ✅ Certo: Motorista, Programador, Cozinheiro.
                 DICA BONUS -> I (ISP) → divide interfaces para evitar dependência desnecessária.
+                Por que não usar ISP? Muitas interfaces podem complicar a implementação.
             D – Dependency Inversion Principle (DIP)
                 Depender de abstrações, não de implementações.
                 Exemplo: PagamentoService deve depender de uma interface GatewayPagamento, não diretamente de PaypalAPI.
                 DICA BONUS -> D (DIP) → o mais ligado diretamente a baixo acoplamento.
+                Por que não usar DIP? Pode adicionar complexidade com muitas abstrações.
 
         5 - Clean Architecture
             Clean Architecture é uma abordagem de arquitetura em camadas proposta pelo Uncle Bob, 
@@ -158,9 +283,22 @@
     O objetivo da entrevista de system design é chegar no "nao sei". Estranho é alguem saber de tudo! 
     
     https://www.youtube.com/watch?v=JHavVCLQT4k
+
+    Primeiro, entenda o problema:
+        1 - Pergunte os requisitos funcionais e nao funcionais.
+        2 - Pergunte sobre o contexto do negócio.
+        3 - Pergunte sobre as restrições técnicas.
+        4 - Pergunte sobre o time e o prazo.
+    Depois, defina o escopo: 
+        1 - Priorize os requisitos.
+        2 - Defina o MVP (Produto Mínimo Viável).
+        3 - Estabeleça metas claras.
  
 ## Micro Serviços e Monólitos
     Análise comparativa entre arquiteturas monolíticas e de microserviços, discutindo os cenários em que cada abordagem se destaca.
+    * Monólito: tudo em um único deploy, mais simples de desenvolver e testar, mas pode ser difícil de escalar e manter.
+    * Microserviços: serviços independentes, mais complexos de desenvolver e testar, mas facilitam a escalabilidade e a manutenção.
+    * Quando usar cada um: monólito para projetos pequenos e médios, microserviços para sistemas grandes e complexos. 
 
 #### <font color = orange><b> Confuso Domínios de Software (DDD) </b></font>
     Exploração dos fundamentos do Domain-Driven Design e sua aplicação para modelar sistemas alinhados com as necessidades do negócio.
@@ -316,7 +454,45 @@
     Entenda como os service meshes facilitam a comunicação, segurança e observabilidade entre microserviços.
 
 #### <font color = orange><b> Two-Phase Commit </b></font>
-    Compreenda o protocolo Two-Phase Commit e seu papel na garantia da integridade em transações distribuídas.
+    Mecanismo para garantir a consistência de transações distribuídas, coordenando múltiplos recursos.
+
+    Quando falamos em consistência em sistemas distribuídos, dois padrões comuns são o Two-Phase Commit (2PC) e o Saga Pattern.
+    Ambos visam garantir a integridade dos dados, mas funcionam de maneiras diferentes e são aplicados em cenários distintos.
+
+    O mais usado é o Saga Pattern, mas o Two-Phase Commit ainda é relevante em alguns contextos.  
+
+    aonde o two-phase commit se encaixa no saga pattern?
+        R: O two-phase commit (2PC) e o saga pattern são ambos mecanismos para garantir a consistência em transações distribuídas, mas eles funcionam de maneiras diferentes e se aplicam a cenários distintos.
+        
+        1. Two-Phase Commit (2PC):
+            O 2PC é um protocolo de commit que garante que todas as partes envolvidas em uma transação distribuída concordem em confirmar ou abortar a transação.
+            Ele é composto por duas fases:
+                Prepare Phase: O coordenador da transação pergunta a todos os participantes se eles estão prontos para confirmar a transação.
+                Commit Phase: Se todos os participantes responderem afirmativamente, o coordenador envia um comando de commit para todos. Se algum participante responder negativamente, o coordenador envia um comando de abort.
+            O 2PC é adequado para cenários onde a consistência forte é necessária e onde as operações podem ser bloqueadas até que a transação seja concluída.
+            Exemplo: Transferência bancária entre duas contas em bancos diferentes.
+
+        como implementar o two-phase commit no java de forma conceitual e nao se falando de codigo?
+        resposta:
+            1. Definir um coordenador de transação que gerencie o processo de commit.
+            2. Cada serviço participante deve implementar uma interface para preparar e confirmar/abortar a transação.
+            3. Na fase de preparação, o coordenador envia uma solicitação para cada serviço participante para verificar se estão prontos para confirmar a transação.
+            4. Cada serviço participante realiza as operações necessárias e responde ao coordenador com um status (pronto ou não pronto).
+            5. Se todos os participantes estiverem prontos, o coordenador envia um comando de commit para todos os serviços participantes.
+            6. Se algum participante não estiver pronto, o coordenador envia um comando de abort para todos os serviços participantes.
+            7. Cada serviço participante executa o comando recebido (commit ou abort) e libera quaisquer recursos bloqueados.
+            8. O coordenador registra o resultado final da transação (sucesso ou falha) para auditoria e monitoramento.
+ 
+        2. Saga Pattern:
+            O saga pattern é uma abordagem para gerenciar transações distribuídas através de uma série de operações locais, cada uma com sua própria compensação.
+            Uma saga é composta por uma sequência de transações locais, onde cada transação tem uma ação compensatória que pode desfazer seus efeitos se necessário.
+            Se uma transação falhar, as transações anteriores são compensadas para reverter o estado do sistema.
+            O saga pattern é mais flexível e tolerante a falhas, permitindo que as operações sejam concluídas de forma assíncrona.
+            Exemplo: Processo de compra online, onde várias etapas (adicionar ao carrinho, processar pagamento, reservar estoque) podem ser revertidas se uma etapa falhar.
+        Resumo:
+            O 2PC é mais rígido e garante a consistência forte, mas pode ser bloqueante e menos tolerante a falhas.
+            O saga pattern é mais flexível, permitindo operações assíncronas e compensações, mas pode levar a estados intermediários inconsistentes.
+        Escolha entre 2PC e saga pattern depende dos requisitos específicos de consistência, tolerância a falhas e desempenho do sistema distribuído em questão.
 
 #### <font color = orange><b> Patterns de Resiliência </b></font> 
 
