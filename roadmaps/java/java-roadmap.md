@@ -153,3 +153,30 @@
 - Aprender sobre arquitetura de microsserviços
 - Estudar práticas de DevOps para aplicações Java
 - Explorar opções de implantação em nuvem (AWS, Azure, GCP)
+
+
+
+
+
+
+
+d
+
+
+
+
+-----------------------------------------------------------------------------
+Framework de Coleções Java
+
+    Lists, Sets, Maps
+    ArrayList, LinkedList
+    HashSet, TreeSet
+    HashMap, TreeMap
+    Iterators e Comparators
+
+quando pensamos em collections no java, a gente pensa em listas, conjuntos e mapas. 
+cada um deles tem suas implementações mais comuns, como arraylist e linkedlist para listas, hashset e treeset para conjuntos, e hashmap e treemap para mapas. 
+além disso, iterators são usados para percorrer essas coleções, e comparators ajudam a definir a ordem dos elementos quando necessário.
+
+
+

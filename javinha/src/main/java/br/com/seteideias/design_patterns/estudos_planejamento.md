@@ -7,6 +7,11 @@ https://chatgpt.com/g/g-p-67b7a57f1a508191895a25d03c5cdfb6-backend/c/689a3eeb-fa
 1. Singleton – controlar 1 instância
    Desafio: BarrilConfig (único) guarda flags da vila.
 
+de bonus, estudei o Monostate (instâncias múltiplas, estado único).
+Sobe o Monostate:
+guru da vila: https://refactoring.guru/pt-br/design-patterns/monostate
+
+
 2. Factory Method – delegar criação
    Desafio: Cantina.factoryPedido("sanduiche"|"agua").
 
