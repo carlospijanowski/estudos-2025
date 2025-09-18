@@ -14,8 +14,8 @@
 É um grande “guarda-chuva” que abrange estilos de distribuição, formas de organização interna, padrões de integração, modelos de execução e práticas transversais. 
 Diferente do design detalhado (nível de código), a arquitetura atua no nível macro, definindo como o sistema será construído, mantido e evoluído.
 
-Logo temos duas grandes áreas:
-1) Arquitetura de Software (nível macro, decisões estruturais)
+## Logo temos duas grandes áreas:
+# 1) Arquitetura de Software (nível macro, decisões estruturais)
    * Estilos de distribuição (como divido o sistema em aplicações/serviços)
    * Estilos de organização interna (como estruturo cada aplicação)
    * Estilos de integração (como partes conversam)
@@ -23,68 +23,71 @@ Logo temos duas grandes áreas:
    * Abordagens e práticas transversais (que atravessam estilos)
    * Combinações frequentes (composições aplicadas na prática)
 
-2) Design Detalhado (nível micro, decisões de implementação)
-   * Combinações frequentes (composições aplicadas na prática)
-   Princípios fundamentais (guia para escrever bom código) 
-   SOLID: SRP, OCP, LSP, ISP, DIP
-   DRY (Don’t Repeat Yourself) e KISS (Keep It Simple, Stupid)
-   YAGNI (You Aren’t Gonna Need It) 
-   * Combinações frequentes (composições aplicadas na prática)
-   Padrões de projeto (soluções reutilizáveis para problemas comuns) 
-   Clássicos (GoF): Singleton, Factory, Observer, Strategy, etc.
-   Integração: Repository, Unit of Work, DTO, Mapper (abstrair acesso a dados, otimizar comunicação entre camadas).
-   Concorrência: Thread Pool, Future, Actor Model (gerenciar múltiplas threads, evitar bloqueios).
-   * Práticas de desenvolvimento
-    CI/CD (Integração e Entrega Contínua): automação de build, testes e deploy.
-   TDD (Test-Driven Development): escrever testes antes do código para guiar o design.
-   Clean Code: legibilidade, simplicidade, nomes significativos, evitar complexidade desnecessária. 
-   * Evolução e manutenção
-   Refatoração: melhorar o código sem alterar seu comportamento externo, mantendo qualidade a longo prazo.
+# 2) Design Detalhado (nível micro, decisões de implementação) 
+   * Princípios fundamentais (guia para escrever bom código)  
+   * Padrões de projeto (soluções reutilizáveis para problemas comuns)  
+   * Práticas de desenvolvimento 
+   * Evolução e manutenção 
 
 
-Neste capítulo, veremos as principais dimensões da arquitetura:
- 
-       1) Estilos de distribuição (como divido o sistema em aplicações/serviços) 
-            * Monólito (ou Monólito Modular). monólito em ingles é monolith
-            prós e contras: simples de desenvolver, testar e implantar; difícil de escalar e manter com o crescimento.
-            * SOA (Service-Oriented Architecture): serviços maiores, compartilhando contratos; geralmente mais acoplados que microservices. 
-            prós e contras: facilita integração entre sistemas legados; pode levar a gargalos e complexidade com ESB.
-            * Microservices: serviços pequenos e independentes, alinhados a bounded contexts (DDD). 
-            obs: bounded contexts são partes do domínio que têm uma linguagem e modelo próprios, podendo ser implementados como microservices separados.
-            prós e contras: facilita escalabilidade e manutenção; mais complexo de desenvolver, testar e implantar.
-            * Serverless: funções ou containers gerenciados por cloud provider, pagando por uso. 
-            prós e contras: reduz overhead de infraestrutura; pode ter limitações de execução e vendor lock-in. 
+# PRIMEIRA GRANDE AREA - Arquitetura de Software (nível macro, decisões estruturais)
 
-       2) Estilos de organização interna (como estruturo cada aplicação, seja monólito ou microservice) 
-            * Arquitetura em Camadas (Layered): apresentação → domínio → infraestrutura/dados.
-            * Arquiteturas com foco no domínio: Hexagonal (Ports & Adapters), Clean, Onion
-
-       3) Estilos de integração (como partes conversam)
-           Sincrono por API: REST, gRPC, GraphQL (API-Driven).
-           Assíncrono por Mensageria / Event-Driven: Kafka, RabbitMQ, SNS/SQS (pub/sub, event-carried state transfer, 
-            CQRS + Event Sourcing como padrões opcionais).
-
-       4) Modelos de execução/implantação (onde/como rodam) 
+## Arquitetura de Software (nível macro, decisões estruturais) 
+    1) Estilos de distribuição (como divido o sistema em aplicações/serviços) 
+         * Monólito (ou Monólito Modular). monólito em ingles é monolith
+         prós e contras: simples de desenvolver, testar e implantar; difícil de escalar e manter com o crescimento.
+         * SOA (Service-Oriented Architecture): serviços maiores, compartilhando contratos; geralmente mais acoplados que microservices. 
+         prós e contras: facilita integração entre sistemas legados; pode levar a gargalos e complexidade com ESB.
+         * Microservices: serviços pequenos e independentes, alinhados a bounded contexts (DDD). 
+         obs: bounded contexts são partes do domínio que têm uma linguagem e modelo próprios, podendo ser implementados como microservices separados.
+         prós e contras: facilita escalabilidade e manutenção; mais complexo de desenvolver, testar e implantar.
+         * Serverless: funções ou containers gerenciados por cloud provider, pagando por uso. 
+         prós e contras: reduz overhead de infraestrutura; pode ter limitações de execução e vendor lock-in.  
+    2) Estilos de organização interna (como estruturo cada aplicação, seja monólito ou microservice) 
+        * Arquitetura em Camadas (Layered): apresentação → domínio → infraestrutura/dados.
+        * Arquiteturas com foco no domínio: Hexagonal (Ports & Adapters), Clean, Onion 
+    3) Estilos de integração (como partes conversam)
+        * Sincrono por API: REST, gRPC, GraphQL (API-Driven).
+        * Assíncrono por Mensageria / Event-Driven: Kafka, RabbitMQ, SNS/SQS (pub/sub, event-carried state transfer, 
+        * CQRS + Event Sourcing como padrões opcionais). 
+    4) Modelos de execução/implantação (onde/como rodam) 
            Containers & Orquestração: Docker + Kubernetes (microservices ou monólitos containerizados). 
            Serverless – FaaS: AWS Lambda, Azure Functions (funções). 
            Serverless – Containers: Cloud Run, AWS App Runner (containers sem gerenciar servidores). 
-           BaaS (quando aplicável): Cognito/Auth0, Firebase, etc. (terceiriza capabilities). 
-
-       5) Abordagens e práticas que atravessam estilos 
+           BaaS (quando aplicável): Cognito/Auth0, Firebase, etc. (terceiriza capabilities).  
+    5) Abordagens e práticas que atravessam estilos 
            DDD (ubiquitous language, bounded contexts, agregados). 
            API-First (OpenAPI, contrato antes do código). 
            Observabilidade e Resiliência (circuit breaker, retry, bulkhead, idempotência). 
-           Segurança (Zero-Trust, OAuth2/OIDC, mTLS). 
-
-       6) Combinações frequentes (chame de composições, não “novas arquiteturas”) 
+           Segurança (Zero-Trust, OAuth2/OIDC, mTLS).  
+    6) Combinações frequentes (chame de composições, não “novas arquiteturas”) 
             1. Event-Driven Microservices (Microservices + eventos). 
             2. API-Driven Microservices (Microservices + REST/gRPC/GraphQL). 
             3. Microservices em Containers (K8s) ou Microservices Serverless (Lambda + EventBridge/SQS).
             4. Monólito Modular (Monólito + modularização interna, DDD).
             5. SOA (SOA + ESB).
             6. Serverless + Event-Driven (Lambda + EventBridge)
- 
- 
+
+# SEGUNDA GRANDE AREA - Design Detalhado (nível micro, decisões de implementação)
+
+## Design Detalhado (nível micro, decisões de implementação)
+    1. Princípios fundamentais (guia para escrever bom código)
+        SOLID: SRP, OCP, LSP, ISP, DIP
+        DRY (Don’t Repeat Yourself) e KISS (Keep It Simple, Stupid) - evite duplicação e complexidade desnecessária
+        YAGNI (You Aren’t Gonna Need It) - não implemente algo que não é necessário agora
+    2. Padrões de projeto (soluções reutilizáveis para problemas comuns)
+        Clássicos (GoF): Singleton, Factory, Observer, Strategy, etc.
+        Integração: Repository, Unit of Work, DTO, Mapper (abstrair acesso a dados, otimizar comunicação entre camadas).
+        Concorrência: Thread Pool, Future, Actor Model (gerenciar múltiplas threads, evitar bloqueios).
+    3. Práticas de desenvolvimento
+        CI/CD (Integração e Entrega Contínua): automação de build, testes e deploy.
+        TDD (Test-Driven Development): escrever testes antes do código para guiar o design.
+        Clean Code: legibilidade, simplicidade, nomes significativos, evitar complexidade desnecessária.
+    4. Evolução e manutenção
+        Refatoração: melhorar o código sem alterar seu comportamento externo, mantendo qualidade a longo prazo.
+
+------------------------------------------------------------------------------------------------------------------------
+
 ## SOA - Service Oriented Architecture
 Uma abordagem de arquitetura de software onde os sistemas são compostos por serviços independentes que se comunicam entre si.
 Cada serviço é responsável por uma funcionalidade específica e pode ser desenvolvido, implantado e escalado de forma independente.
