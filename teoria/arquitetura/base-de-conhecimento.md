@@ -11,28 +11,57 @@
 ## capitulo 1 - o que é arquitetura?
 
 # Arquitetura de software é um conjunto de decisões estruturais e organizacionais sobre um sistema. 
-É um grande “guarda-chuva” que abrange estilos de distribuição, formas de organização interna, padrões de integração, modelos de execução e práticas transversais. 
-Diferente do design detalhado (nível de código), a arquitetura atua no nível macro, definindo como o sistema será construído, mantido e evoluído.
+É um grande “guarda-chuva” que abrange estilos de distribuição, formas de organização interna, padrões de integração, 
+modelos de execução e práticas transversais. 
+Diferente do design detalhado (nível de código), a arquitetura atua no nível macro, definindo como o sistema será construído, 
+mantido e evoluído.
 
 ## Logo temos duas grandes áreas:
 # 1) Arquitetura de Software (nível macro, decisões estruturais)
    * Estilos de distribuição (como divido o sistema em aplicações/serviços)
+     Ele pensa: “Será que abro um restaurantezão só (monólito), ou várias filiais especializadas (microservices), 
+     ou uma dark kitchen só de entrega (serverless/FaaS)?”
+     👉 Isso é como dividir o sistema em aplicações/serviços.
    * Estilos de organização interna (como estruturo cada aplicação)
+     Dentro de cada restaurante, como organizar?
+     “Vou separar cozinha, pizzaria, churrascaria, copa… cada um bem definido.”
+     👉 Isso é como estruturo cada aplicação (camadas, hexagonal, DDD).
    * Estilos de integração (como partes conversam)
+     Como as áreas se falam?
+     “O garçom leva o pedido da mesa para a cozinha, pizzaria ou copa. 
+     Posso usar bilhete (mensageria), gritar no salão (REST síncrono), ou usar campainha (eventos).”
+       👉 Isso é como partes conversam.
    * Modelos de execução/implantação (onde/como rodam)
+     Onde cada filial roda?
+     “Tem restaurante no shopping (ECS), delivery na nuvem (Kubernetes), ou quiosque móvel (Lambda).”
+     👉 Isso é onde/como rodam.
    * Abordagens e práticas transversais (que atravessam estilos)
+     Regras que valem para todos: higiene, preço dos pratos, treinamento dos garçons, música ao vivo.
+     👉 Isso são práticas que atravessam estilos (observabilidade, segurança, CI/CD, logs, escalabilidade).
    * Combinações frequentes (composições aplicadas na prática)
+     Na prática, o Rui mistura tudo:
+     “Um Michelli monólito pro salão, microservices pra pizzaria delivery, eventos pra notificar quando o pedido fica pronto.”
+     👉 Isso é composição aplicada na prática.
 
 # 2) Design Detalhado (nível micro, decisões de implementação) 
    * Princípios fundamentais (guia para escrever bom código)  
    * Padrões de projeto (soluções reutilizáveis para problemas comuns)  
    * Práticas de desenvolvimento 
    * Evolução e manutenção 
-
-
+ 
+-------------------------------------------------------------------------------------------------------------------------
 # PRIMEIRA GRANDE AREA - Arquitetura de Software (nível macro, decisões estruturais)
 
 ## Arquitetura de Software (nível macro, decisões estruturais) 
+
+“DOIMAC”
+D → Distribuição (quantos restaurantes/serviços?)
+O → Organização interna (como arrumo dentro de cada?)
+I → Integração (como conversam?)
+M → Modelos de execução/implantação (onde rodam?)
+A → Abordagens transversais (regras gerais)
+C → Combinações (mix prático)
+
     1) Estilos de distribuição (como divido o sistema em aplicações/serviços) 
          * Monólito (ou Monólito Modular). monólito em ingles é monolith
          prós e contras: simples de desenvolver, testar e implantar; difícil de escalar e manter com o crescimento.
@@ -47,9 +76,12 @@ Diferente do design detalhado (nível de código), a arquitetura atua no nível 
         * Arquitetura em Camadas (Layered): apresentação → domínio → infraestrutura/dados.
         * Arquiteturas com foco no domínio: Hexagonal (Ports & Adapters), Clean, Onion 
     3) Estilos de integração (como partes conversam)
-        * Sincrono por API: REST, gRPC, GraphQL (API-Driven).
-        * Assíncrono por Mensageria / Event-Driven: Kafka, RabbitMQ, SNS/SQS (pub/sub, event-carried state transfer, 
-        * CQRS + Event Sourcing como padrões opcionais). 
+        * Sincrono por API: 
+            REST, gRPC, GraphQL (API-Driven).
+                gRPC? gRPC é um framework de comunicação remota desenvolvido pelo Google que utiliza HTTP/2 para transporte e Protobuf para serialização de dados.
+                já o protobuf (Protocol Buffers) é um formato de serialização de dados eficiente e compacto, usado para definir a estrutura das mensagens trocadas entre serviços.
+        * Assíncrono por Mensageria / Event-Driven: 
+            Kafka, RabbitMQ, SNS/SQS (pub/sub, event-carried state transfer, CQRS + Event Sourcing como padrões opcionais). 
     4) Modelos de execução/implantação (onde/como rodam) 
            Containers & Orquestração: Docker + Kubernetes (microservices ou monólitos containerizados). 
            Serverless – FaaS: AWS Lambda, Azure Functions (funções). 
@@ -236,7 +268,7 @@ Em resumo, todos os microsserviços podem ser considerados parte de uma arquitet
                                Release: combinação do artefato de build com a configuração específica do ambiente. Prepara a aplicação para ser executada.
                                Run: execução da aplicação no ambiente de produção ou outro ambiente. A aplicação deve ser stateless e escalável.
 
-                           usamos algumas ferramentas para cada etapa?
+                           usamos algumas ferramentas para cada etapa? [we use some tools for each step]
                                R: 
                                    Build: ferramentas como Maven, Gradle, npm, Docker.
                                    Release: ferramentas como Jenkins, GitLab CI/CD, Spinnaker.
@@ -253,31 +285,31 @@ Em resumo, todos os microsserviços podem ser considerados parte de uma arquitet
 
                        4 - SOLID;
                            S – Single Responsibility Principle (SRP)
-                               Cada classe deve ter uma única responsabilidade.
+                               Cada classe deve ter uma única responsabilidade. [Each class must have a single responsibility]
                                Facilita testes e manutenção.
                                ❌ Errado: uma classe Relatorio que gera PDF, envia e-mails e salva no banco.
                                ✅ Certo: GeradorRelatorio, EmailService, RelatorioRepository.
                                DICA BONUS -> S (SRP) e C (SRP + coesão) → deixam as classes menores e focadas (isso indiretamente reduz acoplamento).
                                Por que não usar SRP? Às vezes, dividir demais pode complicar a navegação no código.
-                           O – Open/Closed Principle (OCP)
+                           O – Open/Closed Principle (OCP) [Classes must be open for extension, but closed for modification]
                                Classes devem estar abertas para extensão, mas fechadas para modificação.
                                Usar abstrações para permitir adicionar novas regras sem alterar código existente.
                                Exemplo: estratégia de cálculo de imposto com Imposto (interface) → ICMS, ISS.
                                DICA BONUS -> O (OCP) → aberto para extensão, fechado para modificação → incentiva baixo acoplamento via herança/polimorfismo.
                                Por que não usar OCP? Pode levar a hierarquias complexas se exagerar.
-                           L – Liskov Substitution Principle (LSP)
+                           L – Liskov Substitution Principle (LSP) [Subtypes must be able to replace their base types without breaking the program]
                                Subtipos devem poder substituir seus tipos base sem quebrar o programa.
                                ❌ Errado: Ave com método voar(), e Pinguim herdando Ave.
                                ✅ Certo: separar em AveQueVoa e AveQueNaoVoa.
                                DICA BONUS -> L (LSP) → reforça a substituição sem quebrar dependências → acoplamento saudável.
                                Por que não usar LSP? Às vezes, a modelagem do domínio não se encaixa perfeitamente.
-                           I – Interface Segregation Principle (ISP)
+                           I – Interface Segregation Principle (ISP) [Interfaces must be small and specific]
                                Interfaces devem ser pequenas e específicas.
                                ❌ Errado: interface Funcionario com métodos dirigir(), programar(), cozinhar().
                                ✅ Certo: Motorista, Programador, Cozinheiro.
                                DICA BONUS -> I (ISP) → divide interfaces para evitar dependência desnecessária.
                                Por que não usar ISP? Muitas interfaces podem complicar a implementação.
-                           D – Dependency Inversion Principle (DIP)
+                           D – Dependency Inversion Principle (DIP) [Rely on abstractions, not implementations]
                                Depender de abstrações, não de implementações.
                                Exemplo: PagamentoService deve depender de uma interface GatewayPagamento, não diretamente de PaypalAPI.
                                DICA BONUS -> D (DIP) → o mais ligado diretamente a baixo acoplamento.
@@ -439,14 +471,22 @@ Em resumo, todos os microsserviços podem ser considerados parte de uma arquitet
 #### <font color = orange><b> Teoria CAP, ACID e BASE (SQL e NoSQL) </b></font>
     Estudo dos fundamentos teóricos que regem a consistência e a disponibilidade dos dados em sistemas distribuídos.
     entendendo cada um deles: 
-        CAP: Consistency, Availability, Partition Tolerance. 
+        * CAP: Consistency, Availability, Partition Tolerance. 
             Em sistemas distribuídos, só dá pra garantir 2 dos 3 ao mesmo tempo.
             Exemplo: se a rede cai (Partition Tolerance), você pode escolher entre Consistency (todos veem os mesmos dados) 
             ou Availability (o sistema continua respondendo).
-        ACID: Atomicity, Consistency, Isolation, Durability. 
+            Consistency: todos os nós veem os mesmos dados ao mesmo tempo.
+            Availability: todo pedido recebe uma resposta (mesmo que não seja a mais recente).
+            Partition Tolerance: o sistema continua funcionando mesmo com falhas na rede.
+        De forma resumida, CAP diz que em um sistema distribuído, você só pode garantir dois desses três aspectos ao mesmo tempo.
+        Pq 2? Porque se a rede falha (Partition Tolerance), você tem que escolher entre Consistency (todos veem os mesmos dados) ou Availability (o sistema continua respondendo).
+        Se a rede estiver ok, você pode ter os 3. Mas em cenários reais, falhas de rede são inevitáveis, então sempre tem que escolher 2 dos 3.
+        E se a rede não falhar nunca? Aí você pode ter os 3. Mas na prática, redes falham, então CAP é relevante.
+        E se a Consistency for eventual? Aí você está relaxando a Consistency para Eventual Consistency, o que é comum em sistemas BASE.
+        * ACID: Atomicity, Consistency, Isolation, Durability. 
             Propriedades que garantem transações confiáveis em bancos de dados relacionais.
             Exemplo: uma transferência bancária deve ser atômica (ou tudo acontece ou nada acontece).
-        BASE: Basically Available, Soft state, Eventual consistency. 
+        * BASE: Basically Available, Soft state, Eventual consistency. 
             Abordagem mais flexível usada em bancos NoSQL.
             Exemplo: um sistema de redes sociais pode ser basicamente disponível (você pode ver posts mesmo se alguns servidores estiverem fora), 
             ter estado temporário (dados podem mudar com o tempo) e consistência eventual (todos verão a mesma informação eventualmente).
@@ -632,6 +672,16 @@ Em resumo, todos os microsserviços podem ser considerados parte de uma arquitet
             O saga pattern é mais flexível, permitindo operações assíncronas e compensações, mas pode levar a estados intermediários inconsistentes.
         Escolha entre 2PC e saga pattern depende dos requisitos específicos de consistência, tolerância a falhas e desempenho do sistema distribuído em questão.
 
+        3 . orquestração vs coreografia no saga pattern?
+            R: No contexto do Saga Pattern, orquestração e coreografia são duas abordagens diferentes para gerenciar a sequência de transações distribuídas.
+
+            Orquestração:
+                Na orquestração, há um componente central (orquestrador) que controla o fluxo das transações.
+                O orquestrador é responsável por iniciar cada transação, monitorar seu progresso e decidir quando executar as ações compensatórias em caso de falha.
+                Vantagens:
+                    Centralização do controle, facilitando a gestão e monitoramento.
+                    Mais fácil de implementar em sistemas complexos.    
+
 #### <font color = orange><b> Patterns de Resiliência </b></font> 
 
 https://www.youtube.com/watch?v=LnOK32zvxVg&list=PLZTjHbp2Y7809w3PLM0UE_LgQq6vk49q0
@@ -685,12 +735,23 @@ https://www.youtube.com/watch?v=LnOK32zvxVg&list=PLZTjHbp2Y7809w3PLM0UE_LgQq6vk4
 
 um software precisa ser escalável, performático e resiliente. 
 
-qual a versao atualdo spring?
+qual a versao atual do spring?
     R: A versão mais recente do Spring Framework é a 6.0.10, lançada em 15 de maio de 2024.
     A versão mais recente do Spring Boot é a 3.1.7, lançada em 15 de maio de 2024.
     A versão mais recente do Spring Security é a 6.1.5, lançada em 15 de maio de 2024.
     A versão mais recente do Spring Data é a 3.1.5, lançada em 15 de maio de 2024.
-    A versão mais recente do Spring Cloud é a 2023.0.5, lançada em 15 de maio de 2024.
+    A versão mais recente do Spring Cloud é a 2023.0.5, lançada em 15 de maio de 2024. 
+
+    Você pode dividir em blocos, o que mostra organização mental:
+    Área	Exemplos / Dependências
+    Base do Framework (IoC, AOP)	spring-core, spring-context, spring-beans, spring-aop
+    API REST	spring-boot-starter-web, spring-boot-starter-validation
+    Persistência	spring-boot-starter-data-jpa, flyway-core, hibernate-validator
+    Segurança	spring-boot-starter-security, spring-security-oauth2-resource-server
+    Mensageria	spring-kafka, spring-amqp
+    Resiliência e Observabilidade	resilience4j, spring-boot-starter-actuator, micrometer-registry-prometheus, opentelemetry-exporter-otlp
+    Microsserviços / Cloud	spring-cloud-openfeign, spring-cloud-config, spring-cloud-starter-gateway, eureka-client
+    Testes	spring-boot-starter-test, mockito-core, wiremock, testcontainers
 
 o que teve de diferente no spring 6?
     R: O Spring Framework 6 trouxe várias mudanças significativas, incluindo:
@@ -797,8 +858,7 @@ aonde, nesse contexto entra a observablidade e monitoramento?
 
     4. Resiliência:
         Monitoramento de falhas e tempos de resposta ajuda a identificar pontos fracos no sistema.
-        Observabilidade
-
+        Observabilidade permite investigar a causa raiz de falhas e entender como o sistema se comporta sob estresse, facilitando a implementação de padrões de resiliência.
 
     Problemas dos sistemas distribuídos:
         Latência de rede
@@ -818,4 +878,168 @@ aonde, nesse contexto entra a observablidade e monitoramento?
         Princípios SOLID
             S (SRP) → Singleton, Factory.
             O (OCP) → Strategy, Decorator.      
+
+    Problemas de sistemas não distribuídos:
+        Escalabilidade limitada
+        Ponto único de falha (SPOF) 
+
+    como mitigar esses problemas?
+        Escalabilidade Horizontal
+        Redundância e Failover
+        Balanceamento de Carga
+        Monitoramento e Alertas
+        Backup e Recuperação de Desastres
+        Testes de Carga e Estresse
+        Padrões de Arquitetura
+        Princípios SOLID
+            S (SRP) → Singleton, Factory.
+            O (OCP) → Strategy, Decorator.
             
+quando falo de load balancer, estou falando de qual area do system design?
+    R: Quando falamos de load balancer, estamos abordando a área de "Alta Disponibilidade e Escalabilidade" dentro do system design. 
+    O load balancer é um componente crucial que distribui o tráfego de rede ou solicitações de serviço entre múltiplos servidores ou instâncias de aplicação, 
+    garantindo que nenhum servidor fique sobrecarregado e que o sistema como um todo permaneça disponível e responsivo.
+
+    Funções principais do load balancer incluem:
+        Distribuição de carga: balanceia as requisições entre servidores para otimizar o uso dos recursos.
+        Alta disponibilidade: redireciona o tráfego para servidores saudáveis em caso de falha de algum servidor.
+        Escalabilidade: facilita a adição ou remoção de servidores conforme a demanda varia.
+        Segurança: pode atuar como um ponto de controle para implementar políticas de segurança, como SSL termination.
+
+    Em resumo, o load balancer é uma peça fundamental para garantir que sistemas distribuídos sejam escaláveis, disponíveis e resilientes.
+
+se quisermos implementar o load balancer temos as seguintes opcoes:
+    Load Balancer de Software:
+        Nginx
+        HAProxy
+        Traefik
+        Envoy
+    Load Balancer de Hardware:
+        F5 BIG-IP
+        Citrix ADC
+        A10 Networks
+    Load Balancer em Nuvem:
+        AWS Elastic Load Balancing (ELB)
+        Google Cloud Load Balancing
+        Azure Load Balancer
+    Load Balancer DNS:
+        Amazon Route 53
+        Cloudflare
+        NS1
+
+dá pra usar o load balancer com kubernetes?
+    R: Sim, é possível usar um load balancer com Kubernetes. Na verdade, o Kubernetes oferece suporte nativo para load balancing através de seus recursos de Service.
+
+    Existem diferentes tipos de Services em Kubernetes que podem atuar como load balancers:
+        ClusterIP: O padrão, expõe o serviço dentro do cluster. Não é um load balancer externo.
+        NodePort: Expõe o serviço em uma porta específica em cada nó do cluster. Pode ser acessado externamente, mas não é um load balancer completo.
+        LoadBalancer: Cria um load balancer externo (geralmente na nuvem) e atribui um IP público ao serviço. Este é o tipo mais comum para load balancing em Kubernetes.
+        ExternalName: Mapeia o serviço para um nome DNS externo. Não é um load balancer, mas pode ser usado para redirecionar tráfego.
+
+    Além disso, você pode usar Ingress Controllers, que são componentes adicionais que gerenciam o acesso externo aos serviços no cluster, 
+    oferecendo funcionalidades avançadas de load balancing, roteamento e SSL termination.
+
+    Exemplos populares de Ingress Controllers incluem:
+        Nginx Ingress Controller
+        Traefik
+        HAProxy Ingress
+        Istio (que também oferece funcionalidades de service mesh)
+
+    Em resumo, Kubernetes facilita a implementação de load balancing tanto internamente quanto externamente, 
+    permitindo que você escolha a abordagem que melhor se adapta às suas necessidades.
+
+o que é e pra que serve o JAVA_OPTS?
+    R: JAVA_OPTS é uma variável de ambiente usada para passar opções e argumentos para a Java Virtual Machine (JVM) quando você inicia uma aplicação Java. 
+    Ela permite configurar diversos aspectos do comportamento da JVM, como alocação de memória, opções de depuração, configurações de desempenho, entre outros.
+
+    Exemplos comuns de uso do JAVA_OPTS incluem:
+        Configuração de memória:
+            -Xms512m -Xmx1024m (define o tamanho inicial e máximo da heap)
+        Habilitar o Garbage Collector:
+            -XX:+UseG1GC (usa o coletor de lixo G1)
+        Configurações de depuração:
+            -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 (habilita a depuração remota)
+        Definição de propriedades do sistema:
+            -DpropertyName=value (define propriedades específicas para a aplicação)
+
+    Exemplo de como usar JAVA_OPTS ao iniciar uma aplicação Java:
+        export JAVA_OPTS="-Xms512m -Xmx1024m -XX:+UseG1GC"
+        java $JAVA_OPTS -jar minha-aplicacao.jar
+
+    Em resumo, JAVA_OPTS é uma maneira conveniente de personalizar o ambiente de execução da JVM para atender às necessidades específicas da sua aplicação Java.
+
+ele carrega antes do java -jar?
+    R: Sim, a variável de ambiente JAVA_OPTS é carregada antes do comando java -jar ser executado. 
+    Quando você define JAVA_OPTS, essas opções são automaticamente aplicadas à JVM quando você inicia uma aplicação Java usando o comando java.
+
+    Por exemplo, se você definir:
+        export JAVA_OPTS="-Xms512m -Xmx1024m -XX:+UseG1GC"
+    
+    E depois executar:
+        java $JAVA_OPTS -jar minha-aplicacao.jar
+
+    As opções especificadas em JAVA_OPTS serão passadas para a JVM antes da execução do arquivo JAR, 
+    configurando o ambiente de execução conforme desejado.
+
+    É importante notar que o uso de JAVA_OPTS é uma prática comum em ambientes de produção e desenvolvimento para garantir que a JVM seja configurada corretamente para a aplicação específica que está sendo executada.
+
+é atraves dele que eu passo aquele string args?
+    R: Sim, você pode usar a variável de ambiente JAVA_OPTS para passar argumentos de linha de comando (string args) para a JVM ao iniciar uma aplicação Java. 
+    No entanto, é importante distinguir entre os argumentos que são passados para a JVM e aqueles que são passados para a aplicação Java em si.
+
+    Argumentos para a JVM (como opções de memória, garbage collection, etc.) são geralmente definidos em JAVA_OPTS. 
+    Já os argumentos específicos da aplicação (como parâmetros que sua aplicação espera receber) são passados diretamente após o comando java -jar.
+
+    Exemplo:
+        export JAVA_OPTS="-Xms512m -Xmx1024m -XX:+UseG1GC"
+        java $JAVA_OPTS -jar minha-aplicacao.jar arg1 arg2 arg3
+
+    Neste exemplo:
+        - As opções definidas em JAVA_OPTS (-Xms512m, -Xmx1024m, -XX:+UseG1GC) são passadas para a JVM.
+        - Os argumentos arg1, arg2 e arg3 são passados para a aplicação Java (minha-aplicacao.jar).
+
+    Portanto, enquanto JAVA_OPTS é usado para configurar a JVM, os argumentos da aplicação são fornecidos diretamente na linha de comando após o comando java -jar.
+
+como eu asso uma string e logo ela assim que a aplicacao sobe?
+    R: Para passar uma string como argumento para uma aplicação Java assim que ela sobe, você pode definir a variável de ambiente JAVA_OPTS com a string desejada e, em seguida, referenciar essa variável ao iniciar a aplicação. 
+    No entanto, é mais comum passar argumentos diretamente na linha de comando após o comando java -jar.
+
+    Exemplo usando JAVA_OPTS:
+        export JAVA_OPTS="-DmyStringArg='Hello, World!'"
+        java $JAVA_OPTS -jar minha-aplicacao.jar
+
+    Neste exemplo, a string "Hello, World!" é passada como uma propriedade do sistema chamada myStringArg. 
+    Dentro da sua aplicação Java, você pode acessar essa propriedade usando:
+        String myString = System.getProperty("myStringArg");
+
+    Alternativamente, você pode passar a string diretamente como um argumento da aplicação:
+        java -jar minha-aplicacao.jar "Hello, World!"
+
+    E dentro da sua aplicação Java, você pode acessar esse argumento através do array args no método main:
+        public static void main(String[] args) {
+            if (args.length > 0) {
+                String myString = args[0];
+                System.out.println(myString); // Output: Hello, World!
+            }
+        }
+
+    Em resumo, você pode usar JAVA_OPTS para definir propriedades do sistema ou passar argumentos diretamente na linha de comando ao iniciar a aplicação Java.
+
+eu consigo passar a porta pelo JAVA_OPTS?
+    R: Sim, você pode passar a porta para uma aplicação Java através da variável de ambiente JAVA_OPTS, especialmente se a aplicação estiver configurada para ler a porta a partir de uma propriedade do sistema.
+
+    Exemplo:
+        export JAVA_OPTS="-Dserver.port=8080"
+        java $JAVA_OPTS -jar minha-aplicacao.jar
+
+    Neste exemplo, a propriedade do sistema server.port é definida como 8080. 
+    Muitas aplicações Java, especialmente aquelas baseadas em frameworks como Spring Boot, 
+    são configuradas para ler essa propriedade e iniciar o servidor na porta especificada.
+
+    Dentro da sua aplicação Java (por exemplo, em um aplicativo Spring Boot), você pode acessar essa propriedade automaticamente, 
+    e o servidor será iniciado na porta 8080.
+
+    Em resumo, usar JAVA_OPTS para definir a porta é uma prática comum e eficaz para configurar a porta de uma aplicação Java ao iniciá-la.
+
+explique o que esta sendo passado pra jvm em "-Xmx512m -Dfile.encoding=UTF-8 -Djava.net.useSystemProxies=true -Dhttp.nonProxyHosts='*.host.intranet|*.intranet.pagseguro.uol|*.pagseguro.intranet|*.pagseguro.srv.intranet|*.intranet' -Dhttps.nonProxyHosts='*.host.intranet|*.intranet.pagseguro.uol|*.pagseguro.intranet|*.pagseguro.srv.intranet|*.intranet' -Dlocal.dc=QA -Dlog4j2.formatMsgNoLookups=true"
+
