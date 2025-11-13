@@ -10,27 +10,18 @@ Minhas experiências profissionais
 Relevant Projects
 Technical Skills
 
-## 1. Introduction 
-
+## Introduction 
 > Okay, let’s start!  
-> 
 > when you don’t practice, you forget a few things.
-> 
-> One of my _main goals_ is _to work on_ an international project — to keep improving my English skills.
-> 
-> I can handle most work situations in English — reading, understanding business rules, and discussing technical topics.
-
-> Back in 2023, I went to Europe — one of my goals was to practice my English. 
-> 
-> i visited London.
-> 
-> That same year, I also had the opportunity to be part of a team that included some English colleagues.
-> 
-> In that project, I was involved in several business decisions, mainly because I was the Tech Lead
+<br> One of my _main goals_ is _to work on_ an international project — to keep improving my English skills.
+<br> I can handle most work situations in English — reading, understanding business rules, and discussing technical topics.
+<br> Back in 2023, I went to Europe — one of my goals was to practice my English. 
+<br> i visited London.
+<br> That same year, I also had the opportunity to be part of a team that included some English colleagues.
+<br> In that project, I was involved in several business decisions, mainly because I was the Tech Lead
 --- 
  
-## 2. Personal Life
-
+## Personal Life
 > Hi, my name is Carlos. I’m 47 years old, married, and i have two daughters.  
 > I live in Itajaí, Its a coastal city in southern Brazil.  
 > In my free time, I love going to the beach, exploring new places, and spending time with my family.  
@@ -38,30 +29,24 @@ Technical Skills
 
 --- 
 
-## 3. Academic Background
+## Academic Background
 
 > I graduated in Information Systems, and later I completed two postgrad courses in IT — one in Software Engineering and another focused on Java for Web development.
 
 ---
 
-## 2. meu background de trabalho
-> I’d like to talk a bit about myself professionally.
+## background de trabalho
 > I have experience working as a backend software engineer, but also as a software architect and tech lead.
-> I have a proactive attitude at work — I’m collaborative and enjoy helping my teammates. 
-> I’ve mainly worked in the banking sector and retail sector. But I’m open to new challenges in different industries like healthcare, education, and logistics.
-> Please feel free to ask me anything about my professional experience.
+<br> I have a proactive attitude at work — I’m collaborative and enjoy helping my teammates. 
+<br> I’ve mainly worked in the banking sector and retail sector. But I’m open to new challenges in different industries like healthcare, education, and logistics.
+<br> Please feel free to ask me anything about my professional experience.
 
 > Pagseguro
-> 
-> Currently, I work as a Senior Software Engineer at PagSeguro, which is a digital payment company.
-> 
-> IN THE BACKEND side
->
-> Besides development and coding, I also participate in important technical decisions, review my teammates’ code, and contribute to system architecture.
-
-> We have around ten applications written in Kotlin and java, and my main role is to implement solutions based on business needs.
->    
->  We hold business meetings, refinement sessions, and technical discussions to define the best approaches for implementation.
+<br> Currently, I work as a Senior Software Engineer at PagSeguro, which is a digital payment company.
+<br> IN THE BACKEND side
+<br> Besides development and coding, I also participate in important technical decisions, review my teammates’ code, and contribute to system architecture.
+<br> We have around ten applications written in Kotlin and java, and my main role is to implement solutions based on business needs.
+<br> We hold business meetings, refinement sessions, and technical discussions to define the best approaches for implementation.
 
 > Lately, I’ve been working a lot on infrastructure-related tasks.
 > Recently, I’ve been involved in adapting PagSeguro’s CI pipelines, as we’re migrating from AWS to PagSeguro’s private cloud.
@@ -199,21 +184,82 @@ I like Agile because it helps teams stay focused, adapt quickly, and continuousl
 
 ## 3️⃣ Arquitetura de Software (nível macro, decisões estruturais)
 
-**Q:** Can you describe your experience with microservices?  
-**A:** I currently work in a microservices environment at PagSeguro, managing a set of around ten backend services — all written in Kotlin. We focus on building small, independent services that communicate asynchronously through Kafka. It gives us scalability and resilience.
----
+> when we talk about software architecture, we can divide it into three main areas:
 
-## 4️⃣ Design Patterns
+## Distribution Styles (how I divide the system into applications/services)
+> 
+> Monolith (or Modular Monolith)
+> Pros and cons: simple to develop, test, and deploy; difficult to scale and maintain as it grows.
+> 
+> SOA (Service-Oriented Architecture): larger services sharing contracts; usually more tightly coupled than microservices.
+> Pros and cons: simplifies integration with legacy systems; can lead to bottlenecks and complexity with an ESB.
+> 
+> Microservices: small, independent services aligned with bounded contexts (DDD).
+> Note: bounded contexts are parts of the domain that have their own language and model, and can be implemented as separate microservices.
+> Pros and cons: improves scalability and maintainability; more complex to develop, test, and deploy.
+> 
+> Serverless: functions or containers managed by a cloud provider, paying only for usage.
+> Pros and cons: reduces infrastructure overhead; may have execution limits and vendor lock-in.
+> 
+## Internal Organization Styles (how I structure each application, whether monolith or microservice)
+> 
+> Layered Architecture: presentation → domain → infrastructure/data.
+> 
+> Domain-focused Architectures: Hexagonal (Ports & Adapters), Clean, Onion.
+> 
+## Integration Styles (how parts communicate)
+> 
+> Synchronous via API:
+> REST, gRPC, GraphQL (API-Driven).
+> → gRPC is a remote communication framework developed by Google that uses HTTP/2 for transport and Protobuf for data serialization.
+> → Protobuf (Protocol Buffers) is an efficient and compact data serialization format used to define the structure of messages exchanged between services.
+> 
+> Asynchronous via Messaging / Event-Driven:
+> Kafka, RabbitMQ, SNS/SQS (pub/sub, event-carried state transfer, CQRS + Event Sourcing as optional patterns).
+> 
+> Modelos de execução/implantação (onde/como rodam) 
+> Containers & Orquestração: Docker + Kubernetes (microservices ou monólitos containerizados). 
+> Serverless – FaaS: AWS Lambda, Azure Functions (funções). 
+> Serverless – Containers: Cloud Run, AWS App Runner (containers sem gerenciar servidores). 
+> BaaS (quando aplicável): Cognito/Auth0, Firebase, etc. (terceiriza capabilities).  
 
+> Abordagens e práticas que atravessam estilos 
+> DDD (ubiquitous language, bounded contexts, agregados). 
+> API-First (OpenAPI, contrato antes do código). 
+> Observabilidade e Resiliência (circuit breaker, retry, bulkhead, idempotência). 
+> Segurança (Zero-Trust, OAuth2/OIDC, mTLS).  
+ 
+## Design Detalhado (nível micro, decisões de implementação)
+1. Princípios fundamentais (guia para escrever bom código)
+> SOLID: SRP, OCP, LSP, ISP, DIP
+> 
+> DRY (Don’t Repeat Yourself) e KISS (Keep It Simple, Stupid) - evite duplicação e complexidade desnecessária
+>
+> YAGNI (You Aren’t Gonna Need It) - não implemente algo que não é necessário agora
+
+2. Design Patterns 
 > Design patterns are project templates — recurring solutions to common problems in software development.
-> 
+>
 > There are three main types: creational, structural, and behavioral.
-> 
+>
 > For creational patterns, I usually use Factory, Singleton, and Builder.
-> 
+>
 > For structural patterns, I often use Adapter and Facade.
-> 
+>
 > And for behavioral patterns, I tend to use Strategy and Chain of Responsibility.
+
+3. Práticas de desenvolvimento
+> CI/CD (Integração e Entrega Contínua): automação de build, testes e deploy.
+>
+> TDD (Test-Driven Development): escrever testes antes do código para guiar o design.
+>
+> Clean Code: legibilidade, simplicidade, nomes significativos, evitar complexidade desnecessária.
+    
+4. Evolução e manutenção
+> Refatoração: melhorar o código sem alterar seu comportamento externo, mantendo qualidade a longo prazo.
+
+
+
  
 ---
 

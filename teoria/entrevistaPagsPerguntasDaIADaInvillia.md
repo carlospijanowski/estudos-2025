@@ -43,7 +43,8 @@ Quais cenários favorecem cada tecnologia e por quê? Explique também as princi
 
 ---
 
-## 4. Em um sistema distribuído onde dois microsserviços se comunicam via Kafka, como você estruturaria essa comunicação? Quais configurações essenciais você aplicaria no Producer e no Consumer para garantir confiabilidade e performance? E como lidaria com falhas de entrega, duplicidade de mensagens e ordenação?
+## 4. Em um sistema distribuído onde dois microsserviços se comunicam via Kafka, como você estruturaria essa comunicação? 
+Quais configurações essenciais você aplicaria no Producer e no Consumer para garantir confiabilidade e performance? E como lidaria com falhas de entrega, duplicidade de mensagens e ordenação?
 
 **Resposta:**
 
