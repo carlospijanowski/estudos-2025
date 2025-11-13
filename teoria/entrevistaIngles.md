@@ -68,14 +68,10 @@ Technical Skills
 ---
 
 ## 5. Relevant Projects
-
 > Every project comes with its own challenges, particularities, and unique aspects.
-> 
-> I can say I have some preferences, such as working with the latest versions of Java and Kotlin.
-> 
-> I also prefer using the most up-to-date versions of the Spring Boot framework.
-> 
-> I enjoy working with distributed systems because an application should be available, scalable, performant, and resilient.
+<br> I can say I have some preferences, such as working with the latest versions of Java and Kotlin.
+<br> I also prefer using the most up-to-date versions of the Spring Boot framework.
+<br> I enjoy working with distributed systems because an application should be available, scalable, performant, and resilient.
 
 ---
 
@@ -112,14 +108,6 @@ Technical Skills
 > “I’ve been following your company for some time, and I admire how you invest in technology and innovation.  
 > I believe I can contribute my experience to your projects while learning from a team that values quality, collaboration, and
 > continuous improvement.”
-
----
-
-## 11. What Do You Know About the Company?
-
-> “From what I’ve researched, your company is recognized for delivering high-impact digital solutions that make a real difference in
-> people’s lives.  
-> I also saw that you value diversity, technical excellence, and long-term vision — values that perfectly align with mine.”
 
 ---
 
@@ -204,8 +192,10 @@ I like Agile because it helps teams stay focused, adapt quickly, and continuousl
 ## Internal Organization Styles (how I structure each application, whether monolith or microservice)
 > 
 > Layered Architecture: presentation → domain → infrastructure/data.
-> 
-> Domain-focused Architectures: Hexagonal (Ports & Adapters), Clean, Onion.
+>  
+<br> Clean Architecture structures software into concentric layers, ensuring that business rules remain independent of frameworks, databases, and the user interface.
+<br> Hexagonal Architecture — also known as Ports and Adapters — takes a more pragmatic approach, emphasizing clear separation between contracts (ports) and their implementations (adapters).
+<br> Both architectures share the same core principle: keeping business logic at the heart of the system, while pushing technical details to the outer layers.
 > 
 ## Integration Styles (how parts communicate)
 > 
@@ -229,13 +219,18 @@ I like Agile because it helps teams stay focused, adapt quickly, and continuousl
 > Observabilidade e Resiliência (circuit breaker, retry, bulkhead, idempotência). 
 > Segurança (Zero-Trust, OAuth2/OIDC, mTLS).  
  
-## Design Detalhado (nível micro, decisões de implementação)
+## Detailed Design (micro level, implementation decisions)
 1. Princípios fundamentais (guia para escrever bom código)
-> SOLID: SRP, OCP, LSP, ISP, DIP
-> 
-> DRY (Don’t Repeat Yourself) e KISS (Keep It Simple, Stupid) - evite duplicação e complexidade desnecessária
->
-> YAGNI (You Aren’t Gonna Need It) - não implemente algo que não é necessário agora
+> SOLID: 
+<br> S -> Single Responsibility Principle (SRP) [Each class must have a single responsibility]
+<br> O -> Open/Closed Principle (OCP) [Classes must be open for extension, but closed for modification]
+<br> L -> Liskov Substitution Principle (LSP) [Subtypes must be able to replace their base types without breaking the program]
+<br> I -> Interface Segregation Principle (ISP) [Interfaces must be small and specific]
+<br> D -> Dependency Inversion Principle (DIP) [Rely on abstractions, not implementations]
+<br> 
+<br> DRY (Don’t Repeat Yourself) e KISS (Keep It Simple, Stupid) - evite duplicação e complexidade desnecessária
+<br>
+<br> YAGNI (You Aren’t Gonna Need It) - não implemente algo que não é necessário agora
 
 2. Design Patterns 
 > Design patterns are project templates — recurring solutions to common problems in software development.
@@ -259,8 +254,6 @@ I like Agile because it helps teams stay focused, adapt quickly, and continuousl
 > Refatoração: melhorar o código sem alterar seu comportamento externo, mantendo qualidade a longo prazo.
 
 
-
- 
 ---
 
 ## 5️⃣ Clean Code & Best Practices
@@ -366,45 +359,4 @@ I work mainly with Spring Boot and Spring Cloud for building microservices. I al
 These frameworks help with scalability, configuration, and integration between services.
 
 ---
-
-## 19️⃣ Good Development Practices (Clean Code, SOLID, Design Patterns)
-
-**Q:** How do you ensure maintainability and scalability in your projects?  
-**A:** I write code guided by SOLID principles and design patterns. I also believe in refactoring regularly, documenting architecture decisions, and sharing knowledge with the team. Code reviews are part of our culture.
-
----
-
-## 20️⃣ Technical Challenges
-
-**Q:** Can you describe a technical challenge you faced and how you solved it?  
-**A:** One major challenge was handling message ordering issues in Kafka. Some messages were arriving out of sequence, causing inconsistencies. I solved it by introducing a unique reference ID and ensuring message correlation logic handled concurrency correctly.
-
----
-
-## 21️⃣ Relevant Projects
-
-**Q:** What’s a project you’re most proud of?  
-**A:** A lead management platform integrated with Salesforce. It used Kafka for async communication and was built following hexagonal architecture. It was a large-scale, multi-squad project — and a great example of clean design and collaboration.
-
----
-
-## 22️⃣ International Teams & English Communication
-
-**Q:** Have you worked with international teams before?  
-**A:** Yes, I’ve worked with colleagues based in London. I used to prepare weekly reports and discuss product improvements. It helped me improve my communication skills and understand different work cultures.
-
----
-
-## 23️⃣ Career Goals
-
-**Q:** Where do you see yourself in the next few years?  
-**A:** I want to continue growing as a software architect — helping teams design scalable systems, mentoring developers, and contributing to technical decisions. I also want to improve my English and work in more international environments.
-
----
-
-## 24️⃣ Motivation to Join the Company
-
-**Q:** Why do you want to work with us?  
-**A:** I admire how your company values innovation, technology, and collaboration. I believe my background in backend systems, microservices, and cloud environments would allow me to contribute effectively — while also learning from a global team.
-
----
+ 
