@@ -106,7 +106,9 @@ Esses recursos trazem imutabilidade, segurança de tipo e código mais limpo.
 
 ---
 
-## 8. Imagine que precisamos criar um ecommerce com alta demanda. Esporadicamente vamos realizar campanhas televisivas que gerarão acessos elevados em determinados momentos. A busca de nosso ecommerce também será bastante requisitada, sendo que muitos usuários pesquisam pelo mesmo produto várias vezes ao dia. Como você estruturaria este projeto visando resolver os problemas relatados? Lembre-se que precisamos garantir escalabilidade, resiliência e rapidez.
+## 8. Imagine que precisamos criar um ecommerce com alta demanda. Esporadicamente vamos realizar campanhas televisivas que gerarão acessos elevados em determinados momentos. 
+A busca de nosso ecommerce também será bastante requisitada, sendo que muitos usuários pesquisam pelo mesmo produto várias vezes ao dia. 
+Como você estruturaria este projeto visando resolver os problemas relatados? Lembre-se que precisamos garantir escalabilidade, resiliência e rapidez.
 
 **Resposta:**
 
@@ -200,7 +202,8 @@ Uso combinado em projetos grandes (ORM + JDBC/jOOQ para hotspots).
 
 ---
 
-## 14. Descreva sua experiência na identificação e resolução de problemas em sistemas concorrentes, como deadlocks, race conditions e contenção de recursos. Cite um caso específico onde você precisou resolver um problema de concorrência.
+## 14. Descreva sua experiência na identificação e resolução de problemas em sistemas concorrentes, como deadlocks, race conditions e contenção de recursos. 
+Cite um caso específico onde você precisou resolver um problema de concorrência.
 
 **Resposta:**
 
@@ -212,7 +215,8 @@ Uso combinado em projetos grandes (ORM + JDBC/jOOQ para hotspots).
 
 ---
 
-## 15. Como você implementaria feature flags em uma aplicação Java para permitir lançamentos graduais? Explique a importância da utilização de feature flags e o potencial risco de não utilizarmos dessa metodologia.
+## 15. Como você implementaria feature flags em uma aplicação Java para permitir lançamentos graduais? 
+Explique a importância da utilização de feature flags e o potencial risco de não utilizarmos dessa metodologia.
 
 **Resposta:**
 
@@ -236,7 +240,8 @@ Uso combinado em projetos grandes (ORM + JDBC/jOOQ para hotspots).
 
 ---
 
-## 17. Descreva uma situação em que você precisou refatorar um código legado para melhorar sua manutenibilidade. Qual foi sua abordagem e quais princípios de Clean Code você aplicou?
+## 17. Descreva uma situação em que você precisou refatorar um código legado para melhorar sua manutenibilidade. 
+Qual foi sua abordagem e quais princípios de Clean Code você aplicou?
 
 **Resposta:**
 
@@ -246,7 +251,8 @@ Uso combinado em projetos grandes (ORM + JDBC/jOOQ para hotspots).
 
 ---
 
-## 18. Que estratégias você usa para mentorar desenvolvedores mais junior? Como você equilibra o tempo entre mentoria e suas próprias entregas?
+## 18. Que estratégias você usa para mentorar desenvolvedores mais junior? 
+Como você equilibra o tempo entre mentoria e suas próprias entregas?
 
 **Resposta:**
 
@@ -256,7 +262,11 @@ Uso combinado em projetos grandes (ORM + JDBC/jOOQ para hotspots).
 
 ---
 
-## 19. Você foi designado para criar uma API RESTful para gerenciamento de usuários em um sistema. A API deve permitir operações de criação, leitura, atualização e exclusão de usuários. Quais boas práticas você adotaria para garantir que essa API siga os princípios RESTful? Como você estruturaria os endpoints e utilizaria os métodos HTTP adequadamente? Cite também como lidaria com versionamento, autenticação, autorização, códigos de status HTTP e tratamento de erros.
+## 19. Você foi designado para criar uma API RESTful para gerenciamento de usuários em um sistema. 
+A API deve permitir operações de criação, leitura, atualização e exclusão de usuários. 
+Quais boas práticas você adotaria para garantir que essa API siga os princípios RESTful? 
+Como você estruturaria os endpoints e utilizaria os métodos HTTP adequadamente? 
+Cite também como lidaria com versionamento, autenticação, autorização, códigos de status HTTP e tratamento de erros.
 
 **Resposta:**
 

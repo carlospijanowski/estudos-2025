@@ -1,16 +1,7 @@
 # 🇬🇧 English Interview Practice Script
 
----
-
-Introduction
-Personal Life
-Academic Background
-Com o que trabalho atualmente
-Minhas experiências profissionais
-Relevant Projects
-Technical Skills
-
-## Introduction 
+ 
+#### Introduction 
 > Okay, let’s start!  
 > when you don’t practice, you forget a few things.
 <br> One of my _main goals_ is _to work on_ an international project — to keep improving my English skills.
@@ -20,26 +11,16 @@ Technical Skills
 <br> That same year, I also had the opportunity to be part of a team that included some English colleagues.
 <br> In that project, I was involved in several business decisions, mainly because I was the Tech Lead
 --- 
- 
-## Personal Life
+#### Personal Life
 > Hi, my name is Carlos. I’m 47 years old, married, and i have two daughters.  
 > I live in Itajaí, Its a coastal city in southern Brazil.  
 > In my free time, I love going to the beach, exploring new places, and spending time with my family.  
 > Cycling is my favorite sport — it’s how I stay active and recharge my batteries
-
 --- 
-
-## Academic Background
-
+#### Academic Background
 > I graduated in Information Systems, and later I completed two postgrad courses in IT — one in Software Engineering and another focused on Java for Web development.
-
 ---
-
-## background de trabalho
-> I have experience working as a backend software engineer, but also as a software architect and tech lead.
-<br> I have a proactive attitude at work — I’m collaborative and enjoy helping my teammates. 
-<br> I’ve mainly worked in the banking sector and retail sector. But I’m open to new challenges in different industries like healthcare, education, and logistics.
-<br> Please feel free to ask me anything about my professional experience.
+#### background de trabalho 
 
 > Pagseguro
 <br> Currently, I work as a Senior Software Engineer at PagSeguro, which is a digital payment company.
@@ -62,143 +43,112 @@ Technical Skills
 > I work in the account security domain.
 > My team is responsible for password matching and password recovery processes.
 > In addition to business and infrastructure tasks, I also investigate production issues through application monitoring and log analysis.
-
-> # Falar um pouquinho sobre outras atividades como teach lead e arquiteto de software
-
 ---
-
-## 5. Relevant Projects
+#### Falar um pouquinho sobre outras atividades como sou dev, teach lead e arquiteto de software
+> I’ve had experience as a developer, tech lead, and architect, and I really enjoy all three roles. 
+> As a developer, I like being hands-on — coding in Java and Kotlin, solving problems, and making services faster and more reliable. 
+> Besides development, I also take care of the delivery side — adjusting pipelines in Jenkins, improving CI/CD steps, 
+> managing deployments, and configuring Kubernetes. 
+> I spend a good amount of time looking at logs, traces, dashboards, and overall observability to keep the systems healthy and reliable.
+> As a tech lead, I enjoy helping the team, unblocking people, and making sure we’re aligned on good practices and clean design. 
+> And as an architect, I focus on the bigger picture — building scalable, resilient solutions and making decisions that keep the system healthy over time.
+> What I like the most is being flexible. If the team needs me coding, I code. If they need guidance, I jump in and support. 
+> If they need someone thinking about architecture and trade-offs, I’m comfortable doing that too. 
+> I like working in a collaborative environment, helping people grow, and making sure we deliver something solid together.”
+> 
+---
+#### Relevant Projects
 > Every project comes with its own challenges, particularities, and unique aspects.
 <br> I can say I have some preferences, such as working with the latest versions of Java and Kotlin.
 <br> I also prefer using the most up-to-date versions of the Spring Boot framework.
 <br> I enjoy working with distributed systems because an application should be available, scalable, performant, and resilient.
-
----
-
-## 6. Technical Skills
-
-> “I have strong experience with Java (17+), Kotlin, Spring Boot, Spring Cloud, Kafka, RabbitMQ, REST APIs, AWS, Docker, Kubernetes,
-> Maven, Git, and both PostgreSQL and Oracle.  
-> I follow Clean Code and SOLID principles, and I’m used to TDD with JUnit 5 and Mockito.  
-> For CI/CD, I work with Jenkins pipelines.  
-> I also care deeply about observability — using tools like Prometheus, Grafana, Splunk, and JaCoCo for monitoring and metrics.”
-
----
-
-## 7. Challenges Faced
-
+--- 
+#### Challenges Faced
 > “One of the biggest challenges I’ve faced was leading a migration from a monolithic system to a microservices architecture.  
 > We had to ensure data consistency, resilience, and minimal downtime.  
 > It required mentoring the team, choosing the right technologies, and keeping alignment with business goals — all under tight
 > deadlines.  
 > It was tough, but it taught me a lot about leadership and system design.”
-
 ---
-
-## 9. Career Goals
-
+#### Career Goals
 > “My main goal is to continue evolving as a software architect and help teams build **scalable, maintainable, and resilient
 > systems**.  
 > I’m also passionate about sharing knowledge — through mentoring, writing documentation, and improving engineering practices.”
-
 ---
-
-## 10. Why Do You Want to Work Here?
-
-> “I’ve been following your company for some time, and I admire how you invest in technology and innovation.  
-> I believe I can contribute my experience to your projects while learning from a team that values quality, collaboration, and
-> continuous improvement.”
-
+#### Why Do You Want to Work Here?
+> i decided that could a great opportunity professional to work in 
 ---
-
-## 12. Thanking the Interviewer
-
-> “Thank you very much for your time and the opportunity to discuss my background and experience.  
-> I’m truly excited about the possibility of contributing to your team, and I look forward to hearing from you soon.”
-> Tenha certeza que vou dar o meu melhor se eu tiver essa oportunidade.
-
+#### Thanking the Interviewer
+> “Thank you very much for your time and the opportunity to discuss my background and experience. 
 ---    
-
-## 18. How Do You See Yourself in 5 Years?
-
+#### How Do You See Yourself in 5 Years?
 > I don’t worry much about that. 
 > I just try to keep up with new tech and software architecture trends. 
 > But one of my goals is definitely to work with people from different countries. to improve my communication skills
-
 ---
-
-## 19. Strengths and Weaknesses
-
+#### Strengths and Weaknesses
 > “My main strength is problem-solving — I stay calm under pressure, analyze issues carefully, and focus on finding effective
 > solutions.  
 > I’m also very detail-oriented and committed to code quality.
 >
 > As for weaknesses, I sometimes take too much responsibility because I want everything to go perfectly.  
 > I’ve been working on delegating more and trusting others to take ownership as well.”
-
 ---
-
-## 20. Technical Challenge Example
-
+#### Technical Challenge Example
 > “One technical challenge I faced was dealing with **event ordering issues in a Kafka-based system**.  
 > Messages were arriving out of order, which caused data inconsistencies.  
 > To solve it, I introduced a unique reference ID for each message and implemented logic to ensure the correct correlation between input
 > and output events.  
 > This approach improved consistency and allowed the system to handle multiple parallel requests safely.”
-
-
-problemas!
+---
+#### problemas ao entender
 “Sorry, could you please repeat that?
 My English is a bit rusty — I haven’t practiced as much lately.
 But I’m following you”
+--- 
+
  
 ---
 
-## Scrum & Agile
+[START]
 
-**Q:** How familiar are you with Agile methodologies, such as Scrum?  
-**A:** I’ve been working in Agile environments for several years. 
-My current team follows Scrum — we have daily stand-ups, sprint planning, reviews, and retrospectives. 
-I like Agile because it helps teams stay focused, adapt quickly, and continuously deliver value.
+#### [TAG Scrum & Agile]
+>**Q:** How familiar are you with Agile methodologies, such as Scrum?  
+>**A:** I’ve been working in Agile environments for several years.
+>My current team follows Scrum — we have daily stand-ups, sprint planning, reviews, and retrospectives.
+>I like Agile because it helps teams stay focused, adapt quickly, and continuously deliver value.
 
----
-
-## 2️⃣ Software Architecture
-
-**Q:** What’s your approach to designing software architecture?  
-**A:** I usually follow principles of modularity and scalability. I’m a big fan of Hexagonal Architecture and Domain-Driven Design because they keep the codebase clean and easy to maintain. I also value clear separation of concerns and well-defined APIs between services.
-
----
-
-## 3️⃣ Arquitetura de Software (nível macro, decisões estruturais)
-
+#### [TAG Backend & Architecture] HIGH LEVEL
+> # Arquitetura de Software (nível macro, decisões estruturais)
+>
 > when we talk about software architecture, we can divide it into three main areas:
-
-## Distribution Styles (how I divide the system into applications/services)
-> 
+> ### 1 - Distribution Styles, 
+> ### 2 - Internal Organization Styles and 
+> ### 3 - Integration Styles
+>
+> ### 1 - Distribution Styles (how I divide the system into applications/services)
 > Monolith (or Modular Monolith)
 > Pros and cons: simple to develop, test, and deploy; difficult to scale and maintain as it grows.
-> 
+>
 > SOA (Service-Oriented Architecture): larger services sharing contracts; usually more tightly coupled than microservices.
 > Pros and cons: simplifies integration with legacy systems; can lead to bottlenecks and complexity with an ESB.
-> 
+>
 > Microservices: small, independent services aligned with bounded contexts (DDD).
 > Note: bounded contexts are parts of the domain that have their own language and model, and can be implemented as separate microservices.
 > Pros and cons: improves scalability and maintainability; more complex to develop, test, and deploy.
-> 
+>
 > Serverless: functions or containers managed by a cloud provider, paying only for usage.
 > Pros and cons: reduces infrastructure overhead; may have execution limits and vendor lock-in.
-> 
-## Internal Organization Styles (how I structure each application, whether monolith or microservice)
-> 
+>
+---
+> ### 2 - Internal Organization Styles (how I structure each application, whether monolith or microservice)
 > Layered Architecture: presentation → domain → infrastructure/data.
->  
-<br> Clean Architecture structures software into concentric layers, ensuring that business rules remain independent of frameworks, databases, and the user interface.
-<br> Hexagonal Architecture — also known as Ports and Adapters — takes a more pragmatic approach, emphasizing clear separation between contracts (ports) and their implementations (adapters).
-<br> Both architectures share the same core principle: keeping business logic at the heart of the system, while pushing technical details to the outer layers.
+> Clean Architecture structures software into concentric layers, ensuring that business rules remain independent of frameworks, databases, and the user interface.
+> Hexagonal Architecture — also known as Ports and Adapters — takes a more pragmatic approach, emphasizing clear separation between contracts (ports) and their implementations (adapters).
+> Both architectures share the same core principle: keeping business logic at the heart of the system, while pushing technical details to the outer layers.
 > 
-## Integration Styles (how parts communicate)
-> 
+---
+> ### 3 - Integration Styles (how parts communicate)
 > Synchronous via API:
 > REST, gRPC, GraphQL (API-Driven).
 > → gRPC is a remote communication framework developed by Google that uses HTTP/2 for transport and Protobuf for data serialization.
@@ -212,151 +162,1686 @@ I like Agile because it helps teams stay focused, adapt quickly, and continuousl
 > Serverless – FaaS: AWS Lambda, Azure Functions (funções). 
 > Serverless – Containers: Cloud Run, AWS App Runner (containers sem gerenciar servidores). 
 > BaaS (quando aplicável): Cognito/Auth0, Firebase, etc. (terceiriza capabilities).  
+--- 
 
-> Abordagens e práticas que atravessam estilos 
-> DDD (ubiquitous language, bounded contexts, agregados). 
-> API-First (OpenAPI, contrato antes do código). 
-> Observabilidade e Resiliência (circuit breaker, retry, bulkhead, idempotência). 
-> Segurança (Zero-Trust, OAuth2/OIDC, mTLS).  
+#### [TAG Backend & Architecture] LOW LEVEL
+It’s a set of engineering practices that support the architecture by keeping components cohesive, decoupled, and easy to evolve
+aqui entra: solid etc
+
+#### [TAG Design & Development Practices]
+> How do you ensure code quality?  
+> I see code quality as a set of practices that need to work together in harmony.
+>
+> ## Applying development techniques
+> Applying development techniques involves adopting structured engineering practices to improve code quality and system longevity.
+> This includes clean code principles, SOLID, design patterns, test-driven development when appropriate, continuous integration, refactoring, and documentation.
+> These techniques minimize technical debt, reduce coupling, and help the architecture remain consistent and scalable.
+> 
+> @SOLID
+> S -> Single Responsibility Principle (SRP) [Each class must have a single responsibility]
+> O -> Open/Closed Principle (OCP) [Classes must be open for extension, but closed for modification]
+> L -> Liskov Substitution Principle (LSP) [Subtypes must be able to replace their base types without breaking the program]
+> I -> Interface Segregation Principle (ISP) [Interfaces must be small and specific]
+> D -> Dependency Inversion Principle (DIP) [Rely on abstractions, not implementations]
+>
+> @DRY (Don’t Repeat Yourself) e KISS (Keep It Simple, Stupid) - evite duplicação e complexidade desnecessária
+>
+> @YAGNI (You Aren’t Gonna Need It) - não implemente algo que não é necessário agora
+> I also value peer code reviews, static analysis tools like SonarQube, and a solid base of unit tests to maintain a consistent and high-quality codebase.
+>
+> ## Applying engineering techniques
+> I apply Domain-Driven Design (DDD) to keep business logic organized and modular.
+> I use TDD when it makes sense, because it helps produce more reliable code with less rework.
+> In some cases, I use BDD to ensure the system reflects the expected behavior from the user or business perspective.
+>
+> ## In the code workflow and versioning 
+> Before any merge, we always perform a code review.
+> We use semantic commits to keep the Git history clean and easy to trace.
+> And we follow good versioning and workflow practices using Git and GitHub (or GitLab, depending on the project).
+
+> @Design paterns
+> “The three main categories are creational, structural, and behavioral. 
+> For example, Singleton, Factory Method, and Builder are creational patterns that focus on object creation…”
+> 1**Creational Patterns**
+> Singleton
+> Ensures there is only one instance of a class and provides a global point of access to it.
+> Example: an application-wide ConfigurationManager.
+> 
+> Factory Method
+> Defines an interface for creating objects, but lets subclasses decide which concrete class to instantiate.
+> Example: creating different types of PaymentProcessor depending on the payment method.
+> 
+> Builder
+> Separates the construction of a complex object from its representation, allowing you to build the object step by step.
+> Example: building an Order object with many optional fields.
+> 
+> **Structural Patterns**
+> Adapter
+> Converts the interface of a class into another interface that clients expect.
+> Example: adapting an external API to match the internal model of your application.
+> 
+> Decorator
+> Adds extra behavior to an object dynamically, without changing the original class.
+> Example: adding logging, metrics, or caching around a Service.
+> 
+> Facade
+> Provides a simple interface to a complex subsystem or set of classes.
+> Example: a PaymentFacade that orchestrates fraud check, charging, and notification.
+> 
+> **Behavioral Patterns**
+> Strategy
+> Defines a family of algorithms and makes them interchangeable at runtime.
+> Example: different strategies to calculate shipping cost or discounts.
+> 
+> Observer
+> Defines a one-to-many dependency, where multiple objects are notified automatically when another object’s state changes.
+> Example: publishing events to listeners when an order is approved.
+> 
+> Chain of Responsibility
+> Lets you pass a request along a chain of handlers, where each handler decides whether to process the request or pass it to the next one.
+> Example: a validation pipeline for a request or business rules.
+> If you want, next I can turn this into a spoken answer like:
+> 
+---
+
+#### [TAG Security & Communication] 
+> We use OAuth2 and JWT tokens for authentication and authorization.
+<br> Encryption protects sensitive data in transit and at rest.
+<br> gRPC and Protobuf improve performance for inter-service communication.
+<br> Every request is logged for tracing and metrics.
+<br> Logging, metrics, and tracing are the pillars of observability.
+<br> We use Grafana and Prometheus for dashboards and alerting.
+<br> OpenTelemetry standardizes our monitoring data.
+<br> Splunk and Jaeger help analyze logs and distributed traces.
+<br> Circuit breakers prevent cascading failures in distributed systems.
+<br> We rely on load testing to assess system performance.
  
-## Detailed Design (micro level, implementation decisions)
-1. Princípios fundamentais (guia para escrever bom código)
-> SOLID: 
-<br> S -> Single Responsibility Principle (SRP) [Each class must have a single responsibility]
-<br> O -> Open/Closed Principle (OCP) [Classes must be open for extension, but closed for modification]
-<br> L -> Liskov Substitution Principle (LSP) [Subtypes must be able to replace their base types without breaking the program]
-<br> I -> Interface Segregation Principle (ISP) [Interfaces must be small and specific]
-<br> D -> Dependency Inversion Principle (DIP) [Rely on abstractions, not implementations]
-<br> 
-<br> DRY (Don’t Repeat Yourself) e KISS (Keep It Simple, Stupid) - evite duplicação e complexidade desnecessária
+#### [TAG SPRING] 
+> Spring Boot accelerates backend development in Java.
+<br> Spring Cloud helps manage distributed microservices.
+> 
+> 🔵 Spring Core
+➡️ É o “baú de LEGO”: todas as peças existem, mas você monta tudo na mão.
+🟢 Spring Boot
+➡️ É o “lego já pré-montado”: você só encaixa algumas peças e o restante vem pronto.
+🟣 Spring Starters
+➡️ São “kits prontos de peças relacionadas”.
+> 
+> “Eu trabalho com o ecossistema Spring de forma completa.
+No Spring Core, uso módulos como spring-core, spring-context, spring-aop e spring-webmvc, que fornecem IoC, DI e a base do MVC.
+Com o Spring Boot, utilizo starters para facilitar a configuração, como Web, Data JPA, Security e Actuator.
+Entendo que os starters são agrupadores de dependências que automatizam a configuração do Spring Core.
+Também trabalho com o ecossistema Spring Cloud para microsserviços.”
+>x 
+<br>Web/REST
+<br>spring-boot-starter-web (Spring MVC), spring-boot-starter-webflux (reativo)
+<br>spring-boot-starter-validation (Jakarta Validation), jackson-databind (JSON)
+<br>Persistência e dados
+<br>spring-boot-starter-data-jpa (Hibernate), spring-boot-starter-data-mongodb
+<br>spring-boot-starter-data-redis (cache/pubsub), spring-boot-starter-jdbc
+<br>flyway-core ou liquibase-core (migrações)
+<br>Segurança
+<br>spring-boot-starter-security, spring-security-oauth2-client/resource-server
+<br>Mensageria
+<br>spring-kafka, spring-retry, resilience4j-*
+<br>spring-amqp (RabbitMQ)
+<br>Integração/Cloud
+<br>spring-cloud-openfeign (HTTP clients tipados)
+<br>spring-cloud-starter-config (external config), eureka-client/consul-discovery
+<br>spring-cloud-starter-gateway (quando BFF/API Gateway)
+<br>Observabilidade
+<br>spring-boot-starter-actuator, micrometer-registry-*
+<br>opentelemetry-exporter-otlp (ou auto-instrumentation)
+<br>Docs
+<br>springdoc-openapi-starter-webmvc-ui (Swagger UI)
+<br>Job/Batch/Agendamento
+<br>spring-boot-starter-batch, spring-boot-starter + @EnableScheduling
+<br>Testes
+<br>spring-boot-starter-test, mockito-core, wiremock-jre8, testcontainers
+<br>Qualidade e utilitários
+<br>mapstruct (mapeamento), lombok (boilerplate), hibernate-validator
 <br>
-<br> YAGNI (You Aren’t Gonna Need It) - não implemente algo que não é necessário agora
-
-2. Design Patterns 
-> Design patterns are project templates — recurring solutions to common problems in software development.
->
-> There are three main types: creational, structural, and behavioral.
->
-> For creational patterns, I usually use Factory, Singleton, and Builder.
->
-> For structural patterns, I often use Adapter and Facade.
->
-> And for behavioral patterns, I tend to use Strategy and Chain of Responsibility.
-
-3. Práticas de desenvolvimento
-> CI/CD (Integração e Entrega Contínua): automação de build, testes e deploy.
->
-> TDD (Test-Driven Development): escrever testes antes do código para guiar o design.
->
-> Clean Code: legibilidade, simplicidade, nomes significativos, evitar complexidade desnecessária.
-    
-4. Evolução e manutenção
-> Refatoração: melhorar o código sem alterar seu comportamento externo, mantendo qualidade a longo prazo.
-
-
+> 
 ---
-
-## 5️⃣ Clean Code & Best Practices
-
-**Q:** How do you ensure code quality?  
-**A:** I always follow Clean Code and SOLID principles — keeping methods small, using meaningful names, and writing readable code. I also value peer reviews, static analysis tools like SonarQube, and unit tests to maintain a high-quality codebase.
-
----
-
-## 6️⃣ Automated Testing
-
-**Q:** What’s your experience with automated testing?  
-**A:** I work with JUnit 5 and Mockito for unit testing, and I use Testcontainers when integration tests require external dependencies. I believe tests are essential not just to find bugs but to improve design and make refactoring safer.
-
----
-
-## 7️⃣ CI/CD
-
-**Q:** How do you handle CI/CD in your team?  
-**A:** We use Jenkins for our CI/CD pipelines. Every commit triggers automatic builds, tests, and deployments. 
-We follow a multistage pipeline approach — from QA to production — ensuring every change passes all validations before going live.
-CI and CD are ways to deliver code automatically.
-there are some tools available.
-Right now, I work with Jenkins. I’ve also used Jenkins in other companies before.
-But there are other options, like Bitbucket, GitHub Actions, and Azure Pipelines. all of them are good options. 
----
-
-## 8️⃣ Cloud Computing (AWS, GCP, Azure)
-
-**Q:** What’s your experience with cloud environments?  
-**A:** I mainly work with AWS, using services like S3, SQS, and ECR for our deployments. But we also operate in a private cloud called PagCloud, which makes us a multicloud environment. I like this setup because it gives flexibility and resilience.
-
----
-
-## 9️⃣ Containerization & Orchestration (Docker, Kubernetes)
-
-**Q:** Do you have experience with Docker or Kubernetes?  
-**A:** Yes, I use Docker for building and packaging our applications, and we deploy everything on Kubernetes. I usually define deployments, services, and ingress configurations in YAML. I’ve also worked with blue-green and rollout deployment strategies.
-
----
-
-## 🔟 Messaging & Queues (Kafka, RabbitMQ, SQS)
-
-**Q:** What kind of messaging systems have you worked with?  
-**A:** I’ve worked mainly with Kafka and RabbitMQ. In my current projects, we use Kafka with Avro serialization for async communication between services. I’ve also used SQS on AWS for decoupled message-based workflows.
-
----
-
-## 11️⃣ Databases (Relational & NoSQL)
-
-**Q:** Which databases have you worked with?  
-**A:** I have experience with both relational and non-relational databases. I’ve worked with PostgreSQL, MySQL, and Oracle — and for NoSQL, mainly MongoDB and DynamoDB. I usually design schemas with performance and scalability in mind.
-
-
----
-
-## 12️⃣ Monitoring & Observability
-
-**Q:** How do you monitor your services in production?  
-**A:** We use Prometheus and Grafana for metrics, and OpenTelemetry for tracing. I’ve also worked with Splunk and Jaeger for log and span analysis. Observability is key — it helps detect issues early and keeps our systems reliable.
-
----
-
-## 13️⃣ Information Security
-
-**Q:** How do you handle security in your applications?  
-**A:** I follow security best practices like using OAuth2 and JWT for authentication and authorization. I also apply encryption where needed and avoid exposing sensitive data in logs. Security is a top priority, especially in account-related systems.
-
----
-
-## 14️⃣ Development Methodologies (TDD, BDD, DDD)
-
-**Q:** Which development practices do you follow?  
-**A:** I apply TDD for unit testing and sometimes BDD for behavior validation when working with business teams. I also follow DDD concepts — separating domains and focusing on the business language within the code.
-
----
-
-## 15️⃣ Version Control (Git, GitHub, GitLab)
-
-**Q:** What’s your workflow with Git?  
-**A:** I use Git every day, following GitFlow or trunk-based branching depending on the project. I create pull requests, review code, and use semantic commit messages to keep our history clear and organized.
-
----
-
-## 16️⃣ Build & Dependency Management (Maven, Gradle)
-
+## [TAG JAVA] 
+> Build & Dependency Management (Maven, Gradle) 
 **Q:** Which build tools do you use?  
 **A:** I’ve used both Maven and Gradle. At PagSeguro, most Kotlin projects use Gradle because it’s faster and easier to configure. For older Java projects, I still maintain Maven builds. I like keeping dependencies well-managed and versioned.
 
----
-
-## 17️⃣ Programming Languages (Java, Kotlin)
-
+> Programming Languages (Java, Kotlin) 
 **Q:** Which language do you prefer, Java or Kotlin?  
 **A:** I’m comfortable with both, but Kotlin is my favorite for backend development — it’s concise, expressive, and reduces boilerplate code. Still, I appreciate Java’s stability and ecosystem. I switch between them easily depending on the project.
-
+>
 ---
-
-## 18️⃣ Frameworks & Libraries (Spring Boot, Spring Cloud, Hibernate)
-
-**Q:** What frameworks are you most experienced with?  
-I work mainly with Spring Boot and Spring Cloud for building microservices. I also use Hibernate and JPA for persistence. 
-These frameworks help with scalability, configuration, and integration between services.
-
----
+#### [TAG TESTING] Understanding Testing in Backend Development
+> When we talk about testing, we can actually be referring to several different types of tests within backend development.
+>
+> We might be talking about unit tests, where we test individual components or functions in isolation. These tests make sure that each small part of the system works as expected.
+> In Java, for example, we often use frameworks like JUnit and Mockito to create and execute unit tests. JUnit provides the structure for writing the tests, while Mockito helps us mock dependencies, simulating external behavior without needing to connect to real services or databases.
+>
+> We can also be referring to integration tests. Unlike unit tests, these validate how different parts of the system work together — for example, how a service interacts with a database, or how two microservices communicate through an API. Integration testing ensures that the system behaves correctly as a whole.
+>
+> Another important type is stress testing (or load testing). These tests check how the system behaves under heavy load — for instance, when thousands of users try to access the same resource at the same time. Stress tests are essential to verify scalability, performance, and resilience, ensuring the system can handle real-world traffic without failures.
+>
+> We can also talk about mocked tests or simulated tests, often implemented with tools like WireMock. This approach is useful when we want to test interactions with external systems or APIs that are not available or are expensive to call in real time. WireMock lets us create fake endpoints that return predefined responses, allowing consistent and repeatable testing scenarios.
+>
+> In summary, testing in backend development is not just about checking if the code works — it’s about ensuring reliability, maintainability, and confidence in the software.
+> A good testing strategy usually combines multiple levels of testing — unit, integration, system, and performance — to cover the system from the smallest function to the most complex real-world scenario.
+--- 
+>
+#### [TAG CI/CD] jenkis etc
+> about
+<br> **Q:** How do you handle CI/CD in your team?  
+<br> **A:** We use Jenkins for our CI/CD pipelines. Every commit triggers automatic builds, tests, and deployments.
+<br> We follow a multistage pipeline approach — from QA to production — ensuring every change passes all validations before going live.
+<br> CI and CD are ways to deliver code automatically.
+<br> there are some tools available.
+<br> Right now, I work with Jenkins. I’ve also used Jenkins in other companies before.
+<br> But there are other options, like Bitbucket, GitHub Actions, and Azure Pipelines. all of them are good options. 
  
+> Continuous Integration (CI) ensures that code changes are automatically tested.
+<br> Continuous Deployment (CD) automates the release of new features.
+<br> DevOps bridges the gap between development and operations.
+<br> Observability helps us understand the system’s behavior in production.
+<br> Scalability means the system can handle increasing traffic.
+<br> Resilience ensures recovery from failures.
+<br> Load balancing distributes traffic evenly among servers.
+<br> Fault tolerance allows the system to keep working even if one part fails.
+<br> Infrastructure as Code (IaC) lets us manage servers using versioned scripts.
+<br> We use a service mesh to handle communication between microservices.
+>
+## [TAG CLOUD]  
+> Cloud Computing (AWS, GCP, Azure)
+**Q:** What’s your experience with cloud environments?  
+**A:** I mainly work with AWS, using services like S3, SQS, and ECR for our deployments. But we also operate in a private cloud called PagCloud, which makes us a multicloud environment. I like this setup because it gives flexibility and resilience.
+>
+## [TAG KUBERNETES]  
+> Containerization & Orchestration (Docker, Kubernetes) 
+**Q:** Do you have experience with Docker or Kubernetes?  
+**A:** Yes, I use Docker for building and packaging our applications, and we deploy everything on Kubernetes. I usually define deployments, services, and ingress configurations in YAML. I’ve also worked with blue-green and rollout deployment strategies.
+>
+
+[END]
+--------------------------------------------------------------------------
+
+## [TAG INVILLIA] 
+## 1. Se você tivesse que escolher entre RabbitMQ e Kafka para um novo sistema, quais critérios levaria em consideração?
+Quais cenários favorecem cada tecnologia e por quê? Explique também as principais diferenças entre filas e tópicos em sistemas de mensageria.
+
+## 2. Como você utilizaria os serviços AWS (SNS, SQS, S3) para criar uma arquitetura escalável e tolerante a falhas?
+
+## 3. Quais métricas você considera essenciais para monitorar em um ambiente de microserviços? Como implementaria a observabilidade?
+Com quais ferramentas você já trabalhou?
+
+## 4. Em um sistema distribuído onde dois microsserviços se comunicam via Kafka, como você estruturaria essa comunicação?
+
+## 5. Explique como você projetaria um banco de dados para um sistema de alta escala. Quando optaria por SQL vs NoSQL?
+
+## 6. Imagine que você está liderando uma equipe DevOps em um projeto crítico com múltiplos desenvolvedores trabalhando simultaneamente.
+Como você utilizaria Git-Flow para gerenciar releases, hotfixes e branches de desenvolvimento, garantindo integração contínua e minimizando conflitos? Quais práticas avançadas você recomendaria para otimizar esse fluxo?
+
+## 7. Quais recursos introduzidos no Java 16 ou superior você já utilizou, como records, sealed classes, ou melhorias no Pattern Matching?
+Explique como esses recursos funcionam e em quais cenários você os considera vantajosos.
+
+## 8. Imagine que precisamos criar um ecommerce com alta demanda. Esporadicamente vamos realizar campanhas televisivas que gerarão
+acessos elevados em determinados momentos.
+
+## 9. Como você implementaria uma arquitetura de microserviços resiliente utilizando Java? Descreva os padrões que utilizaria para
+garantir alta disponibilidade.
+
+## 10. Em um sistema de microserviços, como você lidaria com transações distribuídas que envolvem múltiplos serviços e bases de dados?
+
+## 11. Como você abordaria a implementação de uma feature que exige alta performance e precisa processar grandes volumes de dados em tempo real?
+
+## 12. Na sua experiência com Java, quais os trade-offs entre utilizar um ORM como Hibernate/JPA e JDBC puro?
+## Cite quais cenários você recomendaria cada abordagem, considerando aspectos como performance, produtividade e manutenibilidade.
+
+> ## 13. Descreva como você configuraria um aplicativo Spring Boot para um ambiente de produção de alta disponibilidade.
+> Cite quais recursos específicos do Spring Boot (como profiles, externalized configuration, actuators) você utilizaria e
+> como implementaria métricas personalizadas.
+
+## 14. Descreva sua experiência na identificação e resolução de problemas em sistemas concorrentes, como deadlocks, race conditions e
+contenção de recursos.
+
+## 15. Como você implementaria feature flags em uma aplicação Java para permitir lançamentos graduais?
+
+## 16. Quais estratégias você utiliza para garantir a qualidade do código? Como você implementaria uma pipeline de CI/CD com Jenkins
+que inclua testes e análise de Sonar?
+
+## 17. Descreva uma situação em que você precisou refatorar um código legado para melhorar sua manutenibilidade.
+
+## 18. Que estratégias você usa para mentorar desenvolvedores mais junior?
+
+## 19. Você foi designado para criar uma API RESTful para gerenciamento de usuários em um sistema.
+
+## 20. Como você estrutura seus testes unitários em projetos Java? Quais boas práticas você segue para garantir que os testes sejam confiáveis,
+legíveis e de fácil manutenção? Pode citar ferramentas que costuma utilizar e como você lida com mocks e dependências externas?
+
+
+---
+
+
+
+
+
+
+
+
+> 100 Most Useful English Verbs for IT Professionals
+1–20: Core Daily Workflow
+
+>Build – compile or assemble
+<br>We build the project using Maven.
+<br>Deploy – send to an environment
+<br>We deploy to QA every morning.
+<br>Release – publish a new version
+<br>We will release 1.2.0 today.
+<br>Run – execute
+<br>Run the tests before committing.
+<br>Test – verify something
+<br>Test the endpoint locally.
+<br>Fix – correct a problem
+<br>I fixed the null pointer issue.
+<br>Debug – analyze errors
+<br>Let’s debug the failing service.
+<br>Improve – make better
+<br>We need to improve performance.
+<br>Review – check code or docs
+<br>Can you review my PR?
+<br>Merge – combine branches
+<br>We merge to main only after approval.
+<br>Commit – send code to Git
+<br>Commit with a clear message.
+<br>Push – upload to remote
+<br>Push your branch when ready.
+<br>Pull – download changes
+<br>Pull the latest updates before developing.
+<br>Refactor – reorganize code
+<br>We should refactor this service.
+<br>Document – write documentation
+<br>Please document the API behavior.
+Configure – set parameters
+Configure the Kafka consumer correctly.
+<br>
+<br>Optimize – make more efficient
+<br>We optimized the SQL queries.
+<br>
+<br>Validate – check correctness
+<br>Validate the input before saving.
+✅ Neutral/Professional:
+"Once the code is written, we should test the API."Map – convert from one structure to another
+We map the DTO to the domain object.
+✅ More formal:
+"After implementing the code, it's important to validate the API."Authenticate – verify identity
+The user is authenticated through Cognito.
+✅ Casual/Team discussion:
+"When we're done coding, let's test the API to make sure everything works."21–40: Backend & Architecture
+<br>Authorize – give access
+<br>Only admins are authorized.
+
+Consume – read from Kafka/SQS
+This service consumes the event.
+
+Produce – send to Kafka/SQS
+We produce a message after saving.
+
+Handle – manage an event/error
+The controller handles exceptions.
+
+Persist – save permanently
+We persist the data in Postgres.
+
+Query – ask the database
+We query the customers table.
+
+Cache – store temporarily
+We cache responses in Redis.
+
+Expose – make available
+The API exposes four endpoints.
+
+Inject – provide dependency
+Spring injects the repository automatically.
+
+Implement – create logic for an interface
+We implemented the port adapter.
+
+Extend – inherit
+The class extends the base entity.
+
+Handle – process an event/error
+The service handles all retries.
+
+Throw – raise an exception
+Throw an error if the result is empty.
+
+Return – send a response
+The endpoint returns a JSON object.
+
+Log – record information
+We log all authentication attempts.
+
+Encrypt – secure data
+Encrypt the password before saving.
+
+Deploy – put into production
+We deploy through GitHub Actions.
+
+Scale – increase capacity
+We scaled the service to three replicas.
+
+Monitor – observe behavior
+Monitor latency in Grafana.
+
+Fail – stop working
+The request fails when the token expires.
+
+41–60: Cloud, DevOps & Infrastructure
+
+Provision – create a resource
+Terraform provisions the cluster.
+
+Trigger – start an action
+A push to develop triggers the pipeline.
+
+Rollback – return to previous version
+We rolled back due to errors.
+
+Authenticate – verify identity
+Lambda authenticates the request.
+
+Authorize – check permissions
+APIGW authorizes the user.
+
+Deploy – send to cloud
+ECS deploys the new task definition.
+
+Retry – try again
+Kafka retries three times.
+
+Scale – adjust resources
+K8s scales according to CPU usage.
+
+Containerize – package into Docker
+We containerized the application.
+
+Route – forward traffic
+The ingress routes the request to service A.
+
+Expose – open a port
+The deployment exposes port 8080.
+
+Manage – control resources
+We manage secrets with Vault.
+
+Rotate – replace periodically
+We rotate the credentials weekly.
+
+Observe – visualize metrics
+Observe memory usage closely.
+
+Store – keep data
+S3 stores all uploaded files.
+
+Sync – keep aligned
+The DB syncs with the legacy system.
+
+Failover – switch to backup
+RDS failed over automatically.
+
+Backup – save for recovery
+We back up the table daily.
+
+Recover – restore after failure
+The service recovered after restart.
+
+Alert – notify
+Prometheus alerts when latency increases.
+
+61–80: Collaboration & Meetings
+
+Discuss – talk about
+Let’s discuss this in the refinement.
+
+Align – reach agreement
+We need to align with the PO.
+
+Schedule – plan a time
+Schedule a meeting with the team.
+
+Share – provide information
+Share the logs, please.
+
+Present – show something
+I’ll present the architecture proposal.
+
+Confirm – validate information
+Can you confirm the requirements?
+
+Request – ask formally
+We requested a new SQS queue.
+
+Report – communicate status
+I reported the issue to SRE.
+
+Deliver – complete a task
+We deliver the feature this sprint.
+
+Assess – evaluate
+We assessed the design trade-offs.
+
+Estimate – guess effort
+We estimated eight story points.
+
+Prioritize – define order
+Let’s prioritize bugs first.
+
+Plan – organize
+We plan the next iteration tomorrow.
+
+Track – follow progress
+Track the task in Jira.
+
+Lead – guide a team
+Carlos leads the backend chapter.
+
+Assist – help
+I assisted the QA team with tests.
+
+Guide – mentor
+I guided the junior devs.
+
+Explain – make clear
+Let me explain the sequence diagram.
+
+Negotiate – find middle ground
+We negotiated the API contract.
+
+Collaborate – work together
+We collaborate across squads.
+
+81–100: Thinking, Problem Solving & Quality
+
+Analyze – understand deeply
+We analyzed the logs.
+
+Investigate – search for root cause
+SRE is investigating the incident.
+
+Identify – find a problem
+We identified a memory leak.
+
+Evaluate – judge a solution
+Evaluate if this approach is safe.
+
+Predict – estimate future behavior
+We predict high load on Black Friday.
+
+Design – architect something
+We designed a hexagonal structure.
+
+Architect – plan high-level structure
+He architected the entire platform.
+
+Prototype – create initial version
+We prototyped the feature.
+
+Test – verify correctness
+We test all edge cases.
+
+Measure – quantify
+Measure the response time.
+
+Compare – analyze differences
+Compare JSON before and after mapping.
+
+Estimate – calculate effort
+Estimate the complexity honestly.
+
+Detect – find problems
+We detect anomalies with Prometheus.
+
+Prevent – avoid issues
+We prevent downtime with autoscaling.
+
+Document – explain in writing
+Document the API request flow.
+
+Standardize – unify approach
+We standardized the logging pattern.
+
+Automate – remove manual steps
+We automated deployments with CI/CD.
+
+Monitor – observe behavior
+Monitor Apdex after the fix.
+
+Warn – notify users
+The system warns when the token expires.
+
+Adapt – adjust to context
+We adapted the strategy for PCI.
+
+------------------------
+verbos mais usados
+
+implement  
+develop  
+code  
+refactor  
+test  
+deploy  
+debug  
+build  
+design  
+integrate  
+document  
+validate  
+execute  
+return  
+fetch  
+handle  
+parse  
+persist  
+map  
+convert  
+expose  
+consume  
+register  
+configure  
+synchronize  
+decouple  
+encapsulate  
+inject  
+scale  
+monitor  
+analyze  
+identify  
+compare  
+evaluate  
+decide  
+calculate  
+determine  
+estimate  
+optimize  
+review  
+discuss  
+align  
+share  
+update  
+mention  
+suggest  
+clarify  
+explain  
+point out  
+agree  
+support  
+help  
+collaborate  
+participate  
+join  
+contribute  
+assign  
+delegate  
+attend  
+coordinate  
+plan  
+prioritize  
+estimate  
+deliver  
+define  
+create  
+schedule  
+track  
+complete  
+review  
+provision  
+automate  
+containerize  
+orchestrate  
+scale  
+tune  
+monitor  
+log  
+restart  
+describe  
+explain  
+summarize  
+highlight  
+share  
+demonstrate  
+mention  
+justify  
+recall  
+emphasize  
+catch  
+throw  
+fail  
+retry  
+warn  
+log  
+alert  
+crash  
+fix  
+recover
+ 
+------------------------------------
+falsos cognatos
+
+⭐ Eventually (no fim das contas / finalmente)
+Eventually, we fixed the bug in production.
+Eventually, the legacy service will be replaced.
+After hours of debugging, we eventually found the root cause.
+
+⭐ Actually (na verdade)
+Actually, the issue wasn’t in our API — it was in the provider.
+Actually, we don’t need a refactor; just a config change.
+I thought it was a database problem, but actually it was a caching issue.
+
+⭐ Atualmente (in English = "currently", "nowadays")
+Atualmente, estamos usando Java 21 no projeto.
+Atualmente, o serviço roda no cluster de QA.
+Atualmente, temos três squads trabalhando na mesma feature.
+
+⭐ Eventualmente (in English = "occasionally" / "at some point")
+Eventualmente, vamos precisar migrar esse serviço para Kubernetes.
+Eventualmente, algum request vai falhar — precisamos tratar os erros.
+Eventualmente, teremos que revisar a arquitetura desse módulo.
+
+🔥 Resumo para memorizar
+Eventually = finalmente / no fim das contas.
+Actually = na verdade.
+Atualmente = currently / nowadays.
+Eventualmente = occasionally / at some point.
+------------------------------------
+
+Lista de Verbos — Falsos Cognatos em Inglês
+⭐ 1. Pretend
+TI:
+Don’t pretend the system is stable; the metrics show otherwise.
+We can pretend the API is down to test our fallback.
+Java Backend:
+3. In the unit test, we pretend the repository returns an empty list.
+4. Don’t pretend the JVM memory leak will fix itself.
+
+⭐ 2. Intend
+TI:
+We intend to migrate everything to Kubernetes next quarter.
+I intend to refactor this module before the next release.
+Java Backend:
+3. I intend to remove the synchronous call inside this loop.
+4. The team intends to rewrite this service using Spring Boot 3.
+
+⭐ 3. Support
+TI:
+We support multiple authentication methods in this platform.
+The tool doesn’t support multi-region deployments yet.
+Java Backend:
+3. Our microservice now supports async processing with CompletableFuture.
+4. The API supports pagination through query parameters.
+
+⭐ 4. Discuss
+TI:
+We need to discuss the security implications of this feature.
+Let’s discuss how this change affects the architecture.
+Java Backend:
+3. We should discuss whether to use Feign or WebClient.
+4. Let’s discuss a better structure for the DTOs.
+
+⭐ 5. Realize
+TI:
+I didn’t realize the pipeline was failing since yesterday.
+We realized the alert wasn’t configured correctly.
+Java Backend:
+3. I realized the mapper was dropping fields silently.
+4. We realized the JPA entity was not matching the database schema.
+
+⭐ 6. Attend
+TI:
+I can’t attend the meeting; I’m reviewing a production incident.
+She attended the architecture workshop yesterday.
+Java Backend:
+3. I attended the Spring Boot 3 migration training.
+4. He attended the review session for the new API contract.
+
+⭐ 7. Assist
+TI:
+I’ll assist you with the CI configuration.
+She assisted the team during the outage.
+Java Backend:
+3. I assisted my peer with debugging the Kafka consumer.
+4. He assisted in rewriting the authentication filter.
+
+⭐ 8. Compromise
+TI:
+We may need to compromise on the delivery timeline.
+The teams compromised on a shared approach to logging.
+Java Backend:
+3. We compromised by using a shared DTO instead of rewriting everything.
+4. They compromised on using Redis rather than an in-memory cache.
+
+⭐ 9. Resume
+TI:
+Let’s resume after the deploy is complete.
+We’ll resume the discussion tomorrow.
+Java Backend:
+3. We can resume testing after fixing the failing controller.
+4. Let’s resume coding once the integration tests pass.
+
+⭐ 10. Notice
+TI:
+Did you notice the CPU spike in the dashboard?
+I noticed the logs were duplicated.
+Java Backend:
+3. I noticed the service wasn’t releasing database connections.
+4. She noticed the Kafka offsets weren’t moving forward.
+
+⭐ 11. Ignore
+TI:
+Don’t ignore these alerts; they’re critical.
+The system should ignore invalid requests.
+Java Backend:
+3. We can’t ignore null fields in this DTO.
+4. The validator shouldn’t ignore empty strings.
+
+⭐ 12. Injure
+(Not used literally in TI, but still usable figurativamente.)
+TI:
+That outage really “injured” our SLA for the month.
+A bad release can injure the team’s reputation.
+Java Backend:
+3. Poor error handling injured performance in production.
+4. That huge SQL query injured the service’s response time.
+
+⭐ 13. Introduce
+TI:
+We plan to introduce a new logging standard.
+The new release introduces breaking changes.
+Java Backend:
+3. The PR introduces a new controller for payments.
+4. The update introduces a retry mechanism for the API call.
+
+⭐ 14. Insert
+TI:
+The system won’t let us insert this record.
+You need admin rights to insert data manually.
+Java Backend:
+3. JPA will insert the entity automatically on save.
+4. The service inserts metadata before publishing to Kafka.
+
+⭐ 15. Push
+TI:
+Push the changes to GitHub when you’re done.
+We need to push a new version to the registry.
+Java Backend:
+3. The pipeline pushes the Docker image after the tests pass.
+4. The service pushes notifications to the message broker.
+
+⭐ 16. Pull
+TI:
+Pull the latest version before building.
+The system will pull configurations dynamically.
+Java Backend:
+3. The API pulls data from three different services.
+4. The consumer pulls messages from the topic every second.
+
+⭐ 17. Prevent
+TI:
+We need to prevent this issue from happening again.
+The firewall prevents external access.
+Java Backend:
+3. Validation prevents invalid payloads from reaching the service.
+4. Retry logic prevents temporary failures from breaking the flow.
+
+⭐ 18. Provide
+TI:
+The platform provides real-time monitoring.
+They provide full documentation for the API.
+Java Backend:
+3. The adapter provides the implementation for the port.
+4. This class provides utility methods for mapping responses.
+
+⭐ 19. Design
+TI:
+We need to design a more scalable solution.
+The team will design the integration flow.
+Java Backend:
+3. He designed the domain model following hexagonal principles.
+4. We designed a new API contract for the mobile team.
+
+⭐ 20. Suggest
+TI:
+I suggest using feature flags for this rollout.
+They suggested revisiting the architecture.
+Java Backend:
+3. I suggest adding tests for the mapper layer.
+4. She suggested using WebClient instead of RestTemplate.
+
+⭐ 21. Execute
+TI:
+The pipeline will execute all checks automatically.
+The script executes the deployment steps.
+Java Backend:
+3. The service executes a scheduled task every hour.
+4. JPA executes the query lazily.
+
+⭐ 22. Fabricate
+TI:
+We can fabricate test data for staging.
+The tool fabricates logs for simulation.
+Java Backend:
+3. The test fabricates a fake HTTP response.
+4. We fabricated a mock event for the Kafka topic.
+
+⭐ 23. Convict
+(Figurativo, mais raro, mas incluído.)
+TI:
+The audit logs can convict a failing component.
+Monitoring can convict the root cause quickly.
+Java Backend:
+3. The trace IDs can convict which microservice failed first.
+4. A failing unit test can convict the broken module.
+
+⭐ 24. Record
+TI:
+The system records all user actions.
+We record metrics during load tests.
+Java Backend:
+3. The interceptor records execution time.
+4. The listener records every message processed.
+
+⭐ 25. Advertise
+TI:
+The platform will advertise this new feature next week.
+We don’t advertise beta tools internally.
+Java Backend:
+3. The service advertises its endpoints through Swagger.
+4. Eureka advertises available microservices.
+
+⭐ 26. Abuse
+TI:
+Don’t abuse this API; it has strict rate limits.
+Users sometimes abuse the free tier.
+Java Backend:
+3. The code abuses reflection and becomes hard to maintain.
+4. Don’t abuse static methods; they hurt testability.
+
+⭐ 27. Apply
+TI:
+Apply the configuration changes and restart.
+You need to apply for access to this environment.
+Java Backend:
+3. The validator applies the business rules.
+4. The filter applies the authentication checks.
+
+⭐ 28. Comprehend
+TI:
+It’s hard to comprehend why this bug only happens in QA.
+The system behavior is difficult to comprehend without logs.
+Java Backend:
+3. He couldn’t comprehend why the mapper was failing silently.
+4. It’s hard to comprehend the flow without reading the service class.
+
+⭐ 29. Conserve
+TI:
+We should conserve resources in this cluster.
+The design conserves bandwidth in poor networks.
+Java Backend:
+3. The cache helps conserve database connections.
+4. The rate limiter conserves CPU under heavy load.
+
+⭐ 30. Provide (já listado, mas mantendo a lista original à risca; se quiser troco por outro)
+(Se quiser posso substituir por outro verbo falso cognato real, como "deceive", "remark", etc.)
+TI:
+They provide full monitoring capabilities.
+We provide access only through VPN.
+Java Backend:
+3. The controller provides two GET endpoints.
+4. This adapter provides integration with the external API.
+
+---------------------------------------------------------
+⭐ Expressões profissionais para evitar filler words
+🔹 Em vez de “uh… / um…”
+Use pausas estratégicas, mas quando precisar falar algo:
+Let me think.
+Just a moment.
+Give me a second.
+
+🔹 Em vez de “you know…”
+Use:
+As you can see…
+As you know from earlier…
+As we discussed…
+
+🔹 Em vez de “like…” (quando usado como vício)
+Use:
+For example…
+Such as…
+In this case…
+
+🔹 Em vez de “so…” no começo de frase
+Use:
+Well… (mais natural)
+Here’s the point…
+To summarize…
+The thing is…
+
+🔹 Em vez de “I mean…”
+Use:
+What I’m trying to say is…
+Let me clarify…
+In other words…
+
+🔹 Em vez de “basically…”
+Use:
+Essentially…
+In simple terms…
+The main idea is…
+
+🔹 Em vez de “right?” (para confirmar tudo o tempo inteiro)
+Use:
+Does that make sense?
+Are we aligned?
+Is that clear so far?
+
+🔹 Em vez de “okay… so…”
+Use:
+Moving on…
+Next point…
+Let’s continue…
+
+🔹 Em vez de “uhh yeah…” para ganhar tempo
+Use:
+Let me check.
+Let me think for a moment.
+Good question — here’s the answer.
+
+
+🔥 1. Para ganhar tempo antes de responder
+(em vez de: uh / um / ah / uhhh yeah…)
+Let me think for a second.
+Just a moment, I’m checking.
+Good question — let me see.
+One second, I’m pulling the context.
+
+🔥 2. Para organizar sua fala em reuniões técnicas
+(em vez de: so… / okay so…)
+Here’s the situation…
+Here’s what we found…
+Let’s walk through this.
+Moving on to the next point…
+From a backend perspective…
+
+🔥 3. Para explicar melhor uma decisão técnica
+(em vez de: I mean…)
+What I’m trying to say is…
+Let me clarify the reasoning behind this.
+In other words…
+To put it simply…
+
+🔥 4. Para citar exemplos de forma profissional
+(em vez de: like… like…)
+For example…
+Such as…
+In this case…
+One good example is…
+
+🔥 5. Para evitar “you know…”
+(melhora a postura em reuniões)
+As you can see from the logs…
+As we discussed earlier…
+As the metrics show…
+From what we observed…
+
+🔥 6. Para alinhar expectativas sem parecer inseguro
+(em vez de: right?)
+Does that make sense?
+Are we aligned on this?
+Is everyone okay with this approach?
+Should we validate this together?
+
+🔥 7. Para encerrar uma explicação
+(em vez do famoso “basically…”)
+Essentially…
+The key point is…
+Long story short…
+The bottom line is…
+
+🔥 8. Para falar sobre problemas técnicos
+(e evitar hesitação)
+Here’s what’s causing the issue…
+Here’s the root cause…
+This is where the service breaks…
+This part is failing due to…
+
+🔥 9. Para pedir algo ao time
+(fortalece liderança)
+Can someone double-check this?
+Let’s validate this scenario.
+We should review the logs together.
+Please confirm this on your side.
+
+🔥 10. Para iniciar uma opinião técnica sem parecer agressivo
+(evita “I think… I think…” repetitivo)
+From my perspective…
+Looking at the architecture…
+Based on the logs…
+Considering our constraints…
+From a backend standpoint…
+
+
+---------------------------------------------------------
+praticando HAVE
+
+⭐ 1. HAVE = ter (posse / quantidade)
+No dia a dia de TI
+I have a meeting in five minutes.
+We have a production incident.
+Do you have access to this dashboard?
+We have a blocker on this task.
+No contexto de backend Java
+We have a NullPointerException in the logs.
+I have two endpoints to finish today.
+Do we have a timeout on the external API?
+We have a dependency issue in Maven.
+
+⭐ 2. HAVE = experienciar / passar por algo
+No dia a dia de TI
+We had a slow response time earlier.
+I had trouble connecting to VPN today.
+We’re having issues with the pipeline.
+I had a problem with my permissions.
+Backend Java
+We had a failure in the Kafka consumer.
+The service had a memory spike.
+I’m having trouble with this JPA mapping.
+We had an inconsistent response in QA.
+
+⭐ 3. HAVE TO = ter que (obrigação)
+TI geral
+I have to check the logs.
+We have to update the documentation.
+Do we have to sync with the mobile team?
+We have to fix this before deployment.
+Java backend
+I have to refactor this class.
+We have to validate the DTO properly.
+I have to rewrite this mapper.
+We have to increase the timeout.
+
+⭐ 4. HAVE BEEN + ING = ação contínua (tem estado / tem feito)
+(muito usado em daily meetings)
+TI geral
+I’ve been working on the integration tests.
+We’ve been investigating the latency issue.
+I’ve been reviewing the architecture proposal.
+We’ve been debugging the incident since morning.
+Java backend
+I’ve been fixing the Spring configuration.
+We’ve been improving the error handling.
+I’ve been testing the Kafka flow.
+We’ve been optimizing the database queries.
+
+⭐ 5. HAVE + PARTICÍPIO = já fez / já aconteceu
+TI geral
+I’ve already checked the logs.
+Have you reviewed the PR?
+We’ve finished the deployment.
+We’ve confirmed the root cause.
+Java backend
+I’ve tested the endpoint.
+Have you run the unit tests?
+We’ve implemented the retry logic.
+I’ve documented the API contract.
+
+-------------------------------
+phrasal verbs
+
+1. set up – configurar / montar
+to set up a server, to set up a project
+We need to set up a new environment for QA.
+(A gente precisa configurar um novo ambiente para QA.)
+Can you set up the Spring Boot project with Docker from the beginning?
+(Você pode montar o projeto Spring Boot com Docker desde o início?)
+
+2. spin up – subir (rápido) um recurso/serviço
+Muito usado pra containers, VMs, pods, etc.
+We can spin up a new pod in the cluster to handle the extra load.
+(Podemos subir um novo pod no cluster pra aguentar a carga extra.)
+They spin up a test database before running the integration tests.
+(Eles sobem um banco de teste antes de rodar os testes de integração.)
+
+3. scale up / scale down – escalar pra cima / pra baixo
+If traffic increases, we’ll scale up the number of instances.
+(Se o tráfego aumentar, vamos escalar o número de instâncias.)
+At night we usually scale down the services to save costs.
+(À noite geralmente reduzimos a escala dos serviços pra economizar.)
+
+4. roll out – colocar em produção / liberar
+We’re going to roll out the new version tonight.
+(Vamos liberar a nova versão hoje à noite.)
+The feature was rolled out to 10% of the users first.
+(A feature foi liberada primeiro para 10% dos usuários.)
+
+5. roll back – reverter deploy / versão
+We had to roll back the deployment because of a critical bug.
+(Tivemos que reverter o deploy por causa de um bug crítico.)
+If the health checks fail, the pipeline automatically rolls back.
+(Se os health checks falham, o pipeline reverte automaticamente.)
+
+6. bring up / bring down – subir / derrubar serviço
+The service is down, we’re trying to bring it back up.
+(O serviço está fora, estamos tentando subir de novo.)
+We need to bring down the instance to apply the patch.
+(Precisamos derrubar a instância pra aplicar o patch.)
+
+7. shut down – desligar / encerrar
+We’ll shut down the old legacy service next quarter.
+(Vamos desligar o serviço legado no próximo trimestre.)
+The app shuts down if it can’t connect to the database.
+(O app encerra se não conseguir conectar no banco.)
+
+8. log in / log out – entrar / sair (autenticação)
+Users can’t log in after the last deployment.
+(Os usuários não conseguem fazer login depois do último deploy.)
+The token expires and the user is logged out automatically.
+(O token expira e o usuário é deslogado automaticamente.)
+
+9. sign up – cadastrar-se / criar conta
+We added a new flow for users to sign up with Google.
+(Adicionamos um novo fluxo pra usuários se cadastrarem com o Google.)
+The conversion rate on the sign-up page improved after the redesign.
+(A taxa de conversão na página de cadastro melhorou depois do redesign.)
+
+10. back up – fazer backup
+We back up the database every night.
+(Fazemos backup do banco toda noite.)
+Before changing the schema, please back up the data.
+(Antes de mudar o schema, faz um backup dos dados.)
+
+11. figure out – entender / descobrir / destrinchar
+Muito usado pra debug e análise.
+We need to figure out why the API is timing out.
+(Precisamos entender por que a API está dando timeout.)
+I’m still trying to figure out what’s causing this memory leak.
+(Ainda estou tentando descobrir o que está causando esse memory leak.)
+
+12. find out – descobrir (obter informação)
+Let’s find out which service is causing the high CPU usage.
+(Vamos descobrir qual serviço está causando o alto uso de CPU.)
+I’ll find out who changed this configuration in Kubernetes.
+(Vou descobrir quem mudou essa configuração no Kubernetes.)
+
+13. track down – rastrear / localizar a origem
+We need to track down where this null value comes from.
+(Precisamos rastrear de onde vem esse valor null.)
+The logs helped us track down the failing dependency.
+(Os logs ajudaram a localizar a dependência que estava falhando.)
+
+14. clean up – limpar / organizar código, dados, logs
+We should clean up unused feature flags in the config.
+(Devíamos limpar os feature flags não usados na config.)
+I’ll clean up the controller and move this logic to a service.
+(Vou dar uma limpada no controller e mover essa lógica pra um service.)
+
+15. break down – decompor / explicar parte por parte
+Let me break down the flow: first the request hits the gateway, then the BFF, then the core service.
+(Deixa eu decompor o fluxo: primeiro a requisição passa no gateway, depois no BFF, depois no serviço core.)
+We broke down the monolith into three microservices.
+(Nós quebramos o monólito em três microsserviços.)
+
+16. hand over – repassar / passar adiante
+I’ll hand over this task to the DevOps team.
+(Vou repassar essa tarefa pro time de DevOps.)
+Can you hand over the documentation to the new developer?
+(Você pode passar a documentação pro novo desenvolvedor?)
+
+17. follow up – acompanhar / cobrar depois
+I’ll follow up on this incident after we get more logs.
+(Vou acompanhar esse incidente depois que tivermos mais logs.)
+Can you follow up with the other squad about the API contract?
+(Você pode dar um follow up com a outra squad sobre o contrato da API?)
+
+18. work around – contornar (um problema)
+We added a feature flag to work around the bug in the legacy service.
+(Adicionamos um feature flag pra contornar o bug no serviço legado.)
+For now, we’ll work around the limitation of this API.
+(Por enquanto, vamos contornar a limitação dessa API.)
+
+
+----------------------------
+🔵 Com KEEP (manter, continuar, persistir)
+>keep up – manter o ritmo / continuar
+>“We need to keep up with the new compliance requirements.”
+>“Good job keeping up with the alerts yesterday.”
+>keep track of – acompanhar / rastrear
+>“Can you keep track of the Kafka offsets in the consumer group?”
+>“I’m keeping track of all retries in the logs.”
+>keep an eye on – ficar de olho
+>“Let’s keep an eye on the CPU usage after the deploy.”
+>keep going – continuar trabalhando / seguir
+>“The pipeline failed, but we can keep going locally.”
+>keep something in mind – ter em mente
+>“Keep in mind that this endpoint is synchronous.”
+>keep at it – persistir
+>“Keep at it, the root cause will show up in the logs.”
+
+🟣 Com SET (configurar, definir)
+set up – configurar / preparar / montar
+“I’ll set up the new SQS queues.”
+set out – definir objetivos
+“We set out to reduce latency in this sprint.”
+set off – disparar / iniciar
+“This change can set off multiple retries in the service.”
+set aside – reservar tempo
+“Let’s set aside 30 minutes to review the architecture.”
+
+🟢 Com GET (obter, receber, entender)
+get back to – retornar / responder depois
+“I’ll get back to you after checking the logs.”
+get rid of – remover / eliminar
+“We need to get rid of this deprecated endpoint.”
+get into – entrar no assunto / se aprofundar
+“Let’s not get into performance tuning yet.”
+get around – contornar problema
+“We can get around this by caching the response.”
+get through – finalizar / conseguir passar
+“The request can’t get through the gateway.”
+get ahead of – antecipar problemas
+“We need to get ahead of this incident before peak time.”
+get stuck – travar / ficar bloqueado
+“I got stuck debugging the token validation.”
+
+🔥 Outros phrasal verbs extremamente comuns em TI
+🟨 Ação técnica
+look into – investigar
+“We’ll look into the timeout on the login endpoint.”
+figure out – descobrir / entender
+“Let’s figure out why WebClient isn’t retrying.”
+track down – rastrear
+“We tracked down the root cause to a misconfigured Redis key.”
+bring up (serviço) – subir
+“The pod didn’t bring up correctly after the deploy.”
+bring down – derrubar / desligar serviço
+“We need to bring down the instance before patching.”
+roll out – liberar versão
+“The new flow will be rolled out gradually.”
+roll back – reverter
+“We rolled back due to high error rate.”
+clean up – limpar / remover lixo
+“We should clean up unused feature flags.”
+
+🟩 Comunicação entre squads
+follow up – acompanhar / cobrar
+“I’ll follow up with the BFF team about the contract.”
+point out – destacar
+“Just pointing out: this API is not idempotent.”
+check in – sincronizar / atualizar status
+“Let’s check in after lunch to finalize the review.”
+hand over – repassar
+“I’ll hand over the logs to SRE.”
+talk through – explicar passo a passo
+“Let me talk you through the authentication flow.”
+
+----------------------------
+⭐ 1–10: Estruturais
+1. even
+Squad: The issue happens even after the hotfix.
+Java: The endpoint is slow even with caching enabled.
+
+2. still
+Squad: The bug is still open on Jira.
+Java: The service still returns 500.
+
+3. yet
+Squad: The PO hasn’t confirmed the requirement yet.
+Java: The consumer hasn’t started processing messages yet.
+
+4. though
+Squad: It looks stable now, though the logs are strange.
+Java: The query works, though it’s not optimized.
+
+5. although
+Squad: Although it’s late, we need this alignment.
+Java: Although the API is valid, the mapper fails.
+
+6. actually
+Squad: Actually, we don’t need another meeting.
+Java: Actually, the bug was in the DTO, not the controller.
+
+7. basically
+Squad: Basically, we need better communication.
+Java: Basically, the service fetches, maps, and returns.
+
+8. literally
+Squad: We literally had three incidents today.
+Java: The JVM literally hit 100% CPU.
+
+9. already
+Squad: I already updated the ticket.
+Java: The service already consumed the message.
+
+10. instead
+Squad: Let’s try this approach instead.
+Java: Use WebClient instead of RestTemplate.
+
+⭐ 11–20: Comunicação & alinhamento
+11. anyway
+Squad: Anyway, let’s move to the next topic.
+Java: Anyway, the retry logic still needs improvement.
+
+12. exactly
+Squad: Exactly! That’s the point I was making.
+Java: Exactly where the timeout happens is in this method.
+
+13. probably
+Squad: He’s probably in another call.
+Java: The failure is probably in the database call.
+
+14. honestly
+Squad: Honestly, we don't need this extra ceremony.
+Java: Honestly, this code needs a full refactor.
+
+15. obviously
+Squad: Obviously, we need more test coverage.
+Java: Obviously, JPA can’t handle this structure.
+
+16. apparently
+Squad: Apparently, the deploy didn’t run.
+Java: Apparently, the header isn’t being sent.
+
+17. definitely
+Squad: We definitely need to fix this today.
+Java: This logic definitely needs validation.
+
+18. eventually
+Squad: Eventually, we’ll migrate to a new platform.
+Java: Eventually, this service will be rewritten.
+
+19. currently
+Squad: Currently, we have three open incidents.
+Java: The service is currently failing on startup.
+
+20. recently
+Squad: Recently, we’ve had many access issues.
+Java: The logs recently started showing this warning.
+
+⭐ 21–30: Reuniões / fluxo
+21. however
+Squad: We delivered the feature; however, QA found issues.
+Java: The call works; however, the mapping is wrong.
+
+22. therefore
+Squad: Therefore, we need more people on this task.
+Java: The service failed; therefore, the fallback triggered.
+
+23. meanwhile
+Squad: Meanwhile, the mobile team is testing.
+Java: Meanwhile, the scheduler keeps sending events.
+
+24. otherwise
+Squad: We must sync this today, otherwise it’ll block the sprint.
+Java: Add validation, otherwise the API will break.
+
+25. moreover
+Squad: Moreover, this change affects other squads.
+Java: Moreover, this method is used by three services.
+
+26. besides
+Squad: Besides that, there’s nothing new.
+Java: Besides this error, everything else works.
+
+27. regarding
+Squad: Regarding the incident, we need a timeline.
+Java: Regarding this class, let’s add some logs.
+
+28. related
+Squad: It’s related to the last deploy.
+Java: The issue is related to the thread pool.
+
+29. considering
+Squad: Considering the deadline, we need focus.
+Java: Considering the payload size, we need compression.
+
+30. depending
+Squad: Depending on the PO, we can move forward.
+Java: Depending on the header, the API returns another format.
+
+⭐ 31–40: Ações técnicas
+31. handle
+Squad: We need to handle this in today’s refinement.
+Java: The service must handle null values.
+
+32. fetch
+Squad: We fetch data from two providers.
+Java: The repository fetches all active records.
+
+33. trigger
+Squad: This deploy will trigger a regression test.
+Java: The scheduler triggers the batch job.
+
+34. expose
+Squad: We expose only public endpoints.
+Java: This controller exposes two GET APIs.
+
+35. consume
+Squad: The BI team will consume the data.
+Java: The listener consumes messages from Kafka.
+
+36. provide
+Squad: This dashboard provides visibility.
+Java: The adapter provides the implementation for the port.
+
+37. ensure
+Squad: We need to ensure alignment with mobile.
+Java: Ensure the service returns a valid DTO.
+
+38. avoid
+Squad: Let’s avoid last-minute changes.
+Java: Avoid calling this API synchronously.
+
+39. improve
+Squad: We must improve our communication.
+Java: Let’s improve the error handling.
+
+40. increase
+Squad: Can we increase the priority of this task?
+Java: Increase the timeout for this external API.
+
+⭐ 41–50: Problemas e incidentes
+41. failure
+Squad: We had a failure in production.
+Java: The failure occurred during the database call.
+
+42. issue
+Squad: This issue affects two squads.
+Java: The issue is in the mapping layer.
+
+43. outage
+Squad: The outage impacted several teams.
+Java: The service crashed during the outage.
+
+44. fallback
+Squad: The fallback didn’t trigger correctly.
+Java: The fallback returns cached data.
+
+45. retry
+Squad: We need a retry strategy.
+Java: The client retries three times before failing.
+
+46. timeout
+Squad: We’re seeing timeout spikes.
+Java: The request hits a timeout on the provider.
+
+47. request
+Squad: The request volume increased today.
+Java: The request contains an invalid header.
+
+48. response
+Squad: The response time is too high.
+Java: The response body is missing fields.
+
+49. payload
+Squad: The payload changed without notice.
+Java: The payload doesn’t match the DTO.
+
+50. environment
+Squad: Which environment are you testing in?
+Java: This config only works in the QA environment.
+
+---
+
+
+praticando termos de tecnologia em inglês
+## Glossary of Common Tech Terms in English
+> Backend Development
+<br> Software Architecture
+<br> Microservices
+<br> Monolithic Architecture
+<br> RESTful APIs
+<br> Asynchronous Communication
+<br> Event-Driven Architecture
+<br> Cloud Computing
+<br> Containerization
+<br> Orchestration
+<br> Continuous Integration (CI)
+<br> Continuous Deployment (CD)
+<br> DevOps
+<br> Observability
+<br> Scalability
+<br> Resilience
+<br> Load Balancing
+<br> Fault Tolerance
+<br> Domain-Driven Design (DDD)
+<br> Test-Driven Development (TDD)
+<br> Behavior-Driven Development (BDD)
+<br> Version Control
+<br> Dependency Management
+<br> Code Review
+<br> Agile Methodologies
+<br> Scrum
+<br> Kanban
+<br> Software Development Life Cycle (SDLC)
+<br> Infrastructure as Code (IaC)
+<br> Service Mesh
+<br> API Gateway
+<br> Message Broker
+<br> Data Serialization
+<br> Authentication and Authorization
+<br> Encryption
+<br> Performance Optimization
+<br> Refactoring
+<br> Legacy Systems
+<br> Technical Debt
+<br> Codebase
+<br> Build Automation
+<br> Unit Testing
+<br> Integration Testing
+<br> Load Testing
+<br> Mocking
+<br> Logging
+<br> Tracing
+<br> Metrics
+<br> Circuit Breaker
+<br> Retry Mechanism
+<br> Bulkhead Pattern
+<br> Idempotency
+<br> Ubiquitous Language
+<br> Bounded Context
+<br> Aggregate
+<br> Factory Pattern
+<br> Singleton Pattern
+<br> Builder Pattern
+<br> Adapter Pattern
+<br> Facade Pattern
+<br> Strategy Pattern
+<br> Chain of Responsibility Pattern
+<br> Protobuf (Protocol Buffers)
+<br> gRPC
+<br> OAuth2
+<br> JWT (JSON Web Token)
+<br> Kubernetes (K8s)
+<br> Docker
+<br> Jenkins
+<br> Maven
+<br> Gradle
+<br> Spring Boot
+<br> Spring Cloud
+<br> Hibernate
+<br> Kafka
+<br> RabbitMQ
+<br> PostgreSQL
+<br> Oracle Database
+<br> MongoDB
+<br> DynamoDB
+<br> Prometheus
+<br> Grafana
+<br> OpenTelemetry
+<br> Splunk
+<br> Jaeger
+<br> AWS (Amazon Web Services)
+<br> S3 (Simple Storage Service)
+<br> SQS (Simple Queue Service)
+<br> ECR (Elastic Container Registry)
+<br> FaaS (Function as a Service)
+<br> BaaS (Backend as a Service)
+<br> CI/CD Pipelines
+<br> Blue-Green Deployment
+<br> Rollout Deployment
+<br> Semantic Commit Messages
+<br> Codebase
+<br> system reliable
+
+frases comuns e afirmativar em entrevistas técnicas de desenvolvedor backend com enfase em java em ingles
+## Common Phrases for Backend Developer Interviews (Java Focus)
+> I have extensive experience in backend development using Java and Kotlin.
+<br> I am proficient in building RESTful APIs with Spring Boot.
+<br> I have worked on microservices architecture and understand its benefits and challenges.
+<br> I am familiar with asynchronous communication using Kafka and RabbitMQ.
+<br> I have experience with cloud platforms, particularly AWS.
+<br> I am skilled in containerization with Docker and orchestration using Kubernetes.
+<br> I follow best practices in software architecture, including DDD and Clean Architecture.
+<br> I am comfortable with CI/CD pipelines and have used Jenkins for automation.
+<br> I prioritize code quality and maintainability through code reviews and testing.
+<br> I have a strong understanding of relational databases like PostgreSQL and Oracle.
+<br> I am experienced in using Hibernate and JPA for data persistence.
+<br> I am familiar with observability tools such as Prometheus and Grafana.
+<br> I have implemented security measures using OAuth2 and JWT.
+<br> I am a strong advocate for TDD and have applied it in my projects.
+<br> I am adaptable and open to learning new technologies and methodologies.
+<br> I am a proactive team player and enjoy collaborating with cross-functional teams.
+<br> I am committed to continuous improvement and staying updated with industry trends.
+<br> I am excited about the opportunity to contribute to your team and projects.
+<br> Thank you for considering my application; I look forward to the possibility of working together.
+
+frases que posso afirmar em entrevistas técnicas de desenvolvedor backend com ênfase em java em inglês
+## Affirmative Phrases for Backend Developer Interviews (Java Focus)
+>I am confident in my ability to design and implement scalable backend systems.
+<br>I have a proven track record of delivering high-quality software on time.
+<br>I am skilled at troubleshooting and resolving complex technical issues.
+<br>I am experienced in optimizing application performance and scalability.
+<br>I have a deep understanding of Java and its ecosystem.
+<br>I am proficient in using Spring Boot and Spring Cloud for building microservices.
+<br>I am knowledgeable about software design patterns and best practices.
+<br>I am comfortable working in Agile environments and following Scrum methodologies.
+<br>I am dedicated to writing clean, maintainable, and well-documented code.
+<br>I am experienced in mentoring junior developers and fostering a collaborative team environment.
+<br>I am committed to continuous learning and professional development.
+<br>I am passionate about technology and enjoy solving challenging problems.
+<br>I am excited about the opportunity to contribute my skills and experience to your organization.
+<br>I am eager to take on new challenges and grow as a backend developer.
+<br>I am confident that my skills and experience align well with the requirements of this role.
+
+---
+## Phrases to Use When You Face Difficulties in English During an Interview
+> "Sorry, could you please repeat that?"
+<br> "My English is a bit rusty — I haven’t practiced as much lately."
+<br> "But I’m following you."
+<br> "Could you please clarify that point?"
+<br> "Let me make sure I understand correctly."
+<br> "I’m not sure I caught that. Could you explain it again?"
+<br> "I apologize for any mistakes in my English; I’m working on improving it."
+<br> "Thank you for your patience as I express myself in English."
+<br> "Could you please speak a bit slower? I want to make sure I understand everything."
+<br> "I appreciate your understanding as I navigate this conversation in English."
+
