@@ -454,8 +454,8 @@ Também trabalho com o ecossistema Spring Cloud para microsserviços.”
 > - Define clear domain events and contracts
 > - No generic payloads. I’d use explicit events like CustomerCreatedEvent, OrderApprovedEvent, etc.
 > And I’d use JSON or Avro with a well-defined, versioned schema.
-> - Topic modeling and keying strategy
-> I’d create domain-oriented topics such as: > customer-events or orders-events.
+> - Topic modeling and keying strategy<br>
+> I’d create domain-oriented topics such as: customer-events or orders-events.
 > And I’d use the entity ID (customerId, orderId) as the message key to maintain partition ordering.
 > 
 > - Add important metadata to each event
