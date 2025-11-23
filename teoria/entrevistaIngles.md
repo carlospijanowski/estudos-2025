@@ -464,32 +464,32 @@ Também trabalho com o ecossistema Spring Cloud para microsserviços.”
 > 
 > Resilient producer
 > Service A publishes to the topic with:
-> Proper acks
-> Retry with backoff
-> And for critical cases, I’d use the Outbox pattern so the event is only published after the local transaction succeeds.
+> - Proper acks
+> - Retry with backoff
+> - And for critical cases, I’d use the Outbox pattern so the event is only published after the local transaction succeeds.
 > 
 > Idempotent consumer
-> Service B consumes in a consumer group, allowing horizontal scaling.
-> Processing must be idempotent:
-> Use eventId or a referenceId
-> Keep a record of processed events to avoid duplicating effects
+> - Service B consumes in a consumer group, allowing horizontal scaling.
+> - Processing must be idempotent:
+> - Use eventId or a referenceId
+> - Keep a record of processed events to avoid duplicating effects
 > 
 > Structured retry and DLQ
-> If processing fails due to a temporary issue:
-> Send it to a retry topic with backoff (e.g., orders-events.retry)
-> If it fails permanently (bad payload, rule violation):
-> Move it to a DLQ (e.g., orders-events.dlq) for manual or specific processing.
+> - If processing fails due to a temporary issue:
+> - Send it to a retry topic with backoff (e.g., orders-events.retry)
+> - If it fails permanently (bad payload, rule violation):
+> - Move it to a DLQ (e.g., orders-events.dlq) for manual or specific processing.
 > 
 > Observability
 > Track metrics like:
-> Consumer lag
-> Error rate
-> Consumption/production rate
-> And log with correlationId and eventId, ideally using distributed tracing to connect HTTP requests → Kafka events → consumers.
+> - Consumer lag
+> - Error rate
+> - Consumption/production rate
+> - And log with correlationId and eventId, ideally using distributed tracing to connect HTTP requests → Kafka events → consumers.
 > 
 > Security and governance
-> Use Kafka ACLs to define who can publish/consume.
-> Follow a clear naming convention for topics to simplify governance.
+> - Use Kafka ACLs to define who can publish/consume.
+> - Follow a clear naming convention for topics to simplify governance.
 ---
 
 > 5. Explique como você projetaria um banco de dados para um sistema de alta escala. Quando optaria por SQL vs NoSQL?
@@ -497,26 +497,27 @@ Também trabalho com o ecossistema Spring Cloud para microsserviços.”
 > 
 > First, I look at the data model and the domain — how the entities relate, whether the structure is complex or 
 > more aggregate-based.
+> 
 > Then I consider the access patterns — is the system read-heavy or write-heavy, do we query mostly by ID, 
 > or do we need filters, reports, and joins?
-
+>
 > I also check the non-functional requirements — data volume, expected latency, availability, and the level of 
 > consistency the business needs.
 > 
-> For high scale, I focus on a few pillars:
-> a data model aligned to the use cases,
-> well-planned indexing and partitioning,
-> and replication plus caching (like Redis) to offload the database during traffic spikes.
+> For high scale, I focus on a few pillars:<br>
+> - a data model aligned to the use cases,
+> - well-planned indexing and partitioning,
+> - and replication plus caching (like Redis) to offload the database during traffic spikes.
 > 
 > The idea is that scalability comes from the model + access patterns + infrastructure — not just from picking SQL or NoSQL.
 > 
-> When would I choose SQL? 
+> When would I choose SQL?<br> 
 > SQL is my choice when I need strong consistency, ACID transactions, and the domain has rich relationships 
 > and complex rules — things like financial flows, orders, limits, or anything that depends heavily on integrity and joins.
 > 
 > In short: when the business needs highly consistent, well-related data, SQL is usually the right fit.
 > 
-> When would I choose NoSQL?
+> When would I choose NoSQL?<br>
 > I’d pick NoSQL when I’m dealing with massive data volume and need easier horizontal scaling.
 > It fits well when the model is aggregate/document-oriented, when I need flexible schema evolution, 
 > and when the system can tolerate eventual consistency in exchange for low latency and high availability.
