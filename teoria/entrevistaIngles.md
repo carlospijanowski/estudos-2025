@@ -18,7 +18,8 @@
 > Cycling is my favorite sport — it’s how I stay active and recharge my batteries
 --- 
 #### Academic Background
-> I graduated in Information Systems, and later I completed two postgrad courses in IT — one in Software Engineering and another focused on Java for Web development.
+> I graduated in Information Systems, and later I completed two postgrad courses in IT — one in Software Engineering and 
+> another focused on Java for Web development.
 ---
 #### background de trabalho 
 
@@ -134,7 +135,8 @@ But I’m following you”
 > Pros and cons: simplifies integration with legacy systems; can lead to bottlenecks and complexity with an ESB.
 >
 > Microservices: small, independent services aligned with bounded contexts (DDD).
-> Note: bounded contexts are parts of the domain that have their own language and model, and can be implemented as separate microservices.
+> Note: bounded contexts are parts of the domain that have their own language and model, 
+> and can be implemented as separate microservices.
 > Pros and cons: improves scalability and maintainability; more complex to develop, test, and deploy.
 >
 > Serverless: functions or containers managed by a cloud provider, paying only for usage.
@@ -169,22 +171,26 @@ It’s a set of engineering practices that support the architecture by keeping c
 aqui entra: solid etc
 
 #### [TAG Design & Development Practices]
-> How do you ensure code quality?  
-> I see code quality as a set of practices that need to work together in harmony.
->
 > ## Applying development techniques
-> Applying development techniques involves adopting structured engineering practices to improve code quality and system longevity.
-> This includes clean code principles, SOLID, design patterns, test-driven development when appropriate, continuous integration, refactoring, and documentation.
+> I see code quality as a set of practices that need to work together in harmony.
+> é como asseguramos um codigo com qualidade
+> This includes clean code principles, SOLID, design patterns, test-driven development when appropriate, 
+> continuous integration, refactoring, and documentation.
 > These techniques minimize technical debt, reduce coupling, and help the architecture remain consistent and scalable.
+> 
+> @clean code principles
+> Meaningful Names
+> Small, Focused Functions
+> Single Responsibility Principle (SRP)
+> Avoid Duplication (Don’t Repeat Yourself) e KISS (Keep It Simple, Stupid) - evite duplicação e complexidade desnecessária
+> Clear Error Handling (good: throw new CustomerNotFoundException(id); bad:return null;)
 > 
 > @SOLID
 > S -> Single Responsibility Principle (SRP) [Each class must have a single responsibility]
 > O -> Open/Closed Principle (OCP) [Classes must be open for extension, but closed for modification]
 > L -> Liskov Substitution Principle (LSP) [Subtypes must be able to replace their base types without breaking the program]
 > I -> Interface Segregation Principle (ISP) [Interfaces must be small and specific]
-> D -> Dependency Inversion Principle (DIP) [Rely on abstractions, not implementations]
->
-> @DRY (Don’t Repeat Yourself) e KISS (Keep It Simple, Stupid) - evite duplicação e complexidade desnecessária
+> D -> Dependency Inversion Principle (DIP) [Rely on abstractions, not implementations] 
 >
 > @YAGNI (You Aren’t Gonna Need It) - não implemente algo que não é necessário agora
 > I also value peer code reviews, static analysis tools like SonarQube, and a solid base of unit tests to maintain a consistent and high-quality codebase.
@@ -199,7 +205,7 @@ aqui entra: solid etc
 > We use semantic commits to keep the Git history clean and easy to trace.
 > And we follow good versioning and workflow practices using Git and GitHub (or GitLab, depending on the project).
 
-> @Design paterns
+> @Design patterns
 > “The three main categories are creational, structural, and behavioral. 
 > For example, Singleton, Factory Method, and Builder are creational patterns that focus on object creation…”
 > 1**Creational Patterns**
@@ -365,58 +371,210 @@ Também trabalho com o ecossistema Spring Cloud para microsserviços.”
 --------------------------------------------------------------------------
 
 ## [TAG INVILLIA] 
-## 1. Se você tivesse que escolher entre RabbitMQ e Kafka para um novo sistema, quais critérios levaria em consideração?
-Quais cenários favorecem cada tecnologia e por quê? Explique também as principais diferenças entre filas e tópicos em sistemas de mensageria.
+> 1. Se você tivesse que escolher entre RabbitMQ e Kafka para um novo sistema, quais critérios levaria em consideração?
+> Quais cenários favorecem cada tecnologia e por quê? 
+> Explique também as principais diferenças entre filas e tópicos em sistemas de mensageria.
+> 
+> When I need to choose between RabbitMQ and Kafka, I first look at the type of communication the system needs 
+> and the message volume. I also consider whether the team needs to reprocess events, what the expected latency is, 
+> and how the consumers are supposed to work.
+> 
+> **RabbitMQ** is great when the system follows a more “do this now” style — tasks and commands. 
+> It delivers fast, supports message-level ACKs, and offers flexible routing. 
+> It works really well when each message needs to go to a single consumer, and the overall volume isn’t extreme.
+> 
+> **Kafka** shines in high-volume scenarios, especially when the system is event-driven and needs to store messages for longer. 
+> It allows multiple consumers to read the same event, keeps ordering within partitions, and makes reprocessing very easy. 
+> That’s usually my choice for more complex asynchronous integrations or event-driven observability.
+> 
+> The main difference between a queue and a topic is simple:
+> A queue sends each message to one consumer — it’s work distribution.
+> A topic lets multiple consumers read the same message — it’s event broadcasting.
 
-## 2. Como você utilizaria os serviços AWS (SNS, SQS, S3) para criar uma arquitetura escalável e tolerante a falhas?
+> 2. Como você utilizaria os serviços AWS (SNS, SQS, S3) para criar uma arquitetura escalável e tolerante a falhas?
+> When I build a scalable and fault-tolerant architecture using SNS, SQS, and S3, 
+> I usually think of the whole thing as a loose, async pipeline.
+> 
+> SNS is my event distributor. It lets me notify multiple services at the same time, 
+> which already boosts scalability a lot. 
+> It’s great when different parts of the system need to react to the same event.
+> 
+> SQS works as the reliable buffer in the middle. 
+> It makes sure no messages get lost, even if a consumer goes down. It also helps handle traffic spikes, 
+> because you can scale consumers horizontally as the queue grows.
+> 
+> S3 is the durable storage for files, logs, or bigger payloads. 
+> In many cases, I prefer sending only a “reference” through SNS/SQS and keeping the heavy content in S3. 
+> That reduces traffic, speeds things up, and makes consumption easier.
+> 
+> Overall, I’d use SNS → SQS for a resilient fan-out pattern, and S3 as the central storage for static or large data. 
+> This combo gives you a very decoupled architecture, easy to scale, and still works even if one component has issues.
+> 
+> 3. Quais métricas você considera essenciais para monitorar em um ambiente de microserviços? 
+> Como implementaria a observabilidade?
+> Com quais ferramentas você já trabalhou?
+>
+> 4. Em um sistema distribuído onde dois microsserviços se comunicam via Kafka, como você estruturaria essa comunicação?
+>
+> When we implement asynchronous communication to solve a problem, we can easily introduce new problems if we're not careful.
+> So before designing anything with Kafka, I first think about the risks I want to avoid.
+> I need to predict some risks I want to avoid
+> And what would be the main problems I want to prevent when two microservices communicate through Kafka?
+> 
+> Message loss or duplication
+> - A producer may send the event, but the consumer might not process it — or process it twice.
+> 
+> Event ordering
+> - Some scenarios must keep the order per entity, like all events for the same customerId or orderId.
+> 
+> Idempotency and reprocessing
+> - If I need to reprocess a topic or Kafka redelivers the same message, the consumer can’t break the system state.
+> 
+> Contract coupling
+> - If the payload schema changes, I can’t afford to break every consumer.
+> That’s why event versioning is important.
+> 
+> Backpressure / speed mismatch
+> - Producers can publish much faster than consumers can handle.
+> 
+> Error handling
+> - What do I do with messages that always fail? I need a proper retry strategy and a DLQ.
+> 
+> Observability
+> I need to answer: What happened to this event? Did it fail? Who consumed it? Where did it stop?
+> 
+> Security and isolation
+> Controlling who can publish and consume each topic.
+> 
+> If I ignore these points, the architecture might work fine in the happy path, but it will become a real source of pain in production.
+> 
+> Second: How I would structure the communication between the two microservices using Kafka
+> 
+> To minimize these risks, I’d structure the solution like this:
+> - Define clear domain events and contracts
+> - No generic payloads. I’d use explicit events like CustomerCreatedEvent, OrderApprovedEvent, etc.
+> And I’d use JSON or Avro with a well-defined, versioned schema.
+> - Topic modeling and keying strategy
+> I’d create domain-oriented topics such as: > customer-events or orders-events.
+> And I’d use the entity ID (customerId, orderId) as the message key to maintain partition ordering.
+> 
+> - Add important metadata to each event
+> Things like: eventId (UUID), eventType, correlationId, sourceService, timestamp
+> This helps with tracking, debugging, and idempotency.
+> 
+> Resilient producer
+> Service A publishes to the topic with:
+> Proper acks
+> Retry with backoff
+> And for critical cases, I’d use the Outbox pattern so the event is only published after the local transaction succeeds.
+> 
+> Idempotent consumer
+> Service B consumes in a consumer group, allowing horizontal scaling.
+> Processing must be idempotent:
+> Use eventId or a referenceId
+> Keep a record of processed events to avoid duplicating effects
+> 
+> Structured retry and DLQ
+> If processing fails due to a temporary issue:
+> Send it to a retry topic with backoff (e.g., orders-events.retry)
+> If it fails permanently (bad payload, rule violation):
+> Move it to a DLQ (e.g., orders-events.dlq) for manual or specific processing.
+> 
+> Observability
+> Track metrics like:
+> Consumer lag
+> Error rate
+> Consumption/production rate
+> And log with correlationId and eventId, ideally using distributed tracing to connect HTTP requests → Kafka events → consumers.
+> 
+> Security and governance
+> Use Kafka ACLs to define who can publish/consume.
+> Follow a clear naming convention for topics to simplify governance.
+---
 
-## 3. Quais métricas você considera essenciais para monitorar em um ambiente de microserviços? Como implementaria a observabilidade?
-Com quais ferramentas você já trabalhou?
+> 5. Explique como você projetaria um banco de dados para um sistema de alta escala. Quando optaria por SQL vs NoSQL?
+> When I design a database for a high-scale system, I don’t start with “SQL vs NoSQL.” I start with the requirements.
+> 
+> First, I look at the data model and the domain — how the entities relate, whether the structure is complex or 
+> more aggregate-based.
+> Then I consider the access patterns — is the system read-heavy or write-heavy, do we query mostly by ID, 
+> or do we need filters, reports, and joins?
 
-## 4. Em um sistema distribuído onde dois microsserviços se comunicam via Kafka, como você estruturaria essa comunicação?
+> I also check the non-functional requirements — data volume, expected latency, availability, and the level of 
+> consistency the business needs.
+> 
+> For high scale, I focus on a few pillars:
+> a data model aligned to the use cases,
+> well-planned indexing and partitioning,
+> and replication plus caching (like Redis) to offload the database during traffic spikes.
+> 
+> The idea is that scalability comes from the model + access patterns + infrastructure — not just from picking SQL or NoSQL.
+> 
+> When would I choose SQL? 
+> SQL is my choice when I need strong consistency, ACID transactions, and the domain has rich relationships 
+> and complex rules — things like financial flows, orders, limits, or anything that depends heavily on integrity and joins.
+> 
+> In short: when the business needs highly consistent, well-related data, SQL is usually the right fit.
+> 
+> When would I choose NoSQL?
+> I’d pick NoSQL when I’m dealing with massive data volume and need easier horizontal scaling.
+> It fits well when the model is aggregate/document-oriented, when I need flexible schema evolution, 
+> and when the system can tolerate eventual consistency in exchange for low latency and high availability.
+> 
+> In short: when the focus is large scale, flexible schema, and simple access patterns, NoSQL is a strong choice.
+> 
+---
+>
+> 6. Imagine que você está liderando uma equipe DevOps em um projeto crítico com 
+> múltiplos desenvolvedores trabalhando simultaneamente.
+> Como você utilizaria Git-Flow para gerenciar releases, hotfixes e branches de desenvolvimento, 
+> garantindo integração contínua e minimizando conflitos? 
+> Quais práticas avançadas você recomendaria para otimizar esse fluxo?
 
-## 5. Explique como você projetaria um banco de dados para um sistema de alta escala. Quando optaria por SQL vs NoSQL?
+> 7. Quais recursos introduzidos no Java 16 ou superior você já utilizou, como records, sealed classes, 
+> ou melhorias no Pattern Matching?
+> Explique como esses recursos funcionam e em quais cenários você os considera vantajosos.
 
-## 6. Imagine que você está liderando uma equipe DevOps em um projeto crítico com múltiplos desenvolvedores trabalhando simultaneamente.
-Como você utilizaria Git-Flow para gerenciar releases, hotfixes e branches de desenvolvimento, garantindo integração contínua e minimizando conflitos? Quais práticas avançadas você recomendaria para otimizar esse fluxo?
+> 8. Imagine que precisamos criar um ecommerce com alta demanda. 
+> Esporadicamente vamos realizar campanhas televisivas que gerarão acessos elevados em determinados momentos. 
+> A busca de nosso ecommerce também será bastante requisitada, sendo que muitos usuários pesquisam pelo 
+> mesmo produto várias vezes ao dia.
+> Como você estruturaria este projeto visando resolver os problemas relatados? 
+> Lembre-se que precisamos garantir escalabilidade, resiliência e rapidez.
 
-## 7. Quais recursos introduzidos no Java 16 ou superior você já utilizou, como records, sealed classes, ou melhorias no Pattern Matching?
-Explique como esses recursos funcionam e em quais cenários você os considera vantajosos.
+> 9. Como você implementaria uma arquitetura de microserviços resiliente utilizando Java? 
+> Descreva os padrões que utilizaria para garantir alta disponibilidade.
 
-## 8. Imagine que precisamos criar um ecommerce com alta demanda. Esporadicamente vamos realizar campanhas televisivas que gerarão
-acessos elevados em determinados momentos.
+> 10. Em um sistema de microserviços, como você lidaria com transações distribuídas que envolvem múltiplos serviços 
+> e bases de dados?
 
-## 9. Como você implementaria uma arquitetura de microserviços resiliente utilizando Java? Descreva os padrões que utilizaria para
-garantir alta disponibilidade.
+> 11. Como você abordaria a implementação de uma feature que exige alta performance e precisa processar 
+> grandes volumes de dados em tempo real?
 
-## 10. Em um sistema de microserviços, como você lidaria com transações distribuídas que envolvem múltiplos serviços e bases de dados?
+> 12. Na sua experiência com Java, quais os trade-offs entre utilizar um ORM como Hibernate/JPA e JDBC puro? 
+> Cite quais cenários você recomendaria cada abordagem, considerando aspectos como performance, produtividade e manutenibilidade.
 
-## 11. Como você abordaria a implementação de uma feature que exige alta performance e precisa processar grandes volumes de dados em tempo real?
-
-## 12. Na sua experiência com Java, quais os trade-offs entre utilizar um ORM como Hibernate/JPA e JDBC puro?
-## Cite quais cenários você recomendaria cada abordagem, considerando aspectos como performance, produtividade e manutenibilidade.
-
-> ## 13. Descreva como você configuraria um aplicativo Spring Boot para um ambiente de produção de alta disponibilidade.
+> 13. Descreva como você configuraria um aplicativo Spring Boot para um ambiente de produção de alta disponibilidade.
 > Cite quais recursos específicos do Spring Boot (como profiles, externalized configuration, actuators) você utilizaria e
 > como implementaria métricas personalizadas.
 
-## 14. Descreva sua experiência na identificação e resolução de problemas em sistemas concorrentes, como deadlocks, race conditions e
-contenção de recursos.
+> 14. Descreva sua experiência na identificação e resolução de problemas em sistemas concorrentes, 
+> como deadlocks, race conditions e contenção de recursos.
 
-## 15. Como você implementaria feature flags em uma aplicação Java para permitir lançamentos graduais?
+> 15. Como você implementaria feature flags em uma aplicação Java para permitir lançamentos graduais?
 
-## 16. Quais estratégias você utiliza para garantir a qualidade do código? Como você implementaria uma pipeline de CI/CD com Jenkins
-que inclua testes e análise de Sonar?
+> 16. Quais estratégias você utiliza para garantir a qualidade do código? 
+> Como você implementaria uma pipeline de CI/CD com Jenkins que inclua testes e análise de Sonar?
 
-## 17. Descreva uma situação em que você precisou refatorar um código legado para melhorar sua manutenibilidade.
+> 17. Descreva uma situação em que você precisou refatorar um código legado para melhorar sua manutenibilidade.
 
-## 18. Que estratégias você usa para mentorar desenvolvedores mais junior?
+> 18. Que estratégias você usa para mentorar desenvolvedores mais junior?
 
-## 19. Você foi designado para criar uma API RESTful para gerenciamento de usuários em um sistema.
+> 19. Você foi designado para criar uma API RESTful para gerenciamento de usuários em um sistema.
 
-## 20. Como você estrutura seus testes unitários em projetos Java? Quais boas práticas você segue para garantir que os testes sejam confiáveis,
-legíveis e de fácil manutenção? Pode citar ferramentas que costuma utilizar e como você lida com mocks e dependências externas?
-
+> 20. Como você estrutura seus testes unitários em projetos Java? 
+> Quais boas práticas você segue para garantir que os testes sejam confiáveis, legíveis e de fácil manutenção? 
+> Pode citar ferramentas que costuma utilizar e como você lida com mocks e dependências externas?
 
 ---
 
