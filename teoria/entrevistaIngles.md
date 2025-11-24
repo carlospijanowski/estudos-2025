@@ -263,113 +263,79 @@ aqui entra: solid etc
 <br> We rely on load testing to assess system performance.
 
 #### [TAG SPRING]
-> Spring Boot accelerates backend development in Java, and Spring Cloud helps manage distributed microservices.
->
-> 🔵 Spring Core <br>
-> It’s like a box of LEGO pieces: everything is there, but you assemble everything manually. <br>
-> It provides the fundamentals: IoC, Dependency Injection, ApplicationContext, AOP, and the base for MVC. <br>
+Spring Boot accelerates backend development in Java, and Spring Cloud helps manage distributed microservices.
+
+🔵 Spring Core
+It’s like a box of LEGO pieces: everything is there, but you assemble everything manually.
+It provides the fundamentals: IoC, Dependency Injection, ApplicationContext, AOP, and the base for MVC.
 
 🟢 Spring Boot
-
 It’s like pre-assembled LEGO: most of the heavy lifting is already done.
-
 It reduces boilerplate and loads automatic configurations based on the dependencies you add.
 
 🟣 Spring Starters
-
 They are ready-made kits that bundle related dependencies.
-
 When you include a starter, Spring Boot knows exactly which configurations to load for you.
 
 💬 Professional Summary of My Experience with Spring
-
 I work with the full Spring ecosystem.
-In Spring Core, I use modules such as spring-core, spring-context, spring-aop, and spring-webmvc, which provide IoC, DI, and the foundation of the MVC model.
+In Spring Core, I use modules such as spring-core, spring-context, spring-aop, and spring-webmvc, 
+which provide IoC, DI, and the foundation of the MVC model.
 With Spring Boot, I rely on starters like Web, Data JPA, Security, and Actuator to simplify configuration.
 I understand that starters are dependency bundles that automatically configure Spring Core modules.
-I also work with Spring Cloud to build microservices with distributed configuration, service discovery, resilience, and scalable communication.
+I also work with Spring Cloud to build microservices with distributed configuration, service discovery, 
+resilience, and scalable communication.
 
 📦 Main Spring Stacks I Work With
 🌐 Web / REST
-
 spring-boot-starter-web (Spring MVC)
-
 spring-boot-starter-webflux (Reactive)
-
 spring-boot-starter-validation (Jakarta Validation)
-
 jackson-databind (JSON)
 
 🛢️ Persistence & Data
-
 spring-boot-starter-data-jpa (Hibernate)
-
 spring-boot-starter-data-mongodb
-
 spring-boot-starter-data-redis (cache / pub-sub)
-
 spring-boot-starter-jdbc
-
 flyway-core / liquibase-core (migrations)
 
 🔐 Security
-
 spring-boot-starter-security
-
 spring-security-oauth2-client / resource-server
 
 📡 Messaging
-
 spring-kafka
-
 spring-retry, resilience4j-*
-
 spring-amqp (RabbitMQ)
 
 ☁️ Integration / Cloud
-
 spring-cloud-openfeign (typed HTTP clients)
-
 spring-cloud-starter-config
-
 eureka-client / consul-discovery
-
 spring-cloud-starter-gateway (API Gateway / BFF)
 
 📊 Observability
-
 spring-boot-starter-actuator
-
 micrometer-registry-*
-
 opentelemetry-exporter-otlp (or auto-instrumentation)
 
 📄 Documentation
-
 springdoc-openapi-starter-webmvc-ui (Swagger UI)
 
 ⏱️ Jobs, Batch & Scheduling
-
 spring-boot-starter-batch
-
 @EnableScheduling with Spring Boot
 
 🧪 Testing
-
 spring-boot-starter-test
-
 mockito-core
-
 wiremock-jre8
-
 testcontainers
 
 🛠️ Quality & Utilities
-
 mapstruct (mapping)
-
 lombok (boilerplate reduction)
-
 hibernate-validator
 > 
 ---
