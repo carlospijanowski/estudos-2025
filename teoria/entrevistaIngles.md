@@ -371,9 +371,9 @@ Também trabalho com o ecossistema Spring Cloud para microsserviços.”
 --------------------------------------------------------------------------
 
 ## [TAG INVILLIA] 
-> 1. Se você tivesse que escolher entre RabbitMQ e Kafka para um novo sistema, quais critérios levaria em consideração?<br>
-> Quais cenários favorecem cada tecnologia e por quê? <br>
-> Explique também as principais diferenças entre filas e tópicos em sistemas de mensageria.<br>
+> 1. If you had to choose between RabbitMQ and Kafka for a new system, what criteria would you consider?<br>
+> Which scenarios favor each technology and why? <br>
+> Also explain the main differences between queues and topics in messaging systems.<br>
 > 
 > When I need to choose between RabbitMQ and Kafka, I first:
 > - look at the type of communication the system needs 
