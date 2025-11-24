@@ -552,39 +552,39 @@ Security and governance
 - Follow a clear naming convention for topics to simplify governance.
 ---
 
-> 5. Explique como você projetaria um banco de dados para um sistema de alta escala. Quando optaria por SQL vs NoSQL?
-> 
-> When I design a database for a high-scale system, I don’t start with “SQL vs NoSQL.” I start with the requirements.
-> 
-> First, I look at the data model and the domain — how the entities relate, whether the structure is complex or 
-> more aggregate-based.
-> 
-> Then I consider the access patterns — is the system read-heavy or write-heavy, do we query mostly by ID, 
-> or do we need filters, reports, and joins?
->
-> I also check the non-functional requirements — data volume, expected latency, availability, and the level of 
-> consistency the business needs.
-> 
-> For high scale, I focus on a few pillars:<br>
-> - a data model aligned to the use cases,
-> - well-planned indexing and partitioning,
-> - and replication plus caching (like Redis) to offload the database during traffic spikes.
-> 
-> The idea is that scalability comes from the model + access patterns + infrastructure — not just from picking SQL or NoSQL.
-> 
-> When would I choose SQL?<br> 
-> - SQL is my choice when I need strong consistency, ACID transactions, and the domain has rich relationships 
-> and complex rules — things like financial flows, orders, limits, or anything that depends heavily on integrity and joins.
-> 
-> In short: when the business needs highly consistent, well-related data, SQL is usually the right fit.
-> 
-> When would I choose NoSQL?<br>
-> - I’d pick NoSQL when I’m dealing with massive data volume and need easier horizontal scaling.
-> - It fits well when the model is aggregate/document-oriented, when I need flexible schema evolution, 
-> and when the system can tolerate eventual consistency in exchange for low latency and high availability.
-> 
-> In short: when the focus is large scale, flexible schema, and simple access patterns, NoSQL is a strong choice.
-> 
+5. Explique como você projetaria um banco de dados para um sistema de alta escala. Quando optaria por SQL vs NoSQL?
+
+When I design a database for a high-scale system, I don’t start with “SQL vs NoSQL.” I start with the requirements.
+
+First, I look at the data model and the domain — how the entities relate, whether the structure is complex or 
+more aggregate-based.
+
+Then I consider the access patterns — is the system read-heavy or write-heavy, do we query mostly by ID, 
+or do we need filters, reports, and joins?
+
+I also check the non-functional requirements — data volume, expected latency, availability, and the level of 
+consistency the business needs.
+
+For high scale, I focus on a few pillars:<br>
+- a data model aligned to the use cases,
+- well-planned indexing and partitioning,
+- and replication plus caching (like Redis) to offload the database during traffic spikes.
+
+The idea is that scalability comes from the model + access patterns + infrastructure — not just from picking SQL or NoSQL.
+
+When would I choose SQL?<br> 
+- SQL is my choice when I need strong consistency, ACID transactions, and the domain has rich relationships 
+and complex rules — things like financial flows, orders, limits, or anything that depends heavily on integrity and joins.
+
+In short: when the business needs highly consistent, well-related data, SQL is usually the right fit.
+
+When would I choose NoSQL? <br>
+- I’d pick NoSQL when I’m dealing with massive data volume and need easier horizontal scaling.
+- It fits well when the model is aggregate/document-oriented, when I need flexible schema evolution, 
+and when the system can tolerate eventual consistency in exchange for low latency and high availability.
+
+In short: when the focus is large scale, flexible schema, and simple access patterns, NoSQL is a strong choice.
+
 ---
 >
 > 6. Imagine que você está liderando uma equipe DevOps em um projeto crítico com 
@@ -611,111 +611,136 @@ Security and governance
 >
 ---
 
-> 8. Imagine que precisamos criar um ecommerce com alta demanda. 
-> Esporadicamente vamos realizar campanhas televisivas que gerarão acessos elevados em determinados momentos. 
-> A busca de nosso ecommerce também será bastante requisitada, sendo que muitos usuários pesquisam pelo 
-> mesmo produto várias vezes ao dia.
-> Como você estruturaria este projeto visando resolver os problemas relatados? 
-> Lembre-se que precisamos garantir escalabilidade, resiliência e rapidez.
+8. Imagine que precisamos criar um ecommerce com alta demanda. 
+Esporadicamente vamos realizar campanhas televisivas que gerarão acessos elevados em determinados momentos. 
+A busca de nosso ecommerce também será bastante requisitada, sendo que muitos usuários pesquisam pelo 
+mesmo produto várias vezes ao dia.
+Como você estruturaria este projeto visando resolver os problemas relatados? 
+Lembre-se que precisamos garantir escalabilidade, resiliência e rapidez.
 
-> 9. Como você implementaria uma arquitetura de microserviços resiliente utilizando Java? <br>
-> Descreva os padrões que utilizaria para garantir alta disponibilidade.
-> 
-> Every system fails. It’s something inevitable!<br>
-> I design microservices to fail gracefully. <br>
-> Using Java with Resilience4j!<br>
-> - I apply circuit breakers, retries, bulkheads, timeouts and fallbacks for each outbound call. 
-> - I keep services stateless, idempotent, and event-driven. 
-> - Data uses multi-AZ replicas and the Outbox pattern for consistency. 
-> - Kubernetes ensures health checks, autoscaling, and safe deployments through blue/green or canary rollout. 
-> - Observability is built in with metrics, logs, and distributed tracing. 
-> 
-> - The combination of these patterns delivers a highly available and fault-tolerant architecture.
->
-> ---
-> 
-> 10. Em um sistema de microserviços, como você lidaria com transações distribuídas que envolvem múltiplos serviços 
-> e bases de dados?
-> In microservices, I avoid classic distributed transactions like 2PC (which creates a single point of failure) 
-> because they don’t scale and create strong coupling between services.<br>
-> Instead, I rely on local transactions inside each service and coordinate the overall flow using events 
-> and compensations, following the Saga pattern.
-> 
-> I usually apply Sagas in two ways:
-> 
-> - Choreography: each service performs its local transaction and publishes an event; the next services react to that event. If something fails, an error event triggers the compensating actions.
-> 
-> - Orchestration: a central orchestrator calls each service in sequence and triggers compensations when needed.
->
-> To make this reliable, I ensure:
-> - Idempotency, so a service can process the same event multiple times without breaking the state.
-> - The Outbox Pattern, to avoid losing events between the database and the message broker.
-> - Retries and DLQs, to handle temporary and permanent failures.
-> - Observability, using correlationId to trace the entire “transaction” across services.
->
-> This way, I maintain consistency, low coupling, and resilience across the system—without relying 
-> on heavy distributed transactions.
-> ---
-> 
-> 11. Como você abordaria a implementação de uma feature que exige alta performance e precisa processar 
-> grandes volumes de dados em tempo real?
-> 
-> A solution needs to be available, scalable, performant, and resilient.
-> 
-> - performance: So the first step is understanding what “real-time high performance” actually means in that context: <br>
-> the acceptable latency, the data volume per second, the expected SLAs, and the tolerable error rate.
->
-> - async: After that, I would design an event-driven architecture to avoid the system getting stuck on slow 
-> or synchronous operations. <br>
-> I’d use something like Kafka to ingest and partition the data, allowing multiple consumers to process 
-> everything in parallel and scale horizontally as the load increases.
->
-> - code: In the code itself, I’d focus on fast, asynchronous processing: avoiding blocking operations, 
-> using batching when it makes sense, and relying on caching (like Redis) for frequently accessed data. <br>
-> The idea is to keep the critical path as light as possible — without unnecessary remote calls 
-> that slow down the response.
->
-> - observability: To ensure real performance, I’d add observability from the start: latency metrics, throughput, queue size, 
-> CPU and memory usage, and error rate. With these metrics, I’d run load and stress tests to tune thread counts, 
-> batch sizes, partitioning strategy, and the number of instances.
-> 
-> - scalable: Finally, I’d make sure the solution can scale horizontally in an elastic environment like Kubernetes, 
-> and I’d implement backpressure, retry mechanisms, and a DLQ, so the system keeps running smoothly 
-> even during unexpected spikes.
->
-> ---
-> 
-> 12. Na sua experiência com Java, quais os trade-offs entre utilizar um ORM como Hibernate/JPA e JDBC puro? 
-> Cite quais cenários você recomendaria cada abordagem, considerando aspectos como performance, produtividade e manutenibilidade.
+- For a high-demand ecommerce with traffic spikes caused by TV campaigns, I would focus on CDN, 
+caching, stateless services, and distributed processing.
 
-> 13. Descreva como você configuraria um aplicativo Spring Boot para um ambiente de produção de alta disponibilidade.
-> Cite quais recursos específicos do Spring Boot (como profiles, externalized configuration, actuators) você utilizaria e
-> como implementaria métricas personalizadas.
+- First, I’d place a CDN in front of all static content and use an API Gateway with rate limiting 
+and horizontal scalability through Kubernetes.
 
-> 14. Descreva sua experiência na identificação e resolução de problemas em sistemas concorrentes, 
-> como deadlocks, race conditions e contenção de recursos.
+- The architecture would be microservices-based, so I can scale the components that 
+actually suffer pressure — mainly catalog and search.
 
-> 15. Como você implementaria feature flags em uma aplicação Java para permitir lançamentos graduais?<br>
-> A feature flag solves the problem of releasing a feature without having to bet 100% on it from day one.<br>
-> With feature flags, I can roll out the feature gradually, test it with smaller user groups, compare behavior, <br>
-> and if something goes wrong, I can turn it off within seconds — without any redeploy.
-> There are multiple ways to implement this, depending on the context and the requirements.
-> 
+- For search, I’d use Elasticsearch / OpenSearch and put Redis in front to cache repeated queries, 
+since many users search for the same products multiple times a day.
+
+- For data, I’d keep the catalog in its own database (SQL or NoSQL) and orders in a relational database 
+with read replicas to spread the load.
+Heavy or external operations (payment, antifraud, emails) would be decoupled using messaging (Kafka, RabbitMQ, SQS) 
+to avoid bottlenecks during peak traffic.
+
+- To ensure resilience, I’d apply timeouts, retries, circuit breakers, DLQs, and 
+graceful degradation — prioritizing search and checkout over secondary features during TV-campaign peaks.
+
+- Finally, I’d make everything observable with metrics (latency, errors, throughput, lag), structured logs, 
+and distributed tracing to quickly identify any bottleneck.
+
+9. How would you implement a resilient microservices architecture using Java? <br>
+   Describe the standards you would use to ensure high availability.    
+
+Every system fails. It’s something inevitable!<br>
+I design microservices to fail gracefully. <br>
+Using Java with Resilience4j!<br>
+- I apply circuit breakers, retries, bulkheads, timeouts and fallbacks for each outbound call. 
+- I keep services stateless, idempotent, and event-driven. 
+- Data uses multi-AZ replicas and the Outbox pattern for consistency. 
+- Kubernetes ensures health checks, autoscaling, and safe deployments through blue/green or canary rollout. 
+- Observability is built in with metrics, logs, and distributed tracing. 
+
+- The combination of these patterns delivers a highly available and fault-tolerant architecture.
+
 ---
-> 
-> 16. Quais estratégias você utiliza para garantir a qualidade do código? 
-> Como você implementaria uma pipeline de CI/CD com Jenkins que inclua testes e análise de Sonar?
-> Eu costumo pensar em qualidade de código em três níveis: como eu escrevo, como o time valida e como o pipeline protege a base de código.
 
-> 17. Descreva uma situação em que você precisou refatorar um código legado para melhorar sua manutenibilidade.
+10. Em um sistema de microserviços, como você lidaria com transações distribuídas que envolvem múltiplos serviços 
+e bases de dados?
+In microservices, I avoid classic distributed transactions like 2PC (which creates a single point of failure) 
+because they don’t scale and create strong coupling between services.<br>
+Instead, I rely on local transactions inside each service and coordinate the overall flow using events 
+and compensations, following the Saga pattern.
 
-> 18. Que estratégias você usa para mentorar desenvolvedores mais junior?
+I usually apply Sagas in two ways:
 
-> 19. Você foi designado para criar uma API RESTful para gerenciamento de usuários em um sistema.
+- Choreography: each service performs its local transaction and publishes an event; the next services react to that event. If something fails, an error event triggers the compensating actions.
 
-> 20. Como você estrutura seus testes unitários em projetos Java? 
-> Quais boas práticas você segue para garantir que os testes sejam confiáveis, legíveis e de fácil manutenção? 
-> Pode citar ferramentas que costuma utilizar e como você lida com mocks e dependências externas?
+- Orchestration: a central orchestrator calls each service in sequence and triggers compensations when needed.
+
+To make this reliable, I ensure:
+- Idempotency, so a service can process the same event multiple times without breaking the state.
+- The Outbox Pattern, to avoid losing events between the database and the message broker.
+- Retries and DLQs, to handle temporary and permanent failures.
+- Observability, using correlationId to trace the entire “transaction” across services.
+
+This way, I maintain consistency, low coupling, and resilience across the system—without relying 
+on heavy distributed transactions.
+---
+
+11. How would you approach implementing a feature that requires high performance and needs to process large volumes 
+of data in real time?
+
+A solution needs to be available, scalable, performant, and resilient.
+
+- performance: So the first step is understanding what “real-time high performance” actually means in that context: <br>
+the acceptable latency, the data volume per second, the expected SLAs, and the tolerable error rate.
+
+- async: After that, I would design an event-driven architecture to avoid the system getting stuck on slow 
+or synchronous operations. <br>
+I’d use something like Kafka to ingest and partition the data, allowing multiple consumers to process 
+everything in parallel and scale horizontally as the load increases.
+
+- code: In the code itself, I’d focus on fast, asynchronous processing: avoiding blocking operations, 
+using batching when it makes sense, and relying on caching (like Redis) for frequently accessed data. <br>
+The idea is to keep the critical path as light as possible — without unnecessary remote calls 
+that slow down the response.
+
+- observability: To ensure real performance, I’d add observability from the start: latency metrics, throughput, queue size, 
+CPU and memory usage, and error rate. With these metrics, I’d run load and stress tests to tune thread counts, 
+batch sizes, partitioning strategy, and the number of instances.
+
+- scalable: Finally, I’d make sure the solution can scale horizontally in an elastic environment like Kubernetes, 
+and I’d implement backpressure, retry mechanisms, and a DLQ, so the system keeps running smoothly 
+even during unexpected spikes.
+
+---
+ 
+12. Na sua experiência com Java, quais os trade-offs entre utilizar um ORM como Hibernate/JPA e JDBC puro? 
+Cite quais cenários você recomendaria cada abordagem, considerando aspectos como performance, produtividade e manutenibilidade.
+
+13. Descreva como você configuraria um aplicativo Spring Boot para um ambiente de produção de alta disponibilidade.
+Cite quais recursos específicos do Spring Boot (como profiles, externalized configuration, actuators) você utilizaria e
+como implementaria métricas personalizadas.
+
+14. Descreva sua experiência na identificação e resolução de problemas em sistemas concorrentes, 
+como deadlocks, race conditions e contenção de recursos.
+
+15. Como você implementaria feature flags em uma aplicação Java para permitir lançamentos graduais?<br>
+A feature flag solves the problem of releasing a feature without having to bet 100% on it from day one.<br>
+With feature flags, I can roll out the feature gradually, test it with smaller user groups, compare behavior, <br>
+and if something goes wrong, I can turn it off within seconds — without any redeploy.
+There are multiple ways to implement this, depending on the context and the requirements.
+
+---
+
+16. Quais estratégias você utiliza para garantir a qualidade do código? 
+Como você implementaria uma pipeline de CI/CD com Jenkins que inclua testes e análise de Sonar?
+Eu costumo pensar em qualidade de código em três níveis: como eu escrevo, como o time valida e como o pipeline protege a base de código.
+
+17. Descreva uma situação em que você precisou refatorar um código legado para melhorar sua manutenibilidade.
+
+18. Que estratégias você usa para mentorar desenvolvedores mais junior?
+
+19. Você foi designado para criar uma API RESTful para gerenciamento de usuários em um sistema.<br>
+      A API deve permitir operações de criação, leitura, atualização e exclusão de usuários.<br>
+      Quais boas práticas você adotaria para garantir que essa API siga os princípios RESTful?<br>
+      Como você estruturaria os endpoints e utilizaria os métodos HTTP adequadamente?<br>
+      Cite também como lidaria com versionamento, autenticação, autorização, códigos de status HTTP e tratamento de erros.
+
+
 
 ---
  
