@@ -402,29 +402,29 @@ hibernate-validator
 --------------------------------------------------------------------------
 
 ## [TAG INVILLIA] 
-> 1. If you had to choose between RabbitMQ and Kafka for a new system, what criteria would you consider?<br>
-> Which scenarios favor each technology and why? <br>
-> Also explain the main differences between queues and topics in messaging systems.<br>
-> 
-> When I need to choose between RabbitMQ and Kafka, I first:
-> - look at the type of communication the system needs 
-> - and the message volume. 
-> - I also consider whether the team needs to reprocess events, what the expected latency is, 
-> and how the consumers are supposed to work.
-> 
-> **RabbitMQ** is great when the system follows a more “do this now” style — tasks and commands. 
-> It delivers fast, supports message-level ACKs, and offers flexible routing. 
-> It works really well when each message needs to go to a single consumer, and the overall volume isn’t extreme.
-> 
-> **Kafka** shines in high-volume scenarios, especially when the system is event-driven and needs to store messages for longer. 
-> It allows multiple consumers to read the same event, keeps ordering within partitions, and makes reprocessing very easy. 
-> That’s usually my choice for more complex asynchronous integrations or event-driven observability.
-> 
-> The main difference between a queue and a topic is simple:
-> A queue sends each message to one consumer — it’s work distribution.
-> A topic lets multiple consumers read the same message — it’s event broadcasting.
->
-> ---
+1. If you had to choose between RabbitMQ and Kafka for a new system, what criteria would you consider?<br>
+Which scenarios favor each technology and why? <br>
+Also explain the main differences between queues and topics in messaging systems.<br>
+
+When I need to choose between RabbitMQ and Kafka, I first:
+- look at the type of communication the system needs 
+- and the message volume. 
+- I also consider whether the team needs to reprocess events, what the expected latency is, 
+and how the consumers are supposed to work.
+
+**RabbitMQ** is great when the system follows a more “do this now” style — tasks and commands. 
+It delivers fast, supports message-level ACKs, and offers flexible routing. 
+It works really well when each message needs to go to a single consumer, and the overall volume isn’t extreme.
+
+**Kafka** shines in high-volume scenarios, especially when the system is event-driven and needs to store messages for longer. 
+It allows multiple consumers to read the same event, keeps ordering within partitions, and makes reprocessing very easy. 
+That’s usually my choice for more complex asynchronous integrations or event-driven observability.
+
+The main difference between a queue and a topic is simple:
+A queue sends each message to one consumer — it’s work distribution.
+A topic lets multiple consumers read the same message — it’s event broadcasting.
+
+---
 > 
 > 2. Como você utilizaria os serviços AWS (SNS, SQS, S3) para criar uma arquitetura escalável e tolerante a falhas?
 > 
