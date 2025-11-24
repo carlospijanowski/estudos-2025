@@ -265,77 +265,78 @@ aqui entra: solid etc
 #### [TAG SPRING]
 Spring Boot accelerates backend development in Java, and Spring Cloud helps manage distributed microservices.
 
-🔵 Spring Core
-It’s like a box of LEGO pieces: everything is there, but you assemble everything manually.
-It provides the fundamentals: IoC, Dependency Injection, ApplicationContext, AOP, and the base for MVC.
+🔵 Spring Core <br>
+It’s like a box of LEGO pieces: everything is there, but you assemble everything manually. <br>
+It provides the fundamentals: IoC, Dependency Injection, ApplicationContext, AOP, and the base for MVC. <br>
 
-🟢 Spring Boot
-It’s like pre-assembled LEGO: most of the heavy lifting is already done.
-It reduces boilerplate and loads automatic configurations based on the dependencies you add.
+🟢 Spring Boot <br>
+It’s like pre-assembled LEGO: most of the heavy lifting is already done. <br>
+It reduces boilerplate and loads automatic configurations based on the dependencies you add. <br>
 
-🟣 Spring Starters
-They are ready-made kits that bundle related dependencies.
-When you include a starter, Spring Boot knows exactly which configurations to load for you.
+🟣 Spring Starters <br>
+They are ready-made kits that bundle related dependencies. <br>
+When you include a starter, Spring Boot knows exactly which configurations to load for you. <br>
 
-💬 Professional Summary of My Experience with Spring
-I work with the full Spring ecosystem.
+💬 Professional Summary of My Experience with Spring <br>
+I work with the full Spring ecosystem. <br>
 In Spring Core, I use modules such as spring-core, spring-context, spring-aop, and spring-webmvc, 
-which provide IoC, DI, and the foundation of the MVC model.
-With Spring Boot, I rely on starters like Web, Data JPA, Security, and Actuator to simplify configuration.
-I understand that starters are dependency bundles that automatically configure Spring Core modules.
+which provide IoC, DI, and the foundation of the MVC model. <br>
+With Spring Boot, I rely on starters like Web, Data JPA, Security, and Actuator to simplify configuration. <br>
+I understand that starters are dependency bundles that automatically configure Spring Core modules. <br>
 I also work with Spring Cloud to build microservices with distributed configuration, service discovery, 
-resilience, and scalable communication.
+resilience, and scalable communication. <br>
 
 📦 Main Spring Stacks I Work With
-🌐 Web / REST
-spring-boot-starter-web (Spring MVC)
-spring-boot-starter-webflux (Reactive)
-spring-boot-starter-validation (Jakarta Validation)
-jackson-databind (JSON)
 
-🛢️ Persistence & Data
-spring-boot-starter-data-jpa (Hibernate)
-spring-boot-starter-data-mongodb
-spring-boot-starter-data-redis (cache / pub-sub)
-spring-boot-starter-jdbc
-flyway-core / liquibase-core (migrations)
+🌐 Web / REST <br>
+spring-boot-starter-web (Spring MVC) <br>
+spring-boot-starter-webflux (Reactive) <br>
+spring-boot-starter-validation (Jakarta Validation) <br>
+jackson-databind (JSON) <br>
 
-🔐 Security
-spring-boot-starter-security
+🛢️ Persistence & Data <br>
+spring-boot-starter-data-jpa (Hibernate) <br>
+spring-boot-starter-data-mongodb <br>
+spring-boot-starter-data-redis (cache / pub-sub) <br>
+spring-boot-starter-jdbc <br>
+flyway-core / liquibase-core (migrations) <br>
+
+🔐 Security <br>
+spring-boot-starter-security <br>
 spring-security-oauth2-client / resource-server
 
-📡 Messaging
-spring-kafka
-spring-retry, resilience4j-*
-spring-amqp (RabbitMQ)
+📡 Messaging <br>
+spring-kafka <br>
+spring-retry, resilience4j-* <br>
+spring-amqp (RabbitMQ) <br>
 
-☁️ Integration / Cloud
-spring-cloud-openfeign (typed HTTP clients)
-spring-cloud-starter-config
-eureka-client / consul-discovery
+☁️ Integration / Cloud <br>
+spring-cloud-openfeign (typed HTTP clients) <br>
+spring-cloud-starter-config <br>
+eureka-client / consul-discovery <br>
 spring-cloud-starter-gateway (API Gateway / BFF)
 
-📊 Observability
-spring-boot-starter-actuator
-micrometer-registry-*
+📊 Observability <br>
+spring-boot-starter-actuator <br>
+micrometer-registry-* <br>
 opentelemetry-exporter-otlp (or auto-instrumentation)
 
-📄 Documentation
+📄 Documentation <br>
 springdoc-openapi-starter-webmvc-ui (Swagger UI)
 
-⏱️ Jobs, Batch & Scheduling
-spring-boot-starter-batch
+⏱️ Jobs, Batch & Scheduling <br>
+spring-boot-starter-batch <br>
 @EnableScheduling with Spring Boot
 
-🧪 Testing
-spring-boot-starter-test
-mockito-core
-wiremock-jre8
+🧪 Testing <br>
+spring-boot-starter-test <br>
+mockito-core <br>
+wiremock-jre8 <br>
 testcontainers
 
-🛠️ Quality & Utilities
-mapstruct (mapping)
-lombok (boilerplate reduction)
+🛠️ Quality & Utilities <br>
+mapstruct (mapping) <br>
+lombok (boilerplate reduction) <br>
 hibernate-validator
 > 
 ---
