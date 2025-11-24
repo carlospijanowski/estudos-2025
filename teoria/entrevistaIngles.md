@@ -371,12 +371,14 @@ Também trabalho com o ecossistema Spring Cloud para microsserviços.”
 --------------------------------------------------------------------------
 
 ## [TAG INVILLIA] 
-> 1. Se você tivesse que escolher entre RabbitMQ e Kafka para um novo sistema, quais critérios levaria em consideração?
-> Quais cenários favorecem cada tecnologia e por quê? 
-> Explique também as principais diferenças entre filas e tópicos em sistemas de mensageria.
+> 1. Se você tivesse que escolher entre RabbitMQ e Kafka para um novo sistema, quais critérios levaria em consideração?<br>
+> Quais cenários favorecem cada tecnologia e por quê? <br>
+> Explique também as principais diferenças entre filas e tópicos em sistemas de mensageria.<br>
 > 
-> When I need to choose between RabbitMQ and Kafka, I first look at the type of communication the system needs 
-> and the message volume. I also consider whether the team needs to reprocess events, what the expected latency is, 
+> When I need to choose between RabbitMQ and Kafka, I first:
+> - look at the type of communication the system needs 
+> - and the message volume. 
+> - I also consider whether the team needs to reprocess events, what the expected latency is, 
 > and how the consumers are supposed to work.
 > 
 > **RabbitMQ** is great when the system follows a more “do this now” style — tasks and commands. 
@@ -441,18 +443,19 @@ Também trabalho com o ecossistema Spring Cloud para microsserviços.”
 > - What do I do with messages that always fail? I need a proper retry strategy and a DLQ.
 > 
 > Observability
-> I need to answer: What happened to this event? Did it fail? Who consumed it? Where did it stop?
+> - I need to answer: What happened to this event? Did it fail? Who consumed it? Where did it stop?
 > 
 > Security and isolation
-> Controlling who can publish and consume each topic.
+> - Controlling who can publish and consume each topic.
 > 
-> If I ignore these points, the architecture might work fine in the happy path, but it will become a real source of pain in production.
+> If I ignore these points, the architecture might work fine in the happy path, but it will become 
+> a real source of pain in production.
 > 
 > Second: How I would structure the communication between the two microservices using Kafka
 > 
 > To minimize these risks, I’d structure the solution like this:
-> - Define clear domain events and contracts
-> - No generic payloads. I’d use explicit events like CustomerCreatedEvent, OrderApprovedEvent, etc.
+> - Define clear domain events and contracts<br>
+> - No generic payloads. I’d use explicit events like CustomerCreatedEvent, OrderApprovedEvent, etc.<br>
 > And I’d use JSON or Avro with a well-defined, versioned schema.
 > - Topic modeling and keying strategy<br>
 > I’d create domain-oriented topics such as: customer-events or orders-events.
@@ -470,9 +473,8 @@ Também trabalho com o ecossistema Spring Cloud para microsserviços.”
 > 
 > Idempotent consumer
 > - Service B consumes in a consumer group, allowing horizontal scaling.
-> - Processing must be idempotent:
-> - Use eventId or a referenceId
-> - Keep a record of processed events to avoid duplicating effects
+> - Processing must be idempotent: Use eventId or a referenceId and Keep a record of processed events 
+> to avoid duplicating effects
 > 
 > Structured retry and DLQ
 > - If processing fails due to a temporary issue:
@@ -493,6 +495,7 @@ Também trabalho com o ecossistema Spring Cloud para microsserviços.”
 ---
 
 > 5. Explique como você projetaria um banco de dados para um sistema de alta escala. Quando optaria por SQL vs NoSQL?
+> 
 > When I design a database for a high-scale system, I don’t start with “SQL vs NoSQL.” I start with the requirements.
 > 
 > First, I look at the data model and the domain — how the entities relate, whether the structure is complex or 
@@ -512,14 +515,14 @@ Também trabalho com o ecossistema Spring Cloud para microsserviços.”
 > The idea is that scalability comes from the model + access patterns + infrastructure — not just from picking SQL or NoSQL.
 > 
 > When would I choose SQL?<br> 
-> SQL is my choice when I need strong consistency, ACID transactions, and the domain has rich relationships 
+> - SQL is my choice when I need strong consistency, ACID transactions, and the domain has rich relationships 
 > and complex rules — things like financial flows, orders, limits, or anything that depends heavily on integrity and joins.
 > 
 > In short: when the business needs highly consistent, well-related data, SQL is usually the right fit.
 > 
 > When would I choose NoSQL?<br>
-> I’d pick NoSQL when I’m dealing with massive data volume and need easier horizontal scaling.
-> It fits well when the model is aggregate/document-oriented, when I need flexible schema evolution, 
+> - I’d pick NoSQL when I’m dealing with massive data volume and need easier horizontal scaling.
+> - It fits well when the model is aggregate/document-oriented, when I need flexible schema evolution, 
 > and when the system can tolerate eventual consistency in exchange for low latency and high availability.
 > 
 > In short: when the focus is large scale, flexible schema, and simple access patterns, NoSQL is a strong choice.
@@ -527,14 +530,28 @@ Também trabalho com o ecossistema Spring Cloud para microsserviços.”
 ---
 >
 > 6. Imagine que você está liderando uma equipe DevOps em um projeto crítico com 
-> múltiplos desenvolvedores trabalhando simultaneamente.
+> múltiplos desenvolvedores trabalhando simultaneamente. 
 > Como você utilizaria Git-Flow para gerenciar releases, hotfixes e branches de desenvolvimento, 
 > garantindo integração contínua e minimizando conflitos? 
 > Quais práticas avançadas você recomendaria para otimizar esse fluxo?
 
 > 7. Quais recursos introduzidos no Java 16 ou superior você já utilizou, como records, sealed classes, 
-> ou melhorias no Pattern Matching?
+> ou melhorias no Pattern Matching? <br>
 > Explique como esses recursos funcionam e em quais cenários você os considera vantajosos.
+> 
+> I started back in the Java 7 days, working with JSF, managed beans, and the typical monolithic architecture 
+> approach of that time. As Java evolved, I evolved with it.
+> - Java 8 was a big turning point for me — especially with streams, lambdas, and the functional style 
+> that changed the way we write business logic.
+> - In Java 9, the module system pushed me to think more about boundaries and encapsulation inside large applications.
+> - With Java 11, the LTS, most of my production work started to modernize — better performance, 
+> the new HTTP client, and cleaner APIs.
+> - Moving to Java 17 was another major jump, with records, sealed classes, pattern matching and overall stability. 
+> It really changed how we design DTOs, domains, and safer hierarchies.
+> - And today, working with Java 21, I’m taking advantage of virtual threads from Project Loom, 
+> which has been a huge improvement for concurrency in backend systems.
+>
+---
 
 > 8. Imagine que precisamos criar um ecommerce com alta demanda. 
 > Esporadicamente vamos realizar campanhas televisivas que gerarão acessos elevados em determinados momentos. 
@@ -543,15 +560,55 @@ Também trabalho com o ecossistema Spring Cloud para microsserviços.”
 > Como você estruturaria este projeto visando resolver os problemas relatados? 
 > Lembre-se que precisamos garantir escalabilidade, resiliência e rapidez.
 
-> 9. Como você implementaria uma arquitetura de microserviços resiliente utilizando Java? 
+> 9. Como você implementaria uma arquitetura de microserviços resiliente utilizando Java? <br>
 > Descreva os padrões que utilizaria para garantir alta disponibilidade.
-
+> 
+> Every system fails. It’s something inevitable!<br>
+> I design microservices to fail gracefully. <br>
+> Using Java with Resilience4j!<br>
+> - I apply circuit breakers, retries, bulkheads, timeouts and fallbacks for each outbound call. 
+> - I keep services stateless, idempotent, and event-driven. 
+> - Data uses multi-AZ replicas and the Outbox pattern for consistency. 
+> - Kubernetes ensures health checks, autoscaling, and safe deployments through blue/green or canary rollout. 
+> - Observability is built in with metrics, logs, and distributed tracing. 
+> 
+> - The combination of these patterns delivers a highly available and fault-tolerant architecture.
+>
+> ---
+> 
 > 10. Em um sistema de microserviços, como você lidaria com transações distribuídas que envolvem múltiplos serviços 
 > e bases de dados?
-
+>
+> ---
+> 
 > 11. Como você abordaria a implementação de uma feature que exige alta performance e precisa processar 
 > grandes volumes de dados em tempo real?
-
+> 
+> A solution needs to be available, scalable, performant, and resilient.
+> 
+> - performance: So the first step is understanding what “real-time high performance” actually means in that context: <br>
+> the acceptable latency, the data volume per second, the expected SLAs, and the tolerable error rate.
+>
+> - async: After that, I would design an event-driven architecture to avoid the system getting stuck on slow 
+> or synchronous operations. <br>
+> I’d use something like Kafka to ingest and partition the data, allowing multiple consumers to process 
+> everything in parallel and scale horizontally as the load increases.
+>
+> - code: In the code itself, I’d focus on fast, asynchronous processing: avoiding blocking operations, 
+> using batching when it makes sense, and relying on caching (like Redis) for frequently accessed data. <br>
+> The idea is to keep the critical path as light as possible — without unnecessary remote calls 
+> that slow down the response.
+>
+> - observability: To ensure real performance, I’d add observability from the start: latency metrics, throughput, queue size, 
+> CPU and memory usage, and error rate. With these metrics, I’d run load and stress tests to tune thread counts, 
+> batch sizes, partitioning strategy, and the number of instances.
+> 
+> - scalable: Finally, I’d make sure the solution can scale horizontally in an elastic environment like Kubernetes, 
+> and I’d implement backpressure, retry mechanisms, and a DLQ, so the system keeps running smoothly 
+> even during unexpected spikes.
+>
+> ---
+> 
 > 12. Na sua experiência com Java, quais os trade-offs entre utilizar um ORM como Hibernate/JPA e JDBC puro? 
 > Cite quais cenários você recomendaria cada abordagem, considerando aspectos como performance, produtividade e manutenibilidade.
 
@@ -562,10 +619,17 @@ Também trabalho com o ecossistema Spring Cloud para microsserviços.”
 > 14. Descreva sua experiência na identificação e resolução de problemas em sistemas concorrentes, 
 > como deadlocks, race conditions e contenção de recursos.
 
-> 15. Como você implementaria feature flags em uma aplicação Java para permitir lançamentos graduais?
-
+> 15. Como você implementaria feature flags em uma aplicação Java para permitir lançamentos graduais?<br>
+> A feature flag solves the problem of releasing a feature without having to bet 100% on it from day one.<br>
+> With feature flags, I can roll out the feature gradually, test it with smaller user groups, compare behavior, <br>
+> and if something goes wrong, I can turn it off within seconds — without any redeploy.
+> There are multiple ways to implement this, depending on the context and the requirements.
+> 
+---
+> 
 > 16. Quais estratégias você utiliza para garantir a qualidade do código? 
 > Como você implementaria uma pipeline de CI/CD com Jenkins que inclua testes e análise de Sonar?
+> Eu costumo pensar em qualidade de código em três níveis: como eu escrevo, como o time valida e como o pipeline protege a base de código.
 
 > 17. Descreva uma situação em que você precisou refatorar um código legado para melhorar sua manutenibilidade.
 
@@ -578,55 +642,50 @@ Também trabalho com o ecossistema Spring Cloud para microsserviços.”
 > Pode citar ferramentas que costuma utilizar e como você lida com mocks e dependências externas?
 
 ---
-
-
-
-
-
-
-
-
+ 
 > 100 Most Useful English Verbs for IT Professionals
 1–20: Core Daily Workflow
 
 >Build – compile or assemble
-<br>We build the project using Maven.
-<br>Deploy – send to an environment
-<br>We deploy to QA every morning.
-<br>Release – publish a new version
-<br>We will release 1.2.0 today.
-<br>Run – execute
-<br>Run the tests before committing.
-<br>Test – verify something
-<br>Test the endpoint locally.
-<br>Fix – correct a problem
-<br>I fixed the null pointer issue.
-<br>Debug – analyze errors
-<br>Let’s debug the failing service.
-<br>Improve – make better
-<br>We need to improve performance.
-<br>Review – check code or docs
-<br>Can you review my PR?
-<br>Merge – combine branches
-<br>We merge to main only after approval.
-<br>Commit – send code to Git
-<br>Commit with a clear message.
-<br>Push – upload to remote
-<br>Push your branch when ready.
-<br>Pull – download changes
-<br>Pull the latest updates before developing.
-<br>Refactor – reorganize code
-<br>We should refactor this service.
-<br>Document – write documentation
-<br>Please document the API behavior.
-Configure – set parameters
-Configure the Kafka consumer correctly.
-<br>
-<br>Optimize – make more efficient
-<br>We optimized the SQL queries.
-<br>
-<br>Validate – check correctness
-<br>Validate the input before saving.
+<br> We build the project using Maven.
+<br> Deploy – send to an environment
+<br> We deploy to QA every morning.
+<br> Release – publish a new version
+<br> We will release 1.2.0 today.
+<br> Run – execute
+<br> Run the tests before committing.
+<br> Test – verify something
+<br> Test the endpoint locally.
+<br> Fix – correct a problem
+<br> I fixed the null pointer issue.
+<br> Debug – analyze errors
+<br> Let’s debug the failing service.
+<br> Improve – make better
+<br> We need to improve performance.
+<br> Review – check code or docs
+<br> Can you review my PR?
+<br> Merge – combine branches
+<br> We merge to main only after approval.
+<br> Commit – send code to Git
+<br> Commit with a clear message.
+<br> Push – upload to remote
+<br> Push your branch when ready.
+<br> Pull – download changes
+<br> Pull the latest updates before developing.
+<br> Refactor – reorganize code
+<br> We should refactor this service.
+<br> Document – write documentation
+<br> Please document the API behavior.
+Conf igure – set parameters
+Conf igure the Kafka consumer correctly.
+<br> 
+<br> Optimize – make more efficient
+<br> We optimized the SQL queries.
+<br> 
+<br> Validate – check correctness
+<br> Validate the input before saving.
+>
+<br> 
 ✅ Neutral/Professional:
 "Once the code is written, we should test the API."Map – convert from one structure to another
 We map the DTO to the domain object.
