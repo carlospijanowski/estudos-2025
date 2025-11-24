@@ -261,52 +261,116 @@ aqui entra: solid etc
 <br> Splunk and Jaeger help analyze logs and distributed traces.
 <br> Circuit breakers prevent cascading failures in distributed systems.
 <br> We rely on load testing to assess system performance.
- 
-#### [TAG SPRING] 
-> Spring Boot accelerates backend development in Java.
-<br> Spring Cloud helps manage distributed microservices.
-> 
-> 🔵 Spring Core
-➡️ É o “baú de LEGO”: todas as peças existem, mas você monta tudo na mão.
+
+#### [TAG SPRING]
+> Spring Boot accelerates backend development in Java, and Spring Cloud helps manage distributed microservices.
+>
+> 🔵 Spring Core <br>
+> It’s like a box of LEGO pieces: everything is there, but you assemble everything manually. <br>
+> It provides the fundamentals: IoC, Dependency Injection, ApplicationContext, AOP, and the base for MVC. <br>
+
 🟢 Spring Boot
-➡️ É o “lego já pré-montado”: você só encaixa algumas peças e o restante vem pronto.
+
+It’s like pre-assembled LEGO: most of the heavy lifting is already done.
+
+It reduces boilerplate and loads automatic configurations based on the dependencies you add.
+
 🟣 Spring Starters
-➡️ São “kits prontos de peças relacionadas”.
-> 
-> “Eu trabalho com o ecossistema Spring de forma completa.
-No Spring Core, uso módulos como spring-core, spring-context, spring-aop e spring-webmvc, que fornecem IoC, DI e a base do MVC.
-Com o Spring Boot, utilizo starters para facilitar a configuração, como Web, Data JPA, Security e Actuator.
-Entendo que os starters são agrupadores de dependências que automatizam a configuração do Spring Core.
-Também trabalho com o ecossistema Spring Cloud para microsserviços.”
->x 
-<br>Web/REST
-<br>spring-boot-starter-web (Spring MVC), spring-boot-starter-webflux (reativo)
-<br>spring-boot-starter-validation (Jakarta Validation), jackson-databind (JSON)
-<br>Persistência e dados
-<br>spring-boot-starter-data-jpa (Hibernate), spring-boot-starter-data-mongodb
-<br>spring-boot-starter-data-redis (cache/pubsub), spring-boot-starter-jdbc
-<br>flyway-core ou liquibase-core (migrações)
-<br>Segurança
-<br>spring-boot-starter-security, spring-security-oauth2-client/resource-server
-<br>Mensageria
-<br>spring-kafka, spring-retry, resilience4j-*
-<br>spring-amqp (RabbitMQ)
-<br>Integração/Cloud
-<br>spring-cloud-openfeign (HTTP clients tipados)
-<br>spring-cloud-starter-config (external config), eureka-client/consul-discovery
-<br>spring-cloud-starter-gateway (quando BFF/API Gateway)
-<br>Observabilidade
-<br>spring-boot-starter-actuator, micrometer-registry-*
-<br>opentelemetry-exporter-otlp (ou auto-instrumentation)
-<br>Docs
-<br>springdoc-openapi-starter-webmvc-ui (Swagger UI)
-<br>Job/Batch/Agendamento
-<br>spring-boot-starter-batch, spring-boot-starter + @EnableScheduling
-<br>Testes
-<br>spring-boot-starter-test, mockito-core, wiremock-jre8, testcontainers
-<br>Qualidade e utilitários
-<br>mapstruct (mapeamento), lombok (boilerplate), hibernate-validator
-<br>
+
+They are ready-made kits that bundle related dependencies.
+
+When you include a starter, Spring Boot knows exactly which configurations to load for you.
+
+💬 Professional Summary of My Experience with Spring
+
+I work with the full Spring ecosystem.
+In Spring Core, I use modules such as spring-core, spring-context, spring-aop, and spring-webmvc, which provide IoC, DI, and the foundation of the MVC model.
+With Spring Boot, I rely on starters like Web, Data JPA, Security, and Actuator to simplify configuration.
+I understand that starters are dependency bundles that automatically configure Spring Core modules.
+I also work with Spring Cloud to build microservices with distributed configuration, service discovery, resilience, and scalable communication.
+
+📦 Main Spring Stacks I Work With
+🌐 Web / REST
+
+spring-boot-starter-web (Spring MVC)
+
+spring-boot-starter-webflux (Reactive)
+
+spring-boot-starter-validation (Jakarta Validation)
+
+jackson-databind (JSON)
+
+🛢️ Persistence & Data
+
+spring-boot-starter-data-jpa (Hibernate)
+
+spring-boot-starter-data-mongodb
+
+spring-boot-starter-data-redis (cache / pub-sub)
+
+spring-boot-starter-jdbc
+
+flyway-core / liquibase-core (migrations)
+
+🔐 Security
+
+spring-boot-starter-security
+
+spring-security-oauth2-client / resource-server
+
+📡 Messaging
+
+spring-kafka
+
+spring-retry, resilience4j-*
+
+spring-amqp (RabbitMQ)
+
+☁️ Integration / Cloud
+
+spring-cloud-openfeign (typed HTTP clients)
+
+spring-cloud-starter-config
+
+eureka-client / consul-discovery
+
+spring-cloud-starter-gateway (API Gateway / BFF)
+
+📊 Observability
+
+spring-boot-starter-actuator
+
+micrometer-registry-*
+
+opentelemetry-exporter-otlp (or auto-instrumentation)
+
+📄 Documentation
+
+springdoc-openapi-starter-webmvc-ui (Swagger UI)
+
+⏱️ Jobs, Batch & Scheduling
+
+spring-boot-starter-batch
+
+@EnableScheduling with Spring Boot
+
+🧪 Testing
+
+spring-boot-starter-test
+
+mockito-core
+
+wiremock-jre8
+
+testcontainers
+
+🛠️ Quality & Utilities
+
+mapstruct (mapping)
+
+lombok (boilerplate reduction)
+
+hibernate-validator
 > 
 ---
 ## [TAG JAVA] 
@@ -392,8 +456,11 @@ Também trabalho com o ecossistema Spring Cloud para microsserviços.”
 > The main difference between a queue and a topic is simple:
 > A queue sends each message to one consumer — it’s work distribution.
 > A topic lets multiple consumers read the same message — it’s event broadcasting.
-
+>
+> ---
+> 
 > 2. Como você utilizaria os serviços AWS (SNS, SQS, S3) para criar uma arquitetura escalável e tolerante a falhas?
+> 
 > When I build a scalable and fault-tolerant architecture using SNS, SQS, and S3, 
 > I usually think of the whole thing as a loose, async pipeline.
 > 
@@ -412,10 +479,15 @@ Também trabalho com o ecossistema Spring Cloud para microsserviços.”
 > Overall, I’d use SNS → SQS for a resilient fan-out pattern, and S3 as the central storage for static or large data. 
 > This combo gives you a very decoupled architecture, easy to scale, and still works even if one component has issues.
 > 
+> ---
+> 
 > 3. Quais métricas você considera essenciais para monitorar em um ambiente de microserviços? 
+> 
 > Como implementaria a observabilidade?
 > Com quais ferramentas você já trabalhou?
 >
+> ---
+> 
 > 4. Em um sistema distribuído onde dois microsserviços se comunicam via Kafka, como você estruturaria essa comunicação?
 >
 > When we implement asynchronous communication to solve a problem, we can easily introduce new problems if we're not careful.
@@ -535,9 +607,9 @@ Também trabalho com o ecossistema Spring Cloud para microsserviços.”
 > garantindo integração contínua e minimizando conflitos? 
 > Quais práticas avançadas você recomendaria para otimizar esse fluxo?
 
-> 7. Quais recursos introduzidos no Java 16 ou superior você já utilizou, como records, sealed classes, 
-> ou melhorias no Pattern Matching? <br>
-> Explique como esses recursos funcionam e em quais cenários você os considera vantajosos.
+> 7. Which features introduced in Java 16 or later have you already used, such as records, 
+> sealed classes, or improvements to Pattern Matching? <br>
+> Explain how these features work and in which scenarios you consider them advantageous.
 > 
 > I started back in the Java 7 days, working with JSF, managed beans, and the typical monolithic architecture 
 > approach of that time. As Java evolved, I evolved with it.
@@ -578,7 +650,25 @@ Também trabalho com o ecossistema Spring Cloud para microsserviços.”
 > 
 > 10. Em um sistema de microserviços, como você lidaria com transações distribuídas que envolvem múltiplos serviços 
 > e bases de dados?
+> In microservices, I avoid classic distributed transactions like 2PC (which creates a single point of failure) 
+> because they don’t scale and create strong coupling between services.<br>
+> Instead, I rely on local transactions inside each service and coordinate the overall flow using events 
+> and compensations, following the Saga pattern.
+> 
+> I usually apply Sagas in two ways:
+> 
+> - Choreography: each service performs its local transaction and publishes an event; the next services react to that event. If something fails, an error event triggers the compensating actions.
+> 
+> - Orchestration: a central orchestrator calls each service in sequence and triggers compensations when needed.
 >
+> To make this reliable, I ensure:
+> - Idempotency, so a service can process the same event multiple times without breaking the state.
+> - The Outbox Pattern, to avoid losing events between the database and the message broker.
+> - Retries and DLQs, to handle temporary and permanent failures.
+> - Observability, using correlationId to trace the entire “transaction” across services.
+>
+> This way, I maintain consistency, low coupling, and resilience across the system—without relying 
+> on heavy distributed transactions.
 > ---
 > 
 > 11. Como você abordaria a implementação de uma feature que exige alta performance e precisa processar 
