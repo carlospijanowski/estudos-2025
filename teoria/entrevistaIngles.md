@@ -406,23 +406,23 @@ hibernate-validator
 Which scenarios favor each technology and why? <br>
 Also explain the main differences between queues and topics in messaging systems.<br>
 
-When I need to choose between RabbitMQ and Kafka, I first:
+When I need to choose between RabbitMQ and Kafka, I first: <br>
 - look at the type of communication the system needs 
 - and the message volume. 
 - I also consider whether the team needs to reprocess events, what the expected latency is, 
 and how the consumers are supposed to work.
 
 **RabbitMQ** is great when the system follows a more “do this now” style — tasks and commands. 
-It delivers fast, supports message-level ACKs, and offers flexible routing. 
-It works really well when each message needs to go to a single consumer, and the overall volume isn’t extreme.
+- It delivers fast, supports message-level ACKs, and offers flexible routing. 
+- It works really well when each message needs to go to a single consumer, and the overall volume isn’t extreme.
 
 **Kafka** shines in high-volume scenarios, especially when the system is event-driven and needs to store messages for longer. 
-It allows multiple consumers to read the same event, keeps ordering within partitions, and makes reprocessing very easy. 
-That’s usually my choice for more complex asynchronous integrations or event-driven observability.
+- It allows multiple consumers to read the same event, keeps ordering within partitions, and makes reprocessing very easy. 
+- That’s usually my choice for more complex asynchronous integrations or event-driven observability.
 
 The main difference between a queue and a topic is simple:
-A queue sends each message to one consumer — it’s work distribution.
-A topic lets multiple consumers read the same message — it’s event broadcasting.
+- A queue sends each message to one consumer — it’s work distribution.
+- A topic lets multiple consumers read the same message — it’s event broadcasting.
 
 ---
 > 
@@ -448,89 +448,108 @@ A topic lets multiple consumers read the same message — it’s event broadcast
 > 
 > ---
 > 
-> 3. Quais métricas você considera essenciais para monitorar em um ambiente de microserviços? 
-> 
-> Como implementaria a observabilidade?
-> Com quais ferramentas você já trabalhou?
->
-> ---
-> 
-> 4. Em um sistema distribuído onde dois microsserviços se comunicam via Kafka, como você estruturaria essa comunicação?
->
-> When we implement asynchronous communication to solve a problem, we can easily introduce new problems if we're not careful.
-> So before designing anything with Kafka, I first think about the risks I want to avoid.
-> I need to predict some risks I want to avoid
-> And what would be the main problems I want to prevent when two microservices communicate through Kafka?
-> 
-> Message loss or duplication
-> - A producer may send the event, but the consumer might not process it — or process it twice.
-> 
-> Event ordering
-> - Some scenarios must keep the order per entity, like all events for the same customerId or orderId.
-> 
-> Idempotency and reprocessing
-> - If I need to reprocess a topic or Kafka redelivers the same message, the consumer can’t break the system state.
-> 
-> Contract coupling
-> - If the payload schema changes, I can’t afford to break every consumer.
-> That’s why event versioning is important.
-> 
-> Backpressure / speed mismatch
-> - Producers can publish much faster than consumers can handle.
-> 
-> Error handling
-> - What do I do with messages that always fail? I need a proper retry strategy and a DLQ.
-> 
-> Observability
-> - I need to answer: What happened to this event? Did it fail? Who consumed it? Where did it stop?
-> 
-> Security and isolation
-> - Controlling who can publish and consume each topic.
-> 
-> If I ignore these points, the architecture might work fine in the happy path, but it will become 
-> a real source of pain in production.
-> 
-> Second: How I would structure the communication between the two microservices using Kafka
-> 
-> To minimize these risks, I’d structure the solution like this:
-> - Define clear domain events and contracts<br>
-> - No generic payloads. I’d use explicit events like CustomerCreatedEvent, OrderApprovedEvent, etc.<br>
-> And I’d use JSON or Avro with a well-defined, versioned schema.
-> - Topic modeling and keying strategy<br>
-> I’d create domain-oriented topics such as: customer-events or orders-events.
-> And I’d use the entity ID (customerId, orderId) as the message key to maintain partition ordering.
-> 
-> - Add important metadata to each event
-> Things like: eventId (UUID), eventType, correlationId, sourceService, timestamp
-> This helps with tracking, debugging, and idempotency.
-> 
-> Resilient producer
-> Service A publishes to the topic with:
-> - Proper acks
-> - Retry with backoff
-> - And for critical cases, I’d use the Outbox pattern so the event is only published after the local transaction succeeds.
-> 
-> Idempotent consumer
-> - Service B consumes in a consumer group, allowing horizontal scaling.
-> - Processing must be idempotent: Use eventId or a referenceId and Keep a record of processed events 
-> to avoid duplicating effects
-> 
-> Structured retry and DLQ
-> - If processing fails due to a temporary issue:
-> - Send it to a retry topic with backoff (e.g., orders-events.retry)
-> - If it fails permanently (bad payload, rule violation):
-> - Move it to a DLQ (e.g., orders-events.dlq) for manual or specific processing.
-> 
-> Observability
-> Track metrics like:
-> - Consumer lag
-> - Error rate
-> - Consumption/production rate
-> - And log with correlationId and eventId, ideally using distributed tracing to connect HTTP requests → Kafka events → consumers.
-> 
-> Security and governance
-> - Use Kafka ACLs to define who can publish/consume.
-> - Follow a clear naming convention for topics to simplify governance.
+3. What metrics do you consider essential to monitor in a microservices environment?<br>
+   How would you implement observability?<br>
+   What tools have you worked with before?
+
+To monitor microservices, I track four essential categories of metrics:
+- Infrastructure metrics: CPU, memory, GC activity, thread usage, and container limits.
+- Application metrics: p95/p99 latency, error rates, throughput, dependency latency (database, Kafka, REST), 
+  and connection-pool behavior.
+- Messaging metrics: Kafka consumer lag, queue size, production/consumption rate, DLQ volume, and retries.
+- Business metrics: processed orders/events, conversion rates, rule rejections, and end-to-end processing time.
+
+These metrics allow me to monitor not only whether the service is “running,” but whether the business flow is actually healthy.
+
+For observability, I implement the full triad:
+- Structured logs with traceId, spanId, correlationId, and consistent JSON formatting.
+- Metrics using Micrometer exporting to Prometheus, visualized in Grafana (or equivalent).
+- Distributed tracing with OpenTelemetry to follow the entire lifecycle of a request across services.
+
+I’ve worked with ELK, Splunk, New Relic, Datadog, CloudWatch, and Pagmon, as well as Kafka and RabbitMQ 
+dashboards for analyzing lag, offsets, and consumer behavior.
+
+This combination gives me the ability to detect bottlenecks, understand business impact, and react quickly during incidents.
+
+---
+
+
+4. In a distributed system where two microservices communicate via Kafka, how would you structure that communication?
+
+When we implement asynchronous communication to solve a problem, we can easily introduce new problems if we're not careful. <br>
+So before designing anything with Kafka, I first think about the risks I want to avoid.<br>
+I need to predict some risks I want to avoid<br>
+And what would be the main problems I want to prevent when two microservices communicate through Kafka?
+
+Message loss or duplication
+- A producer may send the event, but the consumer might not process it — or process it twice.
+
+Event ordering
+- Some scenarios must keep the order per entity, like all events for the same customerId or orderId.
+
+Idempotency and reprocessing
+- If I need to reprocess a topic or Kafka redelivers the same message, the consumer can’t break the system state.
+
+Contract coupling
+- If the payload schema changes, I can’t afford to break every consumer.<br>
+That’s why event versioning is important.
+
+Backpressure / speed mismatch
+- Producers can publish much faster than consumers can handle.
+
+Error handling
+- What do I do with messages that always fail? I need a proper retry strategy and a DLQ.
+
+Observability
+- I need to answer: What happened to this event? Did it fail? Who consumed it? Where did it stop?
+
+Security and isolation
+- Controlling who can publish and consume each topic.
+
+If I ignore these points, the architecture might work fine in the happy path, but it will become 
+a real source of pain in production.
+
+Second: How I would structure the communication between the two microservices using Kafka
+
+To minimize these risks, I’d structure the solution like this:
+- Define clear domain events and contracts<br>
+- No generic payloads. I’d use explicit events like CustomerCreatedEvent, OrderApprovedEvent, etc.<br>
+And I’d use JSON or Avro with a well-defined, versioned schema.
+- Topic modeling and keying strategy<br>
+I’d create domain-oriented topics such as: customer-events or orders-events.<br>
+And I’d use the entity ID (customerId, orderId) as the message key to maintain partition ordering.
+
+- Add important metadata to each event
+Things like: eventId (UUID), eventType, correlationId, sourceService, timestamp<br>
+This helps with tracking, debugging, and idempotency.
+
+Resilient producer<br>
+Service A publishes to the topic with:
+- Proper acks
+- Retry with backoff
+- And for critical cases, I’d use the Outbox pattern so the event is only published after the local transaction succeeds.
+
+Idempotent consumer
+- Service B consumes in a consumer group, allowing horizontal scaling.
+- Processing must be idempotent: Use eventId or a referenceId and Keep a record of processed events 
+to avoid duplicating effects
+
+Structured retry and DLQ
+- If processing fails due to a temporary issue:
+- Send it to a retry topic with backoff (e.g., orders-events.retry)
+- If it fails permanently (bad payload, rule violation):
+- Move it to a DLQ (e.g., orders-events.dlq) for manual or specific processing.
+
+Observability
+Track metrics like:
+- Consumer lag
+- Error rate
+- Consumption/production rate
+- And log with correlationId and eventId, ideally using distributed tracing to connect HTTP requests → Kafka events → consumers.
+
+Security and governance
+- Use Kafka ACLs to define who can publish/consume.
+- Follow a clear naming convention for topics to simplify governance.
 ---
 
 > 5. Explique como você projetaria um banco de dados para um sistema de alta escala. Quando optaria por SQL vs NoSQL?
