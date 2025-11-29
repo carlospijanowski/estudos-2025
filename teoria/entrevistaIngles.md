@@ -2,67 +2,79 @@
 
  
 #### Introduction 
-> Okay, let’s start!  
-> when you don’t practice, you forget a few things.
-<br> One of my _main goals_ is _to work on_ an international project — to keep improving my English skills.
-<br> I can handle most work situations in English — reading, understanding business rules, and discussing technical topics.
-<br> Back in 2023, I went to Europe — one of my goals was to practice my English. 
-<br> i visited London.
-<br> That same year, I also had the opportunity to be part of a team that included some English colleagues.
-<br> In that project, I was involved in several business decisions, mainly because I was the Tech Lead
+Okay, let’s start!  
+when you don’t practice, you forget a few things.
+One of my _main goals_ is _to work on_ an international project — to keep improving my English skills.
+I can handle most work situations in English — reading, understanding business rules, and discussing technical topics.
+Back in 2023, I went to Europe — one of my goals was to practice my English. 
+i visited London.
+That same year, I also had the opportunity to be part of a team that included some English colleagues.
+In that project, I was involved in several business decisions, mainly because I was the Tech Lead
 --- 
 #### Personal Life
-> Hi, my name is Carlos. I’m 47 years old, married, and i have two daughters.  
-> I live in Itajaí, Its a coastal city in southern Brazil.  
-> In my free time, I love going to the beach, exploring new places, and spending time with my family.  
-> Cycling is my favorite sport — it’s how I stay active and recharge my batteries
+Hi, my name is Carlos. I’m 47 years old, married, and i have two daughters.  
+I live in Itajaí, Its a coastal city in southern Brazil.  
+In my free time, I love going to the beach, exploring new places, and spending time with my family.  
+Cycling is my favorite sport — it’s how I stay active and recharge my batteries
 --- 
 #### Academic Background
-> I graduated in Information Systems, and later I completed two postgrad courses in IT — one in Software Engineering and 
-> another focused on Java for Web development.
+I graduated in Information Systems, and later I completed two postgrad courses in IT — one in Software Engineering and 
+another focused on Java for Web development.
 ---
 #### background de trabalho 
 
-> Pagseguro
-<br> Currently, I work as a Senior Software Engineer at PagSeguro, which is a digital payment company.
-<br> IN THE BACKEND side
-<br> Besides development and coding, I also participate in important technical decisions, review my teammates’ code, and contribute to system architecture.
-<br> We have around ten applications written in Kotlin and java, and my main role is to implement solutions based on business needs.
-<br> We hold business meetings, refinement sessions, and technical discussions to define the best approaches for implementation.
+## Pagseguro
+Currently, I work as a Senior Software Engineer at PagSeguro, for the bank industry. it belongs to the financial area
+since 2009
+my technical stack is revolving around the java and kotlin
+IN THE BACKEND side
+Besides development and coding, I also participate in important technical decisions, review my teammates’ code, and contribute to system architecture.
+We have around ten applications written in Kotlin and java, and my main role is to implement solutions based on business needs.
+We hold business meetings, refinement sessions, and technical discussions to define the best approaches for implementation.
 
-> Lately, I’ve been working a lot on infrastructure-related tasks.
-> Recently, I’ve been involved in adapting PagSeguro’s CI pipelines, as we’re migrating from AWS to PagSeguro’s private cloud.
-> All deployments are done in Kubernetes (K8s).
+Lately, I’ve been working a lot on infrastructure-related tasks.
+Recently, I’ve been involved in adapting PagSeguro’s CI pipelines, as we’re migrating from AWS to PagSeguro’s private cloud.
+All deployments are done in Kubernetes (K8s).
 
-> So, to summarize, I currently work as a Senior Software Engineer handling business-driven demands, 
-> participating in development refinements with my teammates, and also managing infrastructure tasks — such as Kubernetes deployments, 
-> services, and ingress manifests — basically everything related to running our applications in K8s.
+So, to summarize, I currently work as a Senior Software Engineer handling business-driven demands, 
+participating in development refinements with my teammates, and also managing infrastructure tasks — such as Kubernetes deployments, 
+services, and ingress manifests — basically everything related to running our applications in K8s.
 
-> My daily routine at PagBank basically involves attending daily meetings, participating in technical refinement sessions for new features, 
-> deploying applications to staging and production environments, and investigating production issues whenever they occur.
-> 
-> I work in the account security domain.
-> My team is responsible for password matching and password recovery processes.
-> In addition to business and infrastructure tasks, I also investigate production issues through application monitoring and log analysis.
+My daily routine at PagBank basically involves attending daily meetings, participating in technical refinement sessions for new features, 
+deploying applications to staging and production environments, and investigating production issues whenever they occur.
+
+I work in the account security domain.
+My team is responsible for password matching and password recovery processes.
+In addition to business and infrastructure tasks, I also investigate production issues through application monitoring and log analysis.
+
 ---
+
 #### Falar um pouquinho sobre outras atividades como sou dev, teach lead e arquiteto de software
-> I’ve had experience as a developer, tech lead, and architect, and I really enjoy all three roles. 
-> As a developer, I like being hands-on — coding in Java and Kotlin, solving problems, and making services faster and more reliable. 
-> Besides development, I also take care of the delivery side — adjusting pipelines in Jenkins, improving CI/CD steps, 
-> managing deployments, and configuring Kubernetes. 
-> I spend a good amount of time looking at logs, traces, dashboards, and overall observability to keep the systems healthy and reliable.
-> As a tech lead, I enjoy helping the team, unblocking people, and making sure we’re aligned on good practices and clean design. 
-> And as an architect, I focus on the bigger picture — building scalable, resilient solutions and making decisions that keep the system healthy over time.
-> What I like the most is being flexible. If the team needs me coding, I code. If they need guidance, I jump in and support. 
-> If they need someone thinking about architecture and trade-offs, I’m comfortable doing that too. 
-> I like working in a collaborative environment, helping people grow, and making sure we deliver something solid together.”
-> 
+I’ve had experience as a developer, tech lead, and architect, and I really enjoy all three roles. 
+
+- As a developer:
+    I like being hands-on — coding in Java and Kotlin, 
+    solving problems, and 
+    making services faster and more reliable. 
+    Besides development, I also take care of the delivery side — adjusting pipelines in Jenkins, improving CI/CD steps, 
+        managing deployments, and configuring Kubernetes. 
+        I spend a good amount of time looking at logs, traces, dashboards, and overall observability to keep the systems healthy and reliable.
+
+- As a tech lead, I enjoy helping the team, unblocking people, and making sure we’re aligned on good practices and clean design. 
+
+- as an architect, I focus on the bigger picture — 
+building scalable, resilient solutions and making decisions that keep the system healthy over time.
+
+What I like the most is being flexible. If the team needs me coding, I code. If they need guidance, I jump in and support. 
+ If they need someone thinking about architecture and trade-offs, I’m comfortable doing that too. 
+ I like working in a collaborative environment, helping people grow, and making sure we deliver something solid together.
+
 ---
 #### Relevant Projects
-> Every project comes with its own challenges, particularities, and unique aspects.
-<br> I can say I have some preferences, such as working with the latest versions of Java and Kotlin.
-<br> I also prefer using the most up-to-date versions of the Spring Boot framework.
-<br> I enjoy working with distributed systems because an application should be available, scalable, performant, and resilient.
+Every project comes with its own challenges, particularities, and unique aspects.
+I can say I have some preferences, such as working with the latest versions of Java and Kotlin.
+I also prefer using the most up-to-date versions of the Spring Boot framework.
+I enjoy working with distributed systems because an application should be available, scalable, performant, and resilient.
 --- 
 #### Challenges Faced
 > “One of the biggest challenges I’ve faced was leading a migration from a monolithic system to a microservices architecture.  
@@ -80,7 +92,7 @@
 > i decided that could a great opportunity professional to work in 
 ---
 #### Thanking the Interviewer
-> “Thank you very much for your time and the opportunity to discuss my background and experience. 
+> “Thank you for your time and the opportunity to discuss my background and experience. 
 ---    
 #### How Do You See Yourself in 5 Years?
 > I don’t worry much about that. 
@@ -102,6 +114,7 @@
 > and output events.  
 > This approach improved consistency and allowed the system to handle multiple parallel requests safely.”
 ---
+
 #### problemas ao entender
 “Sorry, could you please repeat that?
 My English is a bit rusty — I haven’t practiced as much lately.
@@ -120,134 +133,137 @@ But I’m following you”
 >I like Agile because it helps teams stay focused, adapt quickly, and continuously deliver value.
 
 #### [TAG Backend & Architecture] HIGH LEVEL
-> # Arquitetura de Software (nível macro, decisões estruturais)
->
-> when we talk about software architecture, we can divide it into three main areas:
-> ### 1 - Distribution Styles, 
-> ### 2 - Internal Organization Styles and 
-> ### 3 - Integration Styles
->
-> ### 1 - Distribution Styles (how I divide the system into applications/services)
-> Monolith (or Modular Monolith)
-> Pros and cons: simple to develop, test, and deploy; difficult to scale and maintain as it grows.
->
-> SOA (Service-Oriented Architecture): larger services sharing contracts; usually more tightly coupled than microservices.
-> Pros and cons: simplifies integration with legacy systems; can lead to bottlenecks and complexity with an ESB.
->
-> Microservices: small, independent services aligned with bounded contexts (DDD).
-> Note: bounded contexts are parts of the domain that have their own language and model, 
-> and can be implemented as separate microservices.
-> Pros and cons: improves scalability and maintainability; more complex to develop, test, and deploy.
->
-> Serverless: functions or containers managed by a cloud provider, paying only for usage.
-> Pros and cons: reduces infrastructure overhead; may have execution limits and vendor lock-in.
->
----
+# Arquitetura de Software (nível macro, decisões estruturais)
+
+when we talk about software architecture, we can divide it into three main areas:
+### 1 - Distribution Styles, 
+### 2 - Internal Organization Styles 
+### 3 - Integration Styles
+### 4 - Modelos de execução/implantação (onde/como rodam)
+
+### 1 - Distribution Styles (how I divide the system into applications/services)
+Monolith (or Modular Monolith)     mónolif
+Pros and cons: simple to develop, test, and deploy; difficult to scale and maintain as it grows.
+
+SOA (Service-Oriented Architecture): larger services sharing contracts; usually more tightly coupled than microservices.
+Pros and cons: simplifies integration with legacy systems; can lead to bottlenecks and complexity with an ESB.
+
+Microservices: small, independent services aligned with bounded contexts (DDD).
+Note: bounded contexts are parts of the domain that have their own language and model, 
+and can be implemented as separate microservices.
+Pros and cons: improves scalability and maintainability; more complex to develop, test, and deploy.
+
+Serverless: functions or containers managed by a cloud provider, paying only for usage.
+Pros and cons: reduces infrastructure overhead; may have execution limits and vendor lock-in.
+
 > ### 2 - Internal Organization Styles (how I structure each application, whether monolith or microservice)
-> Layered Architecture: presentation → domain → infrastructure/data.
-> Clean Architecture structures software into concentric layers, ensuring that business rules remain independent of frameworks, databases, and the user interface.
-> Hexagonal Architecture — also known as Ports and Adapters — takes a more pragmatic approach, emphasizing clear separation between contracts (ports) and their implementations (adapters).
-> Both architectures share the same core principle: keeping business logic at the heart of the system, while pushing technical details to the outer layers.
-> 
----
-> ### 3 - Integration Styles (how parts communicate)
-> Synchronous via API:
-> REST, gRPC, GraphQL (API-Driven).
-> → gRPC is a remote communication framework developed by Google that uses HTTP/2 for transport and Protobuf for data serialization.
-> → Protobuf (Protocol Buffers) is an efficient and compact data serialization format used to define the structure of messages exchanged between services.
-> 
-> Asynchronous via Messaging / Event-Driven:
-> Kafka, RabbitMQ, SNS/SQS (pub/sub, event-carried state transfer, CQRS + Event Sourcing as optional patterns).
-> 
-> Modelos de execução/implantação (onde/como rodam) 
-> Containers & Orquestração: Docker + Kubernetes (microservices ou monólitos containerizados). 
-> Serverless – FaaS: AWS Lambda, Azure Functions (funções). 
-> Serverless – Containers: Cloud Run, AWS App Runner (containers sem gerenciar servidores). 
-> BaaS (quando aplicável): Cognito/Auth0, Firebase, etc. (terceiriza capabilities).  
---- 
+Layered Architecture: presentation → domain → infrastructure/data.
+Clean Architecture structures software into concentric layers, ensuring that business rules remain independent of frameworks, 
+    databases, and the user interface.
+Hexagonal Architecture — also known as Ports and Adapters — 
+    takes a more pragmatic approach, emphasizing clear separation between contracts (ports) and their implementations (adapters).
+Both architectures share the same core principle: keeping business logic at the heart of the system, while pushing technical details to the outer layers.
+
+### 3 - Integration Styles (how parts communicate)
+Synchronous via API:
+REST, gRPC, GraphQL (API-Driven).
+→ gRPC is a remote communication framework developed by Google that uses HTTP/2 for transport and Protobuf for data serialization.
+→ Protobuf (Protocol Buffers) is an efficient and compact data serialization format used to define the structure of messages exchanged between services.
+
+Asynchronous via Messaging / Event-Driven:
+Kafka, RabbitMQ, SNS/SQS (pub/sub, event-carried state transfer, CQRS + Event Sourcing as optional patterns).
+
+### 4 - Execution / Deployment Models
+Containers & Orquestração: Docker + Kubernetes (microservices ou monólitos containerizados). 
 
 #### [TAG Backend & Architecture] LOW LEVEL
 It’s a set of engineering practices that support the architecture by keeping components cohesive, decoupled, and easy to evolve
 aqui entra: solid etc
 
 #### [TAG Design & Development Practices]
-> ## Applying development techniques
-> I see code quality as a set of practices that need to work together in harmony.
-> é como asseguramos um codigo com qualidade
-> This includes clean code principles, SOLID, design patterns, test-driven development when appropriate, 
-> continuous integration, refactoring, and documentation.
-> These techniques minimize technical debt, reduce coupling, and help the architecture remain consistent and scalable.
-> 
-> @clean code principles
-> Meaningful Names
-> Small, Focused Functions
-> Single Responsibility Principle (SRP)
-> Avoid Duplication (Don’t Repeat Yourself) e KISS (Keep It Simple, Stupid) - evite duplicação e complexidade desnecessária
-> Clear Error Handling (good: throw new CustomerNotFoundException(id); bad:return null;)
-> 
-> @SOLID
-> S -> Single Responsibility Principle (SRP) [Each class must have a single responsibility]
-> O -> Open/Closed Principle (OCP) [Classes must be open for extension, but closed for modification]
-> L -> Liskov Substitution Principle (LSP) [Subtypes must be able to replace their base types without breaking the program]
-> I -> Interface Segregation Principle (ISP) [Interfaces must be small and specific]
-> D -> Dependency Inversion Principle (DIP) [Rely on abstractions, not implementations] 
->
-> @YAGNI (You Aren’t Gonna Need It) - não implemente algo que não é necessário agora
-> I also value peer code reviews, static analysis tools like SonarQube, and a solid base of unit tests to maintain a consistent and high-quality codebase.
->
-> ## Applying engineering techniques
-> I apply Domain-Driven Design (DDD) to keep business logic organized and modular.
-> I use TDD when it makes sense, because it helps produce more reliable code with less rework.
-> In some cases, I use BDD to ensure the system reflects the expected behavior from the user or business perspective.
->
-> ## In the code workflow and versioning 
-> Before any merge, we always perform a code review.
-> We use semantic commits to keep the Git history clean and easy to trace.
-> And we follow good versioning and workflow practices using Git and GitHub (or GitLab, depending on the project).
+## Applying development techniques
+code quality ia a set of practices that need to work together in harmony.
+ 
+This includes: 
+- clean code principles, 
+- SOLID, 
+- design patterns, 
+- test-driven development when appropriate, 
+- continuous integration, 
+- refactoring, 
+- and documentation.
+These techniques minimize technical debt, reduce coupling, and help the architecture remain consistent and scalable.
 
-> @Design patterns
-> “The three main categories are creational, structural, and behavioral. 
-> For example, Singleton, Factory Method, and Builder are creational patterns that focus on object creation…”
-> 1**Creational Patterns**
-> Singleton
-> Ensures there is only one instance of a class and provides a global point of access to it.
-> Example: an application-wide ConfigurationManager.
-> 
-> Factory Method
-> Defines an interface for creating objects, but lets subclasses decide which concrete class to instantiate.
-> Example: creating different types of PaymentProcessor depending on the payment method.
-> 
-> Builder
-> Separates the construction of a complex object from its representation, allowing you to build the object step by step.
-> Example: building an Order object with many optional fields.
-> 
-> **Structural Patterns**
-> Adapter
-> Converts the interface of a class into another interface that clients expect.
-> Example: adapting an external API to match the internal model of your application.
-> 
-> Decorator
-> Adds extra behavior to an object dynamically, without changing the original class.
-> Example: adding logging, metrics, or caching around a Service.
-> 
-> Facade
-> Provides a simple interface to a complex subsystem or set of classes.
-> Example: a PaymentFacade that orchestrates fraud check, charging, and notification.
-> 
-> **Behavioral Patterns**
-> Strategy
-> Defines a family of algorithms and makes them interchangeable at runtime.
-> Example: different strategies to calculate shipping cost or discounts.
-> 
-> Observer
-> Defines a one-to-many dependency, where multiple objects are notified automatically when another object’s state changes.
-> Example: publishing events to listeners when an order is approved.
-> 
-> Chain of Responsibility
-> Lets you pass a request along a chain of handlers, where each handler decides whether to process the request or pass it to the next one.
-> Example: a validation pipeline for a request or business rules.
-> If you want, next I can turn this into a spoken answer like:
-> 
+@clean code principles
+Meaningful Names
+Small, Focused Functions
+Single Responsibility Principle (SRP)
+Avoid Duplication (Don’t Repeat Yourself) e KISS (Keep It Simple, Stupid) - evite duplicação e complexidade desnecessária
+Clear Error Handling (good: throw new CustomerNotFoundException(id); bad:return null;)
+
+@SOLID
+S -> Single Responsibility Principle (SRP) [Each class must have a single responsibility]
+O -> Open/Closed Principle (OCP) [Classes must be open for extension, but closed for modification]
+L -> Liskov Substitution Principle (LSP) [Subtypes must be able to replace their base types without breaking the program]
+I -> Interface Segregation Principle (ISP) [Interfaces must be small and specific]
+D -> Dependency Inversion Principle (DIP) [Rely on abstractions, not implementations] 
+
+@YAGNI (You Aren’t Gonna Need It) - não implemente algo que não é necessário agora
+I also value peer code reviews, static analysis tools like SonarQube, and a solid base of unit tests to maintain a consistent and high-quality codebase.
+
+## Applying engineering techniques
+I apply Domain-Driven Design (DDD) to keep business logic organized and modular.
+I use TDD when it makes sense, because it helps produce more reliable code with less rework.
+In some cases, I use BDD to ensure the system reflects the expected behavior from the user or business perspective.
+
+## In the code workflow and versioning 
+Before any merge, we always perform a code review.
+We use semantic commits to keep the Git history clean and easy to trace.
+And we follow good versioning and workflow practices using Git and GitHub (or GitLab, depending on the project).
+
+@Design patterns
+“The three main categories are creational, structural, and behavioral. 
+For example, Singleton, Factory Method, and Builder are creational patterns that focus on object creation…”
+1**Creational Patterns**
+Singleton
+Ensures there is only one instance of a class and provides a global point of access to it.
+Example: an application-wide ConfigurationManager.
+
+Factory Method
+Defines an interface for creating objects, but lets subclasses decide which concrete class to instantiate.
+Example: creating different types of PaymentProcessor depending on the payment method.
+
+Builder
+Separates the construction of a complex object from its representation, allowing you to build the object step by step.
+Example: building an Order object with many optional fields.
+
+**Structural Patterns**
+Adapter
+Converts the interface of a class into another interface that clients expect.
+Example: adapting an external API to match the internal model of your application.
+
+Decorator
+Adds extra behavior to an object dynamically, without changing the original class.
+Example: adding logging, metrics, or caching around a Service.
+
+Facade
+Provides a simple interface to a complex subsystem or set of classes.
+Example: a PaymentFacade that orchestrates fraud check, charging, and notification.
+
+**Behavioral Patterns**
+Strategy
+Defines a family of algorithms and makes them interchangeable at runtime.
+Example: different strategies to calculate shipping cost or discounts.
+
+Observer
+Defines a one-to-many dependency, where multiple objects are notified automatically when another object’s state changes.
+Example: publishing events to listeners when an order is approved.
+
+Chain of Responsibility
+Lets you pass a request along a chain of handlers, where each handler decides whether to process the request or pass it to the next one.
+Example: a validation pipeline for a request or business rules.
+If you want, next I can turn this into a spoken answer like:
+
 ---
 
 #### [TAG Security & Communication] 
@@ -263,7 +279,11 @@ aqui entra: solid etc
 <br> We rely on load testing to assess system performance.
 
 #### [TAG SPRING]
-Spring Boot accelerates backend development in Java, and Spring Cloud helps manage distributed microservices.
+Spring Boot accelerates backend development in Java
+menos codigo
+menos arquivos de configuracao
+facil star de uma aplicacao
+muita simplicidade ao usar os starters
 
 🔵 Spring Core <br>
 It’s like a box of LEGO pieces: everything is there, but you assemble everything manually. <br>
@@ -348,22 +368,26 @@ hibernate-validator
 > Programming Languages (Java, Kotlin) 
 **Q:** Which language do you prefer, Java or Kotlin?  
 **A:** I’m comfortable with both, but Kotlin is my favorite for backend development — it’s concise, expressive, and reduces boilerplate code. Still, I appreciate Java’s stability and ecosystem. I switch between them easily depending on the project.
->
+
+versoes de kotlin que ja trabalhei?
+
+versoes de spring que ja trabalhei?
+
 ---
 #### [TAG TESTING] Understanding Testing in Backend Development
-> When we talk about testing, we can actually be referring to several different types of tests within backend development.
->
-> We might be talking about unit tests, where we test individual components or functions in isolation. These tests make sure that each small part of the system works as expected.
-> In Java, for example, we often use frameworks like JUnit and Mockito to create and execute unit tests. JUnit provides the structure for writing the tests, while Mockito helps us mock dependencies, simulating external behavior without needing to connect to real services or databases.
->
-> We can also be referring to integration tests. Unlike unit tests, these validate how different parts of the system work together — for example, how a service interacts with a database, or how two microservices communicate through an API. Integration testing ensures that the system behaves correctly as a whole.
->
-> Another important type is stress testing (or load testing). These tests check how the system behaves under heavy load — for instance, when thousands of users try to access the same resource at the same time. Stress tests are essential to verify scalability, performance, and resilience, ensuring the system can handle real-world traffic without failures.
->
-> We can also talk about mocked tests or simulated tests, often implemented with tools like WireMock. This approach is useful when we want to test interactions with external systems or APIs that are not available or are expensive to call in real time. WireMock lets us create fake endpoints that return predefined responses, allowing consistent and repeatable testing scenarios.
->
-> In summary, testing in backend development is not just about checking if the code works — it’s about ensuring reliability, maintainability, and confidence in the software.
-> A good testing strategy usually combines multiple levels of testing — unit, integration, system, and performance — to cover the system from the smallest function to the most complex real-world scenario.
+When we talk about testing, we can actually be referring to several different types of tests within backend development.
+
+We might be talking about unit tests, where we test individual components or functions in isolation. These tests make sure that each small part of the system works as expected.
+In Java, for example, we often use frameworks like JUnit and Mockito to create and execute unit tests. JUnit provides the structure for writing the tests, while Mockito helps us mock dependencies, simulating external behavior without needing to connect to real services or databases.
+
+We can also be referring to integration tests. Unlike unit tests, these validate how different parts of the system work together — for example, how a service interacts with a database, or how two microservices communicate through an API. Integration testing ensures that the system behaves correctly as a whole.
+
+Another important type is stress testing (or load testing). These tests check how the system behaves under heavy load — for instance, when thousands of users try to access the same resource at the same time. Stress tests are essential to verify scalability, performance, and resilience, ensuring the system can handle real-world traffic without failures.
+
+We can also talk about mocked tests or simulated tests, often implemented with tools like WireMock. This approach is useful when we want to test interactions with external systems or APIs that are not available or are expensive to call in real time. WireMock lets us create fake endpoints that return predefined responses, allowing consistent and repeatable testing scenarios.
+
+In summary, testing in backend development is not just about checking if the code works — it’s about ensuring reliability, maintainability, and confidence in the software.
+A good testing strategy usually combines multiple levels of testing — unit, integration, system, and performance — to cover the system from the smallest function to the most complex real-world scenario.
 --- 
 >
 #### [TAG CI/CD] jenkis etc
@@ -470,10 +494,7 @@ I’ve worked with ELK, Splunk, New Relic, Datadog, CloudWatch, and Pagmon, as w
 dashboards for analyzing lag, offsets, and consumer behavior.
 
 This combination gives me the ability to detect bottlenecks, understand business impact, and react quickly during incidents.
-
----
-
-
+ 
 4. In a distributed system where two microservices communicate via Kafka, how would you structure that communication?
 
 When we implement asynchronous communication to solve a problem, we can easily introduce new problems if we're not careful. <br>
@@ -706,8 +727,6 @@ batch sizes, partitioning strategy, and the number of instances.
 and I’d implement backpressure, retry mechanisms, and a DLQ, so the system keeps running smoothly 
 even during unexpected spikes.
 
----
- 
 12. Na sua experiência com Java, quais os trade-offs entre utilizar um ORM como Hibernate/JPA e JDBC puro? 
 Cite quais cenários você recomendaria cada abordagem, considerando aspectos como performance, produtividade e manutenibilidade.
 
@@ -724,8 +743,6 @@ With feature flags, I can roll out the feature gradually, test it with smaller u
 and if something goes wrong, I can turn it off within seconds — without any redeploy.
 There are multiple ways to implement this, depending on the context and the requirements.
 
----
-
 16. Quais estratégias você utiliza para garantir a qualidade do código? 
 Como você implementaria uma pipeline de CI/CD com Jenkins que inclua testes e análise de Sonar?
 Eu costumo pensar em qualidade de código em três níveis: como eu escrevo, como o time valida e como o pipeline protege a base de código.
@@ -740,7 +757,11 @@ Eu costumo pensar em qualidade de código em três níveis: como eu escrevo, com
       Como você estruturaria os endpoints e utilizaria os métodos HTTP adequadamente?<br>
       Cite também como lidaria com versionamento, autenticação, autorização, códigos de status HTTP e tratamento de erros.
 
-
+## 20. Como você estrutura seus testes unitários em projetos Java? Quais boas práticas você segue para garantir que os testes sejam confiáveis, legíveis e de fácil manutenção? Pode citar ferramentas que costuma utilizar e como você lida com mocks e dependências externas?
+**Estrutura:** Given-When-Then, 1 assert principal por teste, nomes claros.
+**Boas práticas:** isolamento de dependências, evitar mocks desnecessários, manter testes rápidos.
+**Ferramentas:** JUnit 5, Mockito, Testcontainers, WireMock.
+**Dependências externas:** mocks/stubs ou containers temporários para evitar acoplamento a serviços reais.
 
 ---
  
@@ -2163,4 +2184,38 @@ frases que posso afirmar em entrevistas técnicas de desenvolvedor backend com �
 <br> "Thank you for your patience as I express myself in English."
 <br> "Could you please speak a bit slower? I want to make sure I understand everything."
 <br> "I appreciate your understanding as I navigate this conversation in English."
+
+----------------------------------
+
+## technicle interview
+
+- 4 principals de POO
+
+- hash code and equals
+
+- garbage collection
+
+- collections em java na profundidade
+
+- design patterns
+
+- spring
+
+- injection ande dependenci injection (citando via construtor e anotations)
+
+- spring profiles
+
+- tests
+
+- docker e virtual machine
+
+- vertical and horizontal scale
+
+- cloulds
+
+- agile (grooming sessions)
+
+
+
+
 

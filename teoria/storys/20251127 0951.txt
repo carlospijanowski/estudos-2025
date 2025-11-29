@@ -1,0 +1,80 @@
+The Developer and the Brand New Feature That Suddenly Broke Everything
+
+Carla had just finished implementing a brand new feature in the payments-service.
+It was a simple enhancement: add a new endpoint to retrieve transaction limits for customers.
+
+She deployed it to the QA Kubernetes cluster and watched the pod start:
+
+payments-service-7c9d...  1/1  Running
+
+
+Everything looked perfect.
+
+But suddenly, alerts started firing.
+
+QA reported:
+
+“Carla, the /limits endpoint is returning 500. Production is okay, but QA is failing.”
+
+Carla opened the logs:
+
+ERROR Failed to bind properties: prefix=limits
+
+
+She frowned.
+
+“Why would this break in QA but not in PROD?”
+
+Her tech lead walked by and said:
+
+“Carla, it’s up to you to figure out what’s going on.
+You built the feature, you know it better than anyone.”
+
+Challenge accepted.
+
+Carla pulled the configs from QA and instantly noticed something strange.
+In application-qa.yml, the configuration block looked like this:
+
+limit:
+  daily: 2000
+  monthly: 10000
+
+
+But in the brand new feature she had created, the prefix was:
+
+limits:
+  daily: 2000
+  monthly: 10000
+
+
+One letter.
+Just one letter — and Spring Boot failed to bind the properties.
+
+She smiled.
+
+“I think I figured out the root cause,” she said to herself.
+
+Carla fixed the file, redeployed the service, and watched the health checks turn green again.
+
+QA tested the endpoint:
+
+{
+  "dailyLimit": 2000,
+  "monthlyLimit": 10000
+}
+
+
+Everything worked.
+
+She updated the ticket:
+
+“Issue resolved. Incorrect configuration prefix in QA (limit vs limits).
+Fixed and redeployed. The feature now works as expected.”
+
+Her tech lead replied:
+
+“Great job. You figured it out quickly.”
+
+Carla leaned back in her chair, proud.
+In the world of Spring and Kubernetes, sometimes all it takes is one tiny detail —
+and it’s up to you to find it.
