@@ -52,39 +52,65 @@ I like working in a collaborative environment, helping people grow, and making s
 ---
 
 ## Pagseguro
-Currently, I work as a Senior Software Engineer at PagSeguro, for the bank industry. it belongs to the financial area
-since 2009
-my technical stack is revolving around the java and kotlin
-IN THE BACKEND side
-Besides development and coding, I also participate in important technical decisions, review my teammates’ code, and contribute to system architecture.
-We have around ten applications written in Kotlin and java, and my main role is to implement solutions based on business needs.
-We hold business meetings, refinement sessions, and technical discussions to define the best approaches for implementation.
+I currently work at PagSeguro, in the Account Security domain. 
+My team is responsible for the first layer of user authentication. 
+We handle password matching, password recovery, and that is our main scope.
 
-Lately, I’ve been working a lot on infrastructure-related tasks.
-Recently, I’ve been involved in adapting PagSeguro’s CI pipelines, as we’re migrating from AWS to PagSeguro’s private cloud.
-All deployments are done in Kubernetes (K8s).
+backend
+We maintain nine microservices that support others internal services across PagSeguro.
+We work mainly with Kotlin — it’s our primary language — although, in general, other squads at PagSeguro still use Java.
+Regarding the code within my team, I also perform code reviews and help with other improvements in the codebase.
+My daily work involves new features, performance improvements, and refactoring.
 
-So, to summarize, I currently work as a Senior Software Engineer handling business-driven demands, 
-participating in development refinements with my teammates, and also managing infrastructure tasks — such as Kubernetes deployments, 
-services, and ingress manifests — basically everything related to running our applications in K8s.
+CI
+I also take care of the deployment pipelines — specifically the Jenkins pipelines used for our deployments.
 
-My daily routine at PagBank basically involves attending daily meetings, participating in technical refinement sessions for new features, 
-deploying applications to staging and production environments, and investigating production issues whenever they occur.
+We operate in a multi-cloud environment, running deployments in Kubernetes as well as in AWS. 
+I’m also responsible for production deployments. 
+Another part of my role is investigating customer access issues in production by analyzing logs in Splunk and other internal data sources, 
+    and providing support to the customer service team when necessary.
 
-I work in the account security domain.
-My team is responsible for password matching and password recovery processes.
-In addition to business and infrastructure tasks, I also investigate production issues through application monitoring and log analysis.
+“I’m responsible for deploying and maintaining our microservices running on Kubernetes. 
+I work with deployment manifests, services, ingresses, autoscaling rules, 
+and the overall configuration required for running applications in the cluster.”
+📌 Se quiser uma versão ainda mais elegante:
+“I manage the entire lifecycle of our Kubernetes deployments — writing and adjusting manifests, 
+configuring services and ingresses, handling autoscaling, and ensuring that the workloads run properly in the cluster.”
+
+e sobre aws?
+Regarding AWS, we are in the process of decommissioning our services there, 
+since the company is moving toward using only our own private infrastructure. 
+But yes, we still have a few workloads deployed in AWS at the moment. 
+We also maintain some TFVars files that contain provisioning and resource configuration for AWS.
+
+Aside ECS — AWS Elastic Container Service — which is still active, 
+    we are shutting down all the remaining AWS components. 
+We don’t use CloudWatch logs, we don’t use AWS monitoring, and we don’t rely on any messaging brokers 
+    or managed services there. 
+ECS is the only service still running in AWS, and even that is being phased out.
+
+Another responsibility I have within the team is monitoring our alerts. 
+We have several alerts configured in Grafana, and the main ones include Rate Limit, Throughput, Latency, and Error Rate. 
+I handle these alerts daily, reviewing dashboards and investigating any spikes or anomalies to prevent customer-impacting issues.
+
+others technologies envolved
+Across our microservices, we handle both synchronous communication, 
+    using standard REST, 
+    and asynchronous communication using Kafka...
+both for internal microservice interactions and for sending data to BI systems.
 
 ---
 
 #### Em que situacoes falou em ingles para trabalho?
+Two years ago, I worked as a Tech Lead in a squad, 
+and since we had a mobile development team, we often made presentations to the project’s CEO. 
+She was English, so we presented the features we developed in English. It was a garage logistics implementation.
 
+In another situation, when I worked in the financial area, 
+I sometimes supported clients who had issues with their card machines. 
+To assist them, I spoke with a few support agents who were Indian and communicated in English.
 
-#### Relevant Projects
-Every project comes with its own challenges, particularities, and unique aspects.
-I can say I have some preferences, such as working with the latest versions of Java and Kotlin.
-I also prefer using the most up-to-date versions of the Spring Boot framework.
-I enjoy working with distributed systems because an application should be available, scalable, maintainable, performant, and resilient.
+#### Relevant Projects 
 
 available, scalable, performant, and resilient
 1. Available
@@ -107,20 +133,18 @@ available, scalable, performant, and resilient
 --- 
 
 #### Challenges Faced
-    So, for me the really challenging part is migrating a monolith to microservices while keeping the data consistent. 
-    You know, in a monolith you usually rely on ACID transactions — everything is atomic, consistent, isolated, and durable by default. 
-    But once you split things into different services, you don’t have those guarantees automatically anymore
+I believe the architecture is not the problem,
+and engineering is not the problem either.
+Of course, each one has its own complexity,
+but what really makes a project difficult is the business rules.
 
----
+Some projects demand a deep understanding of the business itself —
+much more than implementation or the technical side.
+And that’s always a challenge.
 
-#### Why Do You Want to Work Here?
-    i decided that could a great opportunity professional to work in 
-
----
+--- 
 
 #### Thanking the Interviewer
-    “Thank you for your time and the opportunity to discuss my background and experience. 
-    
 ---    
 
 #### How Do You See Yourself in 5 Years?
@@ -130,21 +154,11 @@ available, scalable, performant, and resilient
 
 ---
 
-#### Strengths and Weaknesses
-> “My main strength is problem-solving — I stay calm under pressure, analyze issues carefully, and focus on finding effective
-> solutions.  
-> I’m also very detail-oriented and committed to code quality.
->
-> As for weaknesses, I sometimes take too much responsibility because I want everything to go perfectly.  
-> I’ve been working on delegating more and trusting others to take ownership as well.”
----
+#### Strengths and Weaknesses 
 #### Technical Challenge Example
-> “One technical challenge I faced was dealing with **event ordering issues in a Kafka-based system**.  
-> Messages were arriving out of order, which caused data inconsistencies.  
-> To solve it, I introduced a unique reference ID for each message and implemented logic to ensure the correct correlation between input
-> and output events.  
-> This approach improved consistency and allowed the system to handle multiple parallel requests safely.”
----
+All the major challenges I’ve faced in IT were related to transforming a monolith into microservices. 
+The real complexity in that process is keeping the transactions consistent. 
+--- 
 
 #### problemas ao entender
 “Sorry, could you please repeat that?
@@ -155,14 +169,25 @@ But I’m following you”
 [START]
 
 #### [TAG Scrum & Agile]
-**Q:** How familiar are you with Agile methodologies, such as Scrum?  
-**A:** I’ve been working in Agile environments for several years.
-    My current team follows Scrum — we have daily stand-ups, sprint planning, reviews, and retrospectives.
-    I like Agile because it helps teams stay focused, adapt quickly, and continuously deliver value.
- 
+How familiar are you with Agile methodologies, such as Scrum?  
+
+Agile in a squad means working in short cycle.
+We move forward together and hand in hand as a squad
+adjusting the course as the team moves forward.
+
+we have daily stand-ups, 
+sprint planning,
+Grooming sessions
+reviews, 
+and retrospectives.
+
 Grooming sessions are basically meetings where the team reviews and refines the backlog. 
-We clarify the business rules, break big stories into smaller ones, discuss edge cases, check dependencies, 
+We clarify the business rules, 
+break big stories into smaller ones, 
+discuss edge cases, 
+check dependencies, 
 and make sure everything is clear before development starts.
+
     “We covered all the Kafka requirements during the grooming session.”
     “Let’s schedule a grooming session to refine the new Spring flow.”
     “During grooming we found missing acceptance criteria.”
@@ -175,7 +200,7 @@ when we talk about software architecture, we can divide it into three main areas
 ### 1 - Distribution Styles, 
 ### 2 - Internal Organization Styles 
 ### 3 - Integration Styles
-### 4 - Modelos de execução/implantação (onde/como rodam)
+### 4 - Execution Models (onde/como rodam)
 
 ### 1 - Distribution Styles (how I divide the system into applications/services)
 Monolith (or Modular Monolith)     mónolif
@@ -473,25 +498,25 @@ A good testing strategy usually combines multiple levels of testing — unit, in
 --- 
 >
 #### [TAG CI/CD] jenkis etc
-> about
-<br> **Q:** How do you handle CI/CD in your team?  
-<br> **A:** We use Jenkins for our CI/CD pipelines. Every commit triggers automatic builds, tests, and deployments.
-<br> We follow a multistage pipeline approach — from QA to production — ensuring every change passes all validations before going live.
-<br> CI and CD are ways to deliver code automatically.
-<br> there are some tools available.
-<br> Right now, I work with Jenkins. I’ve also used Jenkins in other companies before.
-<br> But there are other options, like Bitbucket, GitHub Actions, and Azure Pipelines. all of them are good options. 
+about
+**Q:** How do you handle CI/CD in your team?  
+**A:** We use Jenkins for our CI/CD pipelines. Every commit triggers automatic builds, tests, and deployments.
+We follow a multistage pipeline approach — from QA to production — ensuring every change passes all validations before going live.
+CI and CD are ways to deliver code automatically.
+there are some tools available.
+Right now, I work with Jenkins. I’ve also used Jenkins in other companies before.
+But there are other options, like Bitbucket, GitHub Actions, and Azure Pipelines. all of them are good options. 
  
-> Continuous Integration (CI) ensures that code changes are automatically tested.
-<br> Continuous Deployment (CD) automates the release of new features.
-<br> DevOps bridges the gap between development and operations.
-<br> Observability helps us understand the system’s behavior in production.
-<br> Scalability means the system can handle increasing traffic.
-<br> Resilience ensures recovery from failures.
-<br> Load balancing distributes traffic evenly among servers.
-<br> Fault tolerance allows the system to keep working even if one part fails.
-<br> Infrastructure as Code (IaC) lets us manage servers using versioned scripts.
-<br> We use a service mesh to handle communication between microservices.
+Continuous Integration (CI) ensures that code changes are automatically tested.
+Continuous Deployment (CD) automates the release of new features.
+DevOps bridges the gap between development and operations.
+Observability helps us understand the system’s behavior in production.
+Scalability means the system can handle increasing traffic.
+Resilience ensures recovery from failures.
+Load balancing distributes traffic evenly among servers.
+Fault tolerance allows the system to keep working even if one part fails.
+Infrastructure as Code (IaC) lets us manage servers using versioned scripts.
+We use a service mesh to handle communication between microservices.
 >
 ## [TAG CLOUD]  
 > Cloud Computing (AWS, GCP, Azure)

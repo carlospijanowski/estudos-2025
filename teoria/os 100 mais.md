@@ -1,5 +1,9 @@
 🔥 100 Adjetivos essenciais da área de TI
 
+enquanto nao estruturo melhor
+
+i can gauge
+
 ---
 🔵 Com KEEP (manter, continuar, persistir)
 keep up – manter o ritmo / continuar
