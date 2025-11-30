@@ -77,6 +77,9 @@ In addition to business and infrastructure tasks, I also investigate production 
 
 ---
 
+#### Em que situacoes falou em ingles para trabalho?
+
+
 #### Relevant Projects
     Every project comes with its own challenges, particularities, and unique aspects.
     I can say I have some preferences, such as working with the latest versions of Java and Kotlin.
