@@ -3,300 +3,399 @@
 Accurate – preciso áquiurét
 • Our reconciliation service needs accurate timestamps to avoid processing the same Kafka message twice.
 • The fraud engine only reacts when the customer provides accurate personal data.
+
 Active – ativo
 • The health-check endpoint returns the number of active threads in the worker pool.
 • Only active sessions are kept in Redis; expired ones are removed automatically.
+
 Advanced – avançado
 • We enabled advanced retry logic using Spring Retry to handle intermittent timeouts.
 • The team is adopting advanced monitoring with OTel to trace distributed flows.
+
 Agile – ágil
 • An agile backend needs small, independent modules that deploy without friction.
 • We follow an agile approach to refactor features incrementally in production.
+
 Automated – automatizado
 • The deployment pipeline is fully automated using Jenkins and GitHub Actions.
 • Automated tests run on every PR to prevent regressions in the core domain.
+
 Available – disponível
 • The cache must remain available even when the database is under heavy load.
 • We replicate the service in two zones to stay available during upgrades.
+
 Basic – básico
 • The basic flow only validates the payload before sending it to Kafka.
 • Our basic authentication layer will be replaced with OAuth2.
+
 Blocked – bloqueado
 • The thread pool got blocked due to a slow external API.
 • Requests were blocked while waiting for the lock on the shared resource.
+
 Broken – quebrado / com falha
 • The batch job is broken because the mapper generated a null pointer.
 • We detected a broken dependency after bumping Spring Boot to 3.x.
+
 Cached – armazenado em cache
 • The product details are cached in Redis to reduce database load.
 • We cached the JWT public keys to avoid constant calls to the authorization server.
+
 Centralized – centralizado
 • All authentication logic is centralized in the identity service.
 • We store feature flags in a centralized configuration provider.
+
 Clean – limpo (código)
 • The new module has a clean architecture, separating domain and infrastructure.
 • We keep controllers thin to maintain clean and readable flows.
+
 Complex – complexo
 • The compensation logic for cancelled orders is complex and event-driven.
 • A complex serialization issue occurs when nested objects are mutated during mapping.
+
 Compliant – em conformidade
 • Our logs must be compliant with PCI-DSS standards.
 • The API is now compliant with the new schema defined in OpenAPI 3.
+
 Concurrent – concorrente
 • We use a concurrent queue to handle high-throughput message processing.
 • Concurrent writes caused race conditions in the legacy module.
+
 Configurable – configurável
 • The retry strategy is configurable through the application YAML.
 • Kafka consumers are fully configurable per environment.
+
 Connected – conectado
 • The service stays connected to MongoDB through a pooled connection.
 • The instance isn’t connected to Redis due to missing network rules.
+
 Consistent – consistente
 • We ensure consistent writes using transactions in Postgres.
 • Consistent logs help us debug distributed flows across microservices.
+
 Critical – crítico
 • This is a critical path: any delay affects the checkout experience.
 • Kafka offsets are critical for ensuring idempotency.
+
 Current – atual
 • The current version of the service requires Java 21.
 • Our current design uses a decoupled event-driven workflow.
+
 Custom – personalizado
 • We implemented a custom deserializer to handle the partner’s JSON format.
 • The pipeline uses a custom Jenkins stage to validate OpenAPI contracts.
+
 Decoupled – desacoplado
 • The notification flow is decoupled using Kafka to avoid synchronous waits.
 • We keep business rules decoupled from controllers with the hexagonal approach.
+
 Deprecated – obsoleto
 • The old endpoint is deprecated and will be removed next quarter.
 • Spring marked that annotation as deprecated in Java 21.
+
 Distributed – distribuído
 • In a distributed system, clock drift can break event ordering.
 • We rely on distributed locks to avoid double-processing orders.
+
 Dynamic – dinâmico
 • The rule engine loads dynamic conditions from a configuration file.
 • Our dynamic scaling responds to CPU and latency signals.
+
 Effective – eficaz
 • Caching was the most effective solution to reduce database load.
 • The retry policy is effective against transient network failures.
+
 Efficient – eficiente
 • The Kotlin coroutine model is more efficient for IO-bound tasks.
 • We optimized queries to make the billing service more efficient.
+
 Elastic – elástico
 • EKS provides an elastic infrastructure to support peak traffic.
 • Elastic queues handle bursts without losing messages.
+
 Encrypted – criptografado
 • All secrets remain encrypted at rest using KMS.
 • The payload is encrypted before being published to Kafka.
+
 Expected – esperado
 • The consumer processed the expected number of messages.
 • The API returned the expected HTTP status code.
+
 External – externo
 • The external payment provider started timing out yesterday.
 • We validate the response schema from the external API.
+
 Failed – falho
 • The batch retried all failed transactions overnight.
 • A failed dependency caused the service to stop during startup.
+
 Flexible – flexível
 • The architecture is flexible enough to swap RabbitMQ for Kafka.
 • Our flexible design supports both synchronous and asynchronous flows.
+
 Functional – funcional
 • The new endpoint is functional but needs optimization.
 • We use functional programming patterns with Kotlin flows.
+
 Gradual – gradual
 • We applied a gradual rollout using feature flags.
 • Migration to the new schema will be gradual to avoid downtime.
+
 Heavy – pesado (processamento)
 • The report generator is too heavy to run on the same thread pool.
 • Image processing is heavy, so we moved it to a background worker.
+
 High-level – alto nível
 • We present a high-level design before diving into details.
 • Kotlin offers high-level abstractions over concurrency.
+
 Idle – ocioso
 • The service scales down when nodes are idle.
 • Idle connections were causing memory leaks in the legacy pool.
+
 Immutable – imutável
 • Domain events are immutable to guarantee consistency.
 • We keep immutable DTOs to avoid side effects in mapping.
+
 Important – importante
 • Idempotency keys are important for preventing duplicates.
 • Monitoring latency is important in high-throughput systems.
+
 Independent – independente
 • Each microservice is independent and owns its own database.
 • The feature flag service works independent of the main request flow.
+
 Indexed – indexado
 • The customer_id column is indexed to speed up lookups.
 • MongoDB collections were indexed to optimize query patterns.
+
 Informative – informativo
 • We improved logs to be more informative during debugging.
 • The health endpoint returns informative details about each component.
+
 Initial – inicial
 • The initial load of catalog data happens at startup.
 • We ran an initial migration to normalize the order table.
+
 Inline – em linha
 • We removed the inline SQL and moved it to a repository class.
 • Inline mappers caused duplication, so we refactored them into components.
+
 Internal – interno
 • The internal API is not exposed through the gateway.
 • We encrypt all internal service-to-service communication.
+
 Invalid – inválido
 • The request returned 400 due to an invalid field in the payload.
 • Kafka listeners skip invalid messages and push them to the DLQ.
+
 Involved – envolvido
 • Multiple services are involved in the checkout flow.
 • Kafka, Redis, and Postgres are involved during the customer login process.
+
 JSON-based – baseado em JSON
 • We standardized our JSON-based events using a shared schema registry.
 • The JSON-based request is validated with Jackson annotations.
+
 Legacy – legado
 • The legacy module still uses JDBC templates and manual transactions.
 • We wrapped the legacy SOAP client behind a modern adapter.
+
 Lightweight – leve
 • Micronaut is more lightweight than Spring for serverless workloads.
 • Our lightweight DTOs speed up serialization under high load.
+
 Limited – limitado
 • The API has limited throughput due to external provider constraints.
 • We use rate limiting because the legacy system has limited capacity.
+
 Local – local
 • We run MongoDB in a local container for integration tests.
 • Local caching reduced latency for hot endpoints.
+
 Logical – lógico
 • The mapper applies logical transformations to build the domain model.
 • We group business rules in a logical structure inside the domain layer.
+
 Low-level – baixo nível
 • We used low-level Kafka APIs for a custom partitioning strategy.
 • Low-level byte manipulation was needed to decode the protocol.
+
 Manual – manual
 • A manual retry was needed because the partner API returned malformed data.
 • We removed manual configuration and moved everything to YAML.
+
 Mandatory – obrigatório
 • The customer_id field is mandatory for all POST requests.
 • Authentication is mandatory for accessing the orders endpoint.
+
 Modular – modular
 • Our modular monolith lets us scale components independently.
 • Kotlin modules keep domain logic isolated and clean.
+
 Modern – moderno
 • We are migrating the legacy module to a modern reactive architecture.
 • The service uses modern Java 21 features like virtual threads.
+
 Mutable – mutável
 • Mutable state caused concurrency issues in the billing service.
 • We replaced mutable collections with Kotlin’s immutable List.
+
 Native – nativo
 • We use native AWS SDK integrations to reduce overhead in the payment flow.
 • Quarkus compiled the service to a native binary, improving cold starts.
+
 Networked – ligado à rede
 • All networked components must pass through the company’s zero-trust gateway.
 • Networked storage introduced extra latency in the reporting module.
+
 Non-blocking – não bloqueante
 • WebFlux provides a non-blocking execution model ideal for high concurrency.
 • We migrated the file upload endpoint to a non-blocking approach.
+
 Obvious – óbvio
 • It’s obvious that the slow query is coming from missing indexes.
 • The NPE was obvious once we checked the mapper logic.
+
 On-demand – sob demanda
 • The service generates reports on-demand using S3 triggers.
 • We scale worker pods on-demand based on queue length.
+
 Optimized – otimizado
 • The new SQL statement is optimized for large datasets.
 • We optimized the serialization process to reduce latency by 20%.
+
 Optional – opcional
 • The filter parameter is optional; we return all records if it’s absent.
 • In Kotlin, Optional values are replaced with nullable types.
+
 Parallel – paralelo
 • The batch process runs in parallel using Java streams.
 • Parallel consumers increased throughput during nightly jobs.
+
 Partial – parcial
 • We applied a partial rollback after a failed transaction.
 • The response includes partial data when the partner API times out.
+
 Persistent – persistente
 • The service writes persistent audit logs to Postgres.
 • Persistent volumes store user-uploaded files across deployments.
+
 Portable – portável
 • Containerized services are portable across environments.
 • Kotlin Multiplatform makes business rules portable to other runtimes.
+
 Predictable – previsível
 • Circuit breakers make failures more predictable and controlled.
 • Predictable latency is essential in streaming architectures.
+
 Primary – primário
 • The primary key is a UUID generated on the backend.
 • Our primary goal is to reduce cold starts during peak hours.
+
 Private – privado
 • The private endpoint is only accessible from internal networks.
 • Sensitive fields stay private inside the domain model.
+
 Public – público
 • The public API follows strict versioning rules.
 • We published a public contract in the API Gateway.
+
 Random – aleatório
 • We generate random salts for password hashing.
 • The load balancer distributes traffic using a random strategy.
+
 Reactive – reativo
 • The login flow is reactive using Mono and Flux.
 • Reactive event streams simplify backpressure handling.
+
 Readable – legível
 • We refactored the code to make the validator more readable.
 • Readable logs reduce debugging time in distributed flows.
+
 Real-time – em tempo real
 • Real-time metrics are exported using OpenTelemetry.
 • The fraud system analyzes transactions in real-time.
+
 Redundant – redundante
 • We store redundant events in S3 for replay purposes.
 • Redundant replicas ensure the cluster survives node failures.
+
 Reliable – confiável
 • We moved to Kafka because it provides reliable event delivery under high load.
 • The new retry mechanism made the billing service more reliable.
+
 Remote – remoto
 • The service reads remote configuration from AWS Parameter Store.
 • We replaced the remote SOAP client with a modern REST adapter.
+
 Replicated – replicado
 • Postgres uses replicated nodes to handle read-heavy operations.
 • We replicated the cache to avoid a single point of failure.
+
 Required – obrigatório / exigido
 • The token header is required for all protected endpoints.
 • A referenceId is required for every published event.
+
 Responsive – responsivo
 • Our reactive model keeps the API responsive during peak traffic.
 • The dashboard becomes more responsive after caching metrics.
+
 Robust – robusto
 • The hexagonal architecture made the system more robust.
 • A robust error-handling layer prevents cascading failures.
+
 Scalable – escalável
 • The microservice is scalable through horizontal autoscaling.
 • Redis helps the platform remain scalable during Black Friday.
+
 Scheduled – agendado
 • A scheduled job cleans old tokens every six hours.
 • We use a scheduled task to sync data with Salesforce nightly.
+
 Secure – seguro
 • All communication between pods is secure using mTLS.
 • The login flow is secure thanks to OAuth2 and short-lived tokens.
+
 Shared – compartilhado
 • We keep shared DTOs in a contract module used by all microservices.
 • The cluster runs on shared compute resources across teams.
+
 Synchronous – síncrono
 • The payment confirmation is a synchronous REST call.
 • We avoid synchronous flows whenever external partners are slow.
+
 Asynchronous – assíncrono
 • Order notifications are asynchronous via Kafka.
 • We turned the PDF generation into an asynchronous background task.
+
 Temporary – temporário
 • Temporary files are stored in /tmp before being uploaded to S3.
 • We created a temporary fix until the partner releases the new API.
+
 Thread-safe – seguro para threads
 • The singleton mapper is thread-safe because it has no mutable state.
 • ConcurrentHashMap is thread-safe and performs well under load.
+
 Time-consuming – demorado
 • The report generation is time-consuming, so we offloaded it to workers.
 • Schema validation became time-consuming after adding nested relations.
+
 Unavailable – indisponível
 • The partner API became unavailable during the maintenance window.
 • Our fallback responds immediately when the service is unavailable.
+
 Unexpected – inesperado
 • We logged an unexpected data format coming from the provider.
 • The consumer crashed due to an unexpected null value.
+
 Valid – válido
 • Only valid events are forwarded to the processing engine.
 • We check if the JWT is still valid before retrieving customer data.
+
 Verbose – verboso (log)
 • The legacy module logs are too verbose and flood Splunk.
 • Verbose stack traces were disabled in production mode.
+
 Virtual – virtual
 • Java 21’s virtual threads reduced blocking issues in our API.
 • We run integration tests inside virtual Docker networks.
