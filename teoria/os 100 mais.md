@@ -1,5 +1,482 @@
 🔥 100 Adjetivos essenciais da área de TI
 
+---
+🔵 Com KEEP (manter, continuar, persistir)
+keep up – manter o ritmo / continuar
+“We need to keep up with the new compliance requirements.”
+“Good job keeping up with the alerts yesterday.”
+keep track of – acompanhar / rastrear
+“Can you keep track of the Kafka offsets in the consumer group?”
+“I’m keeping track of all retries in the logs.”
+keep an eye on – ficar de olho
+“Let’s keep an eye on the CPU usage after the deploy.”
+keep going – continuar trabalhando / seguir
+“The pipeline failed, but we can keep going locally.”
+keep something in mind – ter em mente
+“Keep in mind that this endpoint is synchronous.”
+keep at it – persistir
+“Keep at it, the root cause will show up in the logs.”
+
+🟣 Com SET (configurar, definir)
+set up – configurar / preparar / montar
+“I’ll set up the new SQS queues.”
+set out – definir objetivos
+“We set out to reduce latency in this sprint.”
+set off – disparar / iniciar
+“This change can set off multiple retries in the service.”
+set aside – reservar tempo
+“Let’s set aside 30 minutes to review the architecture.”
+
+🟢 Com GET (obter, receber, entender)
+get back to – retornar / responder depois
+“I’ll get back to you after checking the logs.”
+get rid of – remover / eliminar
+“We need to get rid of this deprecated endpoint.”
+get into – entrar no assunto / se aprofundar
+“Let’s not get into performance tuning yet.”
+get around – contornar problema
+“We can get around this by caching the response.”
+get through – finalizar / conseguir passar
+“The request can’t get through the gateway.”
+get ahead of – antecipar problemas
+“We need to get ahead of this incident before peak time.”
+get stuck – travar / ficar bloqueado
+“I got stuck debugging the token validation.”
+
+🔥 Outros phrasal verbs extremamente comuns em TI
+🟨 Ação técnica
+look into – investigar
+“We’ll look into the timeout on the login endpoint.”
+figure out – descobrir / entender
+“Let’s figure out why WebClient isn’t retrying.”
+track down – rastrear
+“We tracked down the root cause to a misconfigured Redis key.”
+bring up (serviço) – subir
+“The pod didn’t bring up correctly after the deploy.”
+bring down – derrubar / desligar serviço
+“We need to bring down the instance before patching.”
+roll out – liberar versão
+“The new flow will be rolled out gradually.”
+roll back – reverter
+“We rolled back due to high error rate.”
+clean up – limpar / remover lixo
+“We should clean up unused feature flags.”
+
+🟩 Comunicação entre squads
+follow up – acompanhar / cobrar
+“I’ll follow up with the BFF team about the contract.”
+point out – destacar
+“Just pointing out: this API is not idempotent.”
+check in – sincronizar / atualizar status
+“Let’s check in after lunch to finalize the review.”
+hand over – repassar
+“I’ll hand over the logs to SRE.”
+talk through – explicar passo a passo
+“Let me talk you through the authentication flow.”
+ 
+---
+phrasal verbs
+
+1. set up – configurar / montar
+   to set up a server, to set up a project
+   We need to set up a new environment for QA.
+   (A gente precisa configurar um novo ambiente para QA.)
+   Can you set up the Spring Boot project with Docker from the beginning?
+   (Você pode montar o projeto Spring Boot com Docker desde o início?)
+
+2. spin up – subir (rápido) um recurso/serviço
+   Muito usado pra containers, VMs, pods, etc.
+   We can spin up a new pod in the cluster to handle the extra load.
+   (Podemos subir um novo pod no cluster pra aguentar a carga extra.)
+   They spin up a test database before running the integration tests.
+   (Eles sobem um banco de teste antes de rodar os testes de integração.)
+
+3. scale up / scale down – escalar pra cima / pra baixo
+   If traffic increases, we’ll scale up the number of instances.
+   (Se o tráfego aumentar, vamos escalar o número de instâncias.)
+   At night we usually scale down the services to save costs.
+   (À noite geralmente reduzimos a escala dos serviços pra economizar.)
+
+4. roll out – colocar em produção / liberar
+   We’re going to roll out the new version tonight.
+   (Vamos liberar a nova versão hoje à noite.)
+   The feature was rolled out to 10% of the users first.
+   (A feature foi liberada primeiro para 10% dos usuários.)
+
+5. roll back – reverter deploy / versão
+   We had to roll back the deployment because of a critical bug.
+   (Tivemos que reverter o deploy por causa de um bug crítico.)
+   If the health checks fail, the pipeline automatically rolls back.
+   (Se os health checks falham, o pipeline reverte automaticamente.)
+
+6. bring up / bring down – subir / derrubar serviço
+   The service is down, we’re trying to bring it back up.
+   (O serviço está fora, estamos tentando subir de novo.)
+   We need to bring down the instance to apply the patch.
+   (Precisamos derrubar a instância pra aplicar o patch.)
+
+7. shut down – desligar / encerrar
+   We’ll shut down the old legacy service next quarter.
+   (Vamos desligar o serviço legado no próximo trimestre.)
+   The app shuts down if it can’t connect to the database.
+   (O app encerra se não conseguir conectar no banco.)
+
+8. log in / log out – entrar / sair (autenticação)
+   Users can’t log in after the last deployment.
+   (Os usuários não conseguem fazer login depois do último deploy.)
+   The token expires and the user is logged out automatically.
+   (O token expira e o usuário é deslogado automaticamente.)
+
+9. sign up – cadastrar-se / criar conta
+   We added a new flow for users to sign up with Google.
+   (Adicionamos um novo fluxo pra usuários se cadastrarem com o Google.)
+   The conversion rate on the sign-up page improved after the redesign.
+   (A taxa de conversão na página de cadastro melhorou depois do redesign.)
+
+10. back up – fazer backup
+    We back up the database every night.
+    (Fazemos backup do banco toda noite.)
+    Before changing the schema, please back up the data.
+    (Antes de mudar o schema, faz um backup dos dados.)
+
+11. figure out – entender / descobrir / destrinchar
+    Muito usado pra debug e análise.
+    We need to figure out why the API is timing out.
+    (Precisamos entender por que a API está dando timeout.)
+    I’m still trying to figure out what’s causing this memory leak.
+    (Ainda estou tentando descobrir o que está causando esse memory leak.)
+
+12. find out – descobrir (obter informação)
+    Let’s find out which service is causing the high CPU usage.
+    (Vamos descobrir qual serviço está causando o alto uso de CPU.)
+    I’ll find out who changed this configuration in Kubernetes.
+    (Vou descobrir quem mudou essa configuração no Kubernetes.)
+
+13. track down – rastrear / localizar a origem
+    We need to track down where this null value comes from.
+    (Precisamos rastrear de onde vem esse valor null.)
+    The logs helped us track down the failing dependency.
+    (Os logs ajudaram a localizar a dependência que estava falhando.)
+
+14. clean up – limpar / organizar código, dados, logs
+    We should clean up unused feature flags in the config.
+    (Devíamos limpar os feature flags não usados na config.)
+    I’ll clean up the controller and move this logic to a service.
+    (Vou dar uma limpada no controller e mover essa lógica pra um service.)
+
+15. break down – decompor / explicar parte por parte
+    Let me break down the flow: first the request hits the gateway, then the BFF, then the core service.
+    (Deixa eu decompor o fluxo: primeiro a requisição passa no gateway, depois no BFF, depois no serviço core.)
+    We broke down the monolith into three microservices.
+    (Nós quebramos o monólito em três microsserviços.)
+
+16. hand over – repassar / passar adiante
+    I’ll hand over this task to the DevOps team.
+    (Vou repassar essa tarefa pro time de DevOps.)
+    Can you hand over the documentation to the new developer?
+    (Você pode passar a documentação pro novo desenvolvedor?)
+
+17. follow up – acompanhar / cobrar depois
+    I’ll follow up on this incident after we get more logs.
+    (Vou acompanhar esse incidente depois que tivermos mais logs.)
+    Can you follow up with the other squad about the API contract?
+    (Você pode dar um follow up com a outra squad sobre o contrato da API?)
+
+18. work around – contornar (um problema)
+    We added a feature flag to work around the bug in the legacy service.
+    (Adicionamos um feature flag pra contornar o bug no serviço legado.)
+    For now, we’ll work around the limitation of this API.
+    (Por enquanto, vamos contornar a limitação dessa API.)
+---
+
+⭐ 1–10: Estruturais
+1. even
+   Squad: The issue happens even after the hotfix.
+   Java: The endpoint is slow even with caching enabled.
+
+2. still
+   Squad: The bug is still open on Jira.
+   Java: The service still returns 500.
+
+3. yet
+   Squad: The PO hasn’t confirmed the requirement yet.
+   Java: The consumer hasn’t started processing messages yet.
+
+4. though
+   Squad: It looks stable now, though the logs are strange.
+   Java: The query works, though it’s not optimized.
+
+5. although
+   Squad: Although it’s late, we need this alignment.
+   Java: Although the API is valid, the mapper fails.
+
+6. actually
+   Squad: Actually, we don’t need another meeting.
+   Java: Actually, the bug was in the DTO, not the controller.
+
+7. basically
+   Squad: Basically, we need better communication.
+   Java: Basically, the service fetches, maps, and returns.
+
+8. literally
+   Squad: We literally had three incidents today.
+   Java: The JVM literally hit 100% CPU.
+
+9. already
+   Squad: I already updated the ticket.
+   Java: The service already consumed the message.
+
+10. instead
+    Squad: Let’s try this approach instead.
+    Java: Use WebClient instead of RestTemplate.
+
+⭐ 11–20: Comunicação & alinhamento
+11. anyway
+    Squad: Anyway, let’s move to the next topic.
+    Java: Anyway, the retry logic still needs improvement.
+
+12. exactly
+    Squad: Exactly! That’s the point I was making.
+    Java: Exactly where the timeout happens is in this method.
+
+13. probably
+    Squad: He’s probably in another call.
+    Java: The failure is probably in the database call.
+
+14. honestly
+    Squad: Honestly, we don't need this extra ceremony.
+    Java: Honestly, this code needs a full refactor.
+
+15. obviously
+    Squad: Obviously, we need more test coverage.
+    Java: Obviously, JPA can’t handle this structure.
+
+16. apparently
+    Squad: Apparently, the deploy didn’t run.
+    Java: Apparently, the header isn’t being sent.
+
+17. definitely
+    Squad: We definitely need to fix this today.
+    Java: This logic definitely needs validation.
+
+18. eventually
+    Squad: Eventually, we’ll migrate to a new platform.
+    Java: Eventually, this service will be rewritten.
+
+19. currently
+    Squad: Currently, we have three open incidents.
+    Java: The service is currently failing on startup.
+
+20. recently
+    Squad: Recently, we’ve had many access issues.
+    Java: The logs recently started showing this warning.
+
+⭐ 21–30: Reuniões / fluxo
+21. however
+    Squad: We delivered the feature; however, QA found issues.
+    Java: The call works; however, the mapping is wrong.
+
+22. therefore
+    Squad: Therefore, we need more people on this task.
+    Java: The service failed; therefore, the fallback triggered.
+
+23. meanwhile
+    Squad: Meanwhile, the mobile team is testing.
+    Java: Meanwhile, the scheduler keeps sending events.
+
+24. otherwise
+    Squad: We must sync this today, otherwise it’ll block the sprint.
+    Java: Add validation, otherwise the API will break.
+
+25. moreover
+    Squad: Moreover, this change affects other squads.
+    Java: Moreover, this method is used by three services.
+
+26. besides
+    Squad: Besides that, there’s nothing new.
+    Java: Besides this error, everything else works.
+
+27. regarding
+    Squad: Regarding the incident, we need a timeline.
+    Java: Regarding this class, let’s add some logs.
+
+28. related
+    Squad: It’s related to the last deploy.
+    Java: The issue is related to the thread pool.
+
+29. considering
+    Squad: Considering the deadline, we need focus.
+    Java: Considering the payload size, we need compression.
+
+30. depending
+    Squad: Depending on the PO, we can move forward.
+    Java: Depending on the header, the API returns another format.
+
+⭐ 31–40: Ações técnicas
+31. handle
+    Squad: We need to handle this in today’s refinement.
+    Java: The service must handle null values.
+
+32. fetch
+    Squad: We fetch data from two providers.
+    Java: The repository fetches all active records.
+
+33. trigger
+    Squad: This deploy will trigger a regression test.
+    Java: The scheduler triggers the batch job.
+
+34. expose
+    Squad: We expose only public endpoints.
+    Java: This controller exposes two GET APIs.
+
+35. consume
+    Squad: The BI team will consume the data.
+    Java: The listener consumes messages from Kafka.
+
+36. provide
+    Squad: This dashboard provides visibility.
+    Java: The adapter provides the implementation for the port.
+
+37. ensure
+    Squad: We need to ensure alignment with mobile.
+    Java: Ensure the service returns a valid DTO.
+
+38. avoid
+    Squad: Let’s avoid last-minute changes.
+    Java: Avoid calling this API synchronously.
+
+39. improve
+    Squad: We must improve our communication.
+    Java: Let’s improve the error handling.
+
+40. increase
+    Squad: Can we increase the priority of this task?
+    Java: Increase the timeout for this external API.
+
+⭐ 41–50: Problemas e incidentes
+41. failure
+    Squad: We had a failure in production.
+    Java: The failure occurred during the database call.
+
+42. issue
+    Squad: This issue affects two squads.
+    Java: The issue is in the mapping layer.
+
+43. outage
+    Squad: The outage impacted several teams.
+    Java: The service crashed during the outage.
+
+44. fallback
+    Squad: The fallback didn’t trigger correctly.
+    Java: The fallback returns cached data.
+
+45. retry
+    Squad: We need a retry strategy.
+    Java: The client retries three times before failing.
+
+46. timeout
+    Squad: We’re seeing timeout spikes.
+    Java: The request hits a timeout on the provider.
+
+47. request
+    Squad: The request volume increased today.
+    Java: The request contains an invalid header.
+
+48. response
+    Squad: The response time is too high.
+    Java: The response body is missing fields.
+
+49. payload
+    Squad: The payload changed without notice.
+    Java: The payload doesn’t match the DTO.
+
+50. environment
+    Squad: Which environment are you testing in?
+    Java: This config only works in the QA environment.
+
+---
+
+Are you out partying?
+"Are you out partying? We need you on the call — the Kafka consumer is stuck again."
+"Are you out partying? Because you sound way too happy for someone debugging a legacy SOAP service."
+
+brand new
+
+Sort of
+"Did we finish the deployment? — Sort of. The app is up, but the health check is still failing."
+"Is this what the PO wanted? — Sort of. We’ll need more clarification in refinement."
+
+Spooky
+"The logs look spooky — there’s no stack trace, but the request still fails."
+"It’s kind of spooky how the issue disappears when we turn on debug mode."
+
+Guess what?
+"Guess what? The test passed locally but exploded in QA again."
+"Guess what? The RabbitMQ message wasn’t the problem — it was the mapper layer."
+
+You seem calmer
+"You seem calmer today — did you finally get the Redis cache working?"
+"You seem calmer now that we refactored the service. The old version was stressful for everyone."
+
+This isn’t a lecture
+"Relax, this isn’t a lecture — I just want to understand why we’re using this approach."
+"Look, this isn’t a lecture, but we need to document this flow before someone breaks it again."
+
+My peer
+"My peer on the other squad already implemented the producer; we just need to handle the consumer."
+"I talked to my peer from the mobile team — they’re waiting for our API contract."
+“I discussed this approach with my peer, and we agreed to refactor the service.”
+“My peer and I are reviewing the new architecture proposal.”
+“One of my peers found a bug in the Kafka consumer.”
+“I paired with a peer to debug the integration issue.”
+
+Rather than
+"Let’s use a DTO rather than exposing the entity directly."
+"We should use async processing rather than blocking the thread during the external call."
+
+regret
+“I regret not implementing proper logging earlier; it would have saved us hours during the incident.”
+“We regret deploying without a full rollback plan — it taught the team an important lesson about release safety.”
+
+Predict
+"We can’t really predict how the service will behave under load until we run the stress tests."
+"It’s hard to predict the impact of this change, so let's monitor it closely after the deploy."
+"We need better metrics to predict when the thread pool starts getting saturated."
+"You can predict a failure here — this synchronous call inside the loop will slow everything down."
+
+Pretend
+"Let’s pretend the external API is down and simulate the fallback logic in QA."
+"In the unit test, we pretend the database returns no records to validate the edge case."
+"Don’t pretend everything is fine — the latency spike is real and getting worse."
+"We can’t pretend this is a small fix; this refactor will impact three other services."
+
+Intend = pretender (no sentido de ter intenção)
+I intend to finish this feature today.
+→ Eu pretendo finalizar essa feature hoje.
+We don’t intend to rewrite this service now.
+→ Nós não pretendemos reescrever esse serviço agora.
+
+noticed
+As a verb (perceber / notar)
+“I noticed the service started responding slower after the last deploy.”
+“Let me know if you notice any unusual logs in the consumer.”
+“We noticed a spike in latency in the authentication endpoint.”
+“Did you notice that the cache wasn’t refreshed properly?”
+As a verb (observar / reparar em algo)
+“I noticed you removed the null-check — was that intentional?”
+“She noticed the feature flag wasn’t being applied in production.”
+As a noun (aviso / notificação)
+“We received a notice from the security team about outdated dependencies.”
+“The system sent a notice about the failed batch job.”
+“You’ll get a notice when the deployment finishes.”
+🏠 Everyday examples
+“Did you notice how quiet the neighborhood is today?”
+“I didn’t notice the time passing.”
+“He didn’t even notice that it was raining.”
+“I noticed your new haircut — looks good!”
+NOTICE = perceber algo com os sentidos
+REALIZE = perceber algo intelectualmente / entender
+
 Accurate – preciso áquiurét
 • Our reconciliation service needs accurate timestamps to avoid processing the same Kafka message twice.
 • The fraud engine only reacts when the customer provides accurate personal data.
@@ -889,3 +1366,71 @@ even under load
 * The service stayed stable even under load during Black Friday.
 * Redis kept latency low even under load.
 * Kafka processed events consistently even under load.
+
+---
+> 100 Most Useful English Verbs for IT Professionals
+1–20: Core Daily Workflow
+
+Build – compile or assemble
+We build the project using Maven.
+Deploy – send to an environment
+We deploy to QA every morning.
+Release – publish a new version
+We will release 1.2.0 today.
+Run – execute
+Run the tests before committing.
+Test – verify something
+Test the endpoint locally.
+Fix – correct a problem
+I fixed the null pointer issue.
+Debug – analyze errors
+Let’s debug the failing service.
+Improve – make better
+We need to improve performance.
+Review – check code or docs
+Can you review my PR?
+Merge – combine branches
+We merge to main only after approval.
+Commit – send code to Git
+Commit with a clear message.
+Push – upload to remote
+Push your branch when ready.
+Pull – download changes
+Pull the latest updates before developing.
+Refactor – reorganize code
+We should refactor this service.
+Document – write documentation
+Please document the API behavior.
+Configure – set parameters
+Configure the Kafka consumer correctly.
+
+Optimize – make more efficient
+We optimized the SQL queries.
+
+Validate – check correctness
+Validate the input before saving.
+
+---
+“Slightly” é muito usado em TI — e de um jeito natural e frequente.
+Ele significa:
+✅ um pouco / levemente / de forma sutil
+É perfeito para falar de desempenho, latência, diferenças entre abordagens, ajustes em código, variações de carga etc.
+📌 Exemplos em contexto de backend/Java/Kubernetes
+“This version is slightly faster than the previous one.”
+(Essa versão está um pouco mais rápida.)
+“The latency increased slightly after the last deployment.”
+(A latência aumentou levemente.)
+“We need to slightly adjust the memory limits in the Kubernetes manifest.”
+(Precisamos ajustar um pouco os limites de memória no manifest.)
+“The new algorithm uses slightly less CPU under heavy load.”
+(O novo algoritmo usa um pouco menos de CPU sob carga pesada.)
+“The logs were slightly misleading during the incident.”
+(Os logs estavam ligeiramente confusos durante o incidente.)
+“The architecture is slightly different from what we expected.”
+(A arquitetura é um pouco diferente do que esperávamos.)
+
+🎯 Resumo
+Slightly = “um pouco” de forma suave → super usado em relatórios de performance, incidentes, análises técnicas e code reviews.
+Se quiser, faço mais frases usando slightly em cenários de CI/CD, Kafka, Redis, JPA ou microservices.
+
+---

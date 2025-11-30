@@ -284,7 +284,9 @@ Cite também como lidaria com versionamento, autenticação, autorização, cód
 
 ---
 
-## 20. Como você estrutura seus testes unitários em projetos Java? Quais boas práticas você segue para garantir que os testes sejam confiáveis, legíveis e de fácil manutenção? Pode citar ferramentas que costuma utilizar e como você lida com mocks e dependências externas?
+## 20. Como você estrutura seus testes unitários em projetos Java? 
+Quais boas práticas você segue para garantir que os testes sejam confiáveis, legíveis e de fácil manutenção? 
+Pode citar ferramentas que costuma utilizar e como você lida com mocks e dependências externas?
 
 **Resposta:**
 
