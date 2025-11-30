@@ -5,62 +5,71 @@
 keep up – manter o ritmo / continuar
 “We need to keep up with the new compliance requirements.”
 “Good job keeping up with the alerts yesterday.”
+
 keep track of – acompanhar / rastrear
 “Can you keep track of the Kafka offsets in the consumer group?”
 “I’m keeping track of all retries in the logs.”
+
 keep an eye on – ficar de olho
 “Let’s keep an eye on the CPU usage after the deploy.”
+
 keep going – continuar trabalhando / seguir
 “The pipeline failed, but we can keep going locally.”
+
 keep something in mind – ter em mente
 “Keep in mind that this endpoint is synchronous.”
+
 keep at it – persistir
 “Keep at it, the root cause will show up in the logs.”
 
+---
 🟣 Com SET (configurar, definir)
 set up – configurar / preparar / montar
-“I’ll set up the new SQS queues.”
+    “I’ll set up the new SQS queues.”
 set out – definir objetivos
-“We set out to reduce latency in this sprint.”
+    “We set out to reduce latency in this sprint.”
 set off – disparar / iniciar
-“This change can set off multiple retries in the service.”
+    “This change can set off multiple retries in the service.”
 set aside – reservar tempo
-“Let’s set aside 30 minutes to review the architecture.”
+    “Let’s set aside 30 minutes to review the architecture.”
+---
 
 🟢 Com GET (obter, receber, entender)
 get back to – retornar / responder depois
-“I’ll get back to you after checking the logs.”
+    “I’ll get back to you after checking the logs.”
 get rid of – remover / eliminar
-“We need to get rid of this deprecated endpoint.”
+    “We need to get rid of this deprecated endpoint.”
 get into – entrar no assunto / se aprofundar
-“Let’s not get into performance tuning yet.”
+    “Let’s not get into performance tuning yet.”
 get around – contornar problema
-“We can get around this by caching the response.”
+    “We can get around this by caching the response.”
 get through – finalizar / conseguir passar
-“The request can’t get through the gateway.”
+    “The request can’t get through the gateway.”
 get ahead of – antecipar problemas
-“We need to get ahead of this incident before peak time.”
+    “We need to get ahead of this incident before peak time.”
 get stuck – travar / ficar bloqueado
-“I got stuck debugging the token validation.”
+    “I got stuck debugging the token validation.”
+
+---
 
 🔥 Outros phrasal verbs extremamente comuns em TI
 🟨 Ação técnica
 look into – investigar
-“We’ll look into the timeout on the login endpoint.”
+    “We’ll look into the timeout on the login endpoint.”
 figure out – descobrir / entender
-“Let’s figure out why WebClient isn’t retrying.”
+    “Let’s figure out why WebClient isn’t retrying.”
 track down – rastrear
-“We tracked down the root cause to a misconfigured Redis key.”
+    “We tracked down the root cause to a misconfigured Redis key.”
 bring up (serviço) – subir
-“The pod didn’t bring up correctly after the deploy.”
+    “The pod didn’t bring up correctly after the deploy.”
 bring down – derrubar / desligar serviço
-“We need to bring down the instance before patching.”
+    “We need to bring down the instance before patching.”
 roll out – liberar versão
-“The new flow will be rolled out gradually.”
+    “The new flow will be rolled out gradually.”
 roll back – reverter
-“We rolled back due to high error rate.”
+    “We rolled back due to high error rate.”
 clean up – limpar / remover lixo
-“We should clean up unused feature flags.”
+    “We should clean up unused feature flags.”
 
 🟩 Comunicação entre squads
 follow up – acompanhar / cobrar
@@ -1242,7 +1251,7 @@ let me put this way
 * Let me put it this way: scaling solves symptoms, not the root cause.
 * Let me put it this way: if the mapper breaks, the whole domain breaks.
 
-“ensurance” (interpreting as “assurance” / “guarantee”)
+“assurance” (interpreting as “assurance” / “guarantee”)
 * We added extra logging as an assurance for debugging incidents.
 * Code reviews give us assurance that critical flows stay consistent.
 * The retry layer provides assurance during peak traffic.
