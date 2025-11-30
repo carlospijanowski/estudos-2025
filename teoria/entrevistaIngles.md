@@ -1,27 +1,55 @@
 # 🇬🇧 English Interview Practice Script
-
  
 #### Introduction 
 Okay, let’s start!  
+Here I'm known as Cartaxo. You can call me Cartaxo.
 when you don’t practice, you forget a few things.
 One of my _main goals_ is _to work on_ an international project — to keep improving my English skills.
 I can handle most work situations in English — reading, understanding business rules, and discussing technical topics.
-Back in 2023, I went to Europe — one of my goals was to practice my English. 
+Back in 2023, I went to Europe — one of my goals was to practice my English.
+I went to Europe and visited some countries.
 i visited London.
 That same year, I also had the opportunity to be part of a team that included some English colleagues.
 In that project, I was involved in several business decisions, mainly because I was the Tech Lead
+
 --- 
+
 #### Personal Life
-Hi, my name is Carlos. I’m 47 years old, married, and i have two daughters.  
+Hi, my name is Carlos. 
+I’m 47 years old, married, and i have two daughters.  
 I live in Itajaí, Its a coastal city in southern Brazil.  
 In my free time, I love going to the beach, exploring new places, and spending time with my family.  
 Cycling is my favorite sport — it’s how I stay active and recharge my batteries
+
 --- 
+
 #### Academic Background
 I graduated in Information Systems, and later I completed two postgrad courses in IT — one in Software Engineering and 
 another focused on Java for Web development.
+
 ---
-#### background de trabalho 
+
+#### Falar um pouquinho sobre outras atividades como sou dev, teach lead e arquiteto de software
+I’ve had experience as a developer, tech lead, and architect, and I really enjoy all three roles.
+
+- As a developer:
+  I like being hands-on — coding in Java and Kotlin,
+  solving problems, and
+  making services faster and more reliable.
+  Besides development, I also take care of the delivery side — adjusting pipelines in Jenkins, improving CI/CD steps,
+  managing deployments, and configuring Kubernetes.
+  I spend a good amount of time looking at logs, traces, dashboards, and overall observability to keep the systems healthy and reliable.
+
+- As a tech lead, I enjoy helping the team, unblocking people, and making sure we’re aligned on good practices and clean design.
+
+- as an architect, I focus on the bigger picture —
+  building scalable, resilient solutions and making decisions that keep the system healthy over time.
+
+What I like the most is being flexible. If the team needs me coding, I code. If they need guidance, I jump in and support.
+If they need someone thinking about architecture and trade-offs, I’m comfortable doing that too.
+I like working in a collaborative environment, helping people grow, and making sure we deliver something solid together.
+
+---
 
 ## Pagseguro
 Currently, I work as a Senior Software Engineer at PagSeguro, for the bank industry. it belongs to the financial area
@@ -49,56 +77,38 @@ In addition to business and infrastructure tasks, I also investigate production 
 
 ---
 
-#### Falar um pouquinho sobre outras atividades como sou dev, teach lead e arquiteto de software
-I’ve had experience as a developer, tech lead, and architect, and I really enjoy all three roles. 
-
-- As a developer:
-    I like being hands-on — coding in Java and Kotlin, 
-    solving problems, and 
-    making services faster and more reliable. 
-    Besides development, I also take care of the delivery side — adjusting pipelines in Jenkins, improving CI/CD steps, 
-        managing deployments, and configuring Kubernetes. 
-        I spend a good amount of time looking at logs, traces, dashboards, and overall observability to keep the systems healthy and reliable.
-
-- As a tech lead, I enjoy helping the team, unblocking people, and making sure we’re aligned on good practices and clean design. 
-
-- as an architect, I focus on the bigger picture — 
-building scalable, resilient solutions and making decisions that keep the system healthy over time.
-
-What I like the most is being flexible. If the team needs me coding, I code. If they need guidance, I jump in and support. 
- If they need someone thinking about architecture and trade-offs, I’m comfortable doing that too. 
- I like working in a collaborative environment, helping people grow, and making sure we deliver something solid together.
-
----
 #### Relevant Projects
-Every project comes with its own challenges, particularities, and unique aspects.
-I can say I have some preferences, such as working with the latest versions of Java and Kotlin.
-I also prefer using the most up-to-date versions of the Spring Boot framework.
-I enjoy working with distributed systems because an application should be available, scalable, performant, and resilient.
+    Every project comes with its own challenges, particularities, and unique aspects.
+    I can say I have some preferences, such as working with the latest versions of Java and Kotlin.
+    I also prefer using the most up-to-date versions of the Spring Boot framework.
+    I enjoy working with distributed systems because an application should be available, scalable, maintainable, performant, and resilient.
+
 --- 
+
 #### Challenges Faced
-> “One of the biggest challenges I’ve faced was leading a migration from a monolithic system to a microservices architecture.  
-> We had to ensure data consistency, resilience, and minimal downtime.  
-> It required mentoring the team, choosing the right technologies, and keeping alignment with business goals — all under tight
-> deadlines.  
-> It was tough, but it taught me a lot about leadership and system design.”
+    So, for me the really challenging part is migrating a monolith to microservices while keeping the data consistent. 
+    You know, in a monolith you usually rely on ACID transactions — everything is atomic, consistent, isolated, and durable by default. 
+    But once you split things into different services, you don’t have those guarantees automatically anymore
+
 ---
-#### Career Goals
-> “My main goal is to continue evolving as a software architect and help teams build **scalable, maintainable, and resilient
-> systems**.  
-> I’m also passionate about sharing knowledge — through mentoring, writing documentation, and improving engineering practices.”
----
+
 #### Why Do You Want to Work Here?
-> i decided that could a great opportunity professional to work in 
+    i decided that could a great opportunity professional to work in 
+
 ---
+
 #### Thanking the Interviewer
-> “Thank you for your time and the opportunity to discuss my background and experience. 
+    “Thank you for your time and the opportunity to discuss my background and experience. 
+    
 ---    
+
 #### How Do You See Yourself in 5 Years?
-> I don’t worry much about that. 
-> I just try to keep up with new tech and software architecture trends. 
-> But one of my goals is definitely to work with people from different countries. to improve my communication skills
+    I don’t worry much about that. 
+    I just try to keep up with new tech and software architecture trends. 
+    But one of my goals is definitely to work with people from different countries. to improve my communication skills
+
 ---
+
 #### Strengths and Weaknesses
 > “My main strength is problem-solving — I stay calm under pressure, analyze issues carefully, and focus on finding effective
 > solutions.  
@@ -127,10 +137,18 @@ But I’m following you”
 [START]
 
 #### [TAG Scrum & Agile]
->**Q:** How familiar are you with Agile methodologies, such as Scrum?  
->**A:** I’ve been working in Agile environments for several years.
->My current team follows Scrum — we have daily stand-ups, sprint planning, reviews, and retrospectives.
->I like Agile because it helps teams stay focused, adapt quickly, and continuously deliver value.
+**Q:** How familiar are you with Agile methodologies, such as Scrum?  
+**A:** I’ve been working in Agile environments for several years.
+    My current team follows Scrum — we have daily stand-ups, sprint planning, reviews, and retrospectives.
+    I like Agile because it helps teams stay focused, adapt quickly, and continuously deliver value.
+ 
+Grooming sessions are basically meetings where the team reviews and refines the backlog. 
+We clarify the business rules, break big stories into smaller ones, discuss edge cases, check dependencies, 
+and make sure everything is clear before development starts.
+    “We covered all the Kafka requirements during the grooming session.”
+    “Let’s schedule a grooming session to refine the new Spring flow.”
+    “During grooming we found missing acceptance criteria.”
+    “The story looked simple, but once we started grooming we identified some technical challenges.”
 
 #### [TAG Backend & Architecture] HIGH LEVEL
 # Arquitetura de Software (nível macro, decisões estruturais)
@@ -279,23 +297,69 @@ If you want, next I can turn this into a spoken answer like:
 <br> We rely on load testing to assess system performance.
 
 #### [TAG SPRING]
-Spring Boot accelerates backend development in Java
-menos codigo
-menos arquivos de configuracao
-facil star de uma aplicacao
-muita simplicidade ao usar os starters
+“Spring Boot accelerates backend development in Java. 
+It lets us write less code, deal with fewer configuration files, and quickly spin up a new application. 
+And thanks to the starters, everything becomes much simpler — dependencies, auto-configurations, and common setups basically work out of the box.”
 
-🔵 Spring Core <br>
-It’s like a box of LEGO pieces: everything is there, but you assemble everything manually. <br>
-It provides the fundamentals: IoC, Dependency Injection, ApplicationContext, AOP, and the base for MVC. <br>
+🔵 Spring Core
+“It’s like a box of LEGO pieces: everything is there, but you have to assemble the structure yourself.”
+It provides the essentials: IoC, Dependency Injection, ApplicationContext, AOP, and the foundation for Spring MVC and the entire Spring ecosystem. 
 
-🟢 Spring Boot <br>
-It’s like pre-assembled LEGO: most of the heavy lifting is already done. <br>
-It reduces boilerplate and loads automatic configurations based on the dependencies you add. <br>
+🟢 Spring Boot 
+It’s like pre-assembled LEGO: most of the heavy lifting is already done. 
+It reduces boilerplate and loads automatic configurations based on the dependencies you add. 
 
-🟣 Spring Starters <br>
-They are ready-made kits that bundle related dependencies. <br>
-When you include a starter, Spring Boot knows exactly which configurations to load for you. <br>
+🟣 Spring Starters
+“It’s like getting pre-assembled LEGO modules: most of the heavy lifting is already done for you.”
+It reduces boilerplate, handles configuration automatically, and boots your application using auto-configuration and 
+opinionated defaults based on the dependencies you add.
+
+
+1. Inversion of Control (IoC)
+It is the principle where Spring itself controls the lifecycle of objects.
+Instead of manually creating instances using new, Spring creates, manages, and provides these objects for you.
+
+2. Dependency Injection (DI)
+This is the mechanism Spring uses to apply IoC.
+DI automatically injects dependencies into classes (via @Autowired, constructors, etc.).
+This reduces coupling and makes the code cleaner, more modular, and easier to test.
+
+3. Spring Container
+This is the core of the Spring framework.
+The Container is responsible for:
+creating objects (beans)
+managing their lifecycle
+resolving dependencies
+applying configurations
+Nothing works without the Spring Container.
+
+4. Spring MVC
+This is the Spring module used to build REST APIs and web applications following the Model–View–Controller pattern.
+It provides:
+routing (@Controller, @RestController)
+HTTP request handling
+JSON serialization
+validation mechanisms
+
+5. Spring Data Access (ORM)
+This module simplifies data access.
+It includes Spring Data JPA, integration with Hibernate, and other ORM technologies.
+It greatly reduces boilerplate and automatically generates repository implementations.
+
+6. Simplified Configuration
+Spring offers multiple ways to configure an application in a simple and intuitive manner:
+annotations (@Component, @Configuration, etc.)
+YAML/Properties files
+Spring Boot autoconfiguration
+This removes the need for the large XML configuration files used in older versions.
+
+7. Real-Time Capabilities
+Spring provides support for reactive and real-time applications through:
+Spring WebFlux
+Streams
+Backpressure
+Reactive programming
+This enables systems to handle thousands of simultaneous connections while consuming minimal resources.
 
 💬 Professional Summary of My Experience with Spring <br>
 I work with the full Spring ecosystem. <br>
@@ -750,6 +814,9 @@ Eu costumo pensar em qualidade de código em três níveis: como eu escrevo, com
 17. Descreva uma situação em que você precisou refatorar um código legado para melhorar sua manutenibilidade.
 
 18. Que estratégias você usa para mentorar desenvolvedores mais junior?
+    He is thorough when reviewing pull requests
+
+
 
 19. Você foi designado para criar uma API RESTful para gerenciamento de usuários em um sistema.<br>
       A API deve permitir operações de criação, leitura, atualização e exclusão de usuários.<br>
@@ -768,44 +835,44 @@ Eu costumo pensar em qualidade de código em três níveis: como eu escrevo, com
 > 100 Most Useful English Verbs for IT Professionals
 1–20: Core Daily Workflow
 
->Build – compile or assemble
-<br> We build the project using Maven.
-<br> Deploy – send to an environment
-<br> We deploy to QA every morning.
-<br> Release – publish a new version
-<br> We will release 1.2.0 today.
-<br> Run – execute
-<br> Run the tests before committing.
-<br> Test – verify something
-<br> Test the endpoint locally.
-<br> Fix – correct a problem
-<br> I fixed the null pointer issue.
-<br> Debug – analyze errors
-<br> Let’s debug the failing service.
-<br> Improve – make better
-<br> We need to improve performance.
-<br> Review – check code or docs
-<br> Can you review my PR?
-<br> Merge – combine branches
-<br> We merge to main only after approval.
-<br> Commit – send code to Git
-<br> Commit with a clear message.
-<br> Push – upload to remote
-<br> Push your branch when ready.
-<br> Pull – download changes
-<br> Pull the latest updates before developing.
-<br> Refactor – reorganize code
-<br> We should refactor this service.
-<br> Document – write documentation
-<br> Please document the API behavior.
+Build – compile or assemble
+We build the project using Maven.
+Deploy – send to an environment
+We deploy to QA every morning.
+Release – publish a new version
+We will release 1.2.0 today.
+Run – execute
+Run the tests before committing.
+Test – verify something
+Test the endpoint locally.
+Fix – correct a problem
+I fixed the null pointer issue.
+Debug – analyze errors
+Let’s debug the failing service.
+Improve – make better
+We need to improve performance.
+Review – check code or docs
+Can you review my PR?
+Merge – combine branches
+We merge to main only after approval.
+Commit – send code to Git
+Commit with a clear message.
+Push – upload to remote
+Push your branch when ready.
+Pull – download changes
+Pull the latest updates before developing.
+Refactor – reorganize code
+We should refactor this service.
+Document – write documentation
+Please document the API behavior.
 Conf igure – set parameters
 Conf igure the Kafka consumer correctly.
-<br> 
-<br> Optimize – make more efficient
-<br> We optimized the SQL queries.
-<br> 
-<br> Validate – check correctness
-<br> Validate the input before saving.
+
+Optimize – make more efficient
+We optimized the SQL queries.
+
+Validate – check correctness
+Validate the input before saving.
 >
 <br> 
 ✅ Neutral/Professional:
@@ -1166,8 +1233,7 @@ fix
 recover
  
 ------------------------------------
-falsos cognatos
-
+falsos cognatos 
 ⭐ Eventually (no fim das contas / finalmente)
 Eventually, we fixed the bug in production.
 Eventually, the legacy service will be replaced.
@@ -1326,6 +1392,9 @@ Java Backend:
 4. The consumer pulls messages from the topic every second.
 
 ⭐ 17. Prevent
+prevent = impedir que algo aconteça
+avoid = evitar / tentar não fazer
+
 TI:
 We need to prevent this issue from happening again.
 The firewall prevents external access.
@@ -2156,34 +2225,34 @@ frases comuns e afirmativar em entrevistas técnicas de desenvolvedor backend co
 
 frases que posso afirmar em entrevistas técnicas de desenvolvedor backend com ênfase em java em inglês
 ## Affirmative Phrases for Backend Developer Interviews (Java Focus)
->I am confident in my ability to design and implement scalable backend systems.
-<br>I have a proven track record of delivering high-quality software on time.
-<br>I am skilled at troubleshooting and resolving complex technical issues.
-<br>I am experienced in optimizing application performance and scalability.
-<br>I have a deep understanding of Java and its ecosystem.
-<br>I am proficient in using Spring Boot and Spring Cloud for building microservices.
-<br>I am knowledgeable about software design patterns and best practices.
-<br>I am comfortable working in Agile environments and following Scrum methodologies.
-<br>I am dedicated to writing clean, maintainable, and well-documented code.
-<br>I am experienced in mentoring junior developers and fostering a collaborative team environment.
-<br>I am committed to continuous learning and professional development.
-<br>I am passionate about technology and enjoy solving challenging problems.
-<br>I am excited about the opportunity to contribute my skills and experience to your organization.
-<br>I am eager to take on new challenges and grow as a backend developer.
-<br>I am confident that my skills and experience align well with the requirements of this role.
+    I am confident in my ability to design and implement scalable backend systems.
+    I have a proven track record of delivering high-quality software on time.
+    I am skilled at troubleshooting and resolving complex technical issues.
+    I am experienced in optimizing application performance and scalability.
+    I have a deep understanding of Java and its ecosystem.
+    I am proficient in using Spring Boot and Spring Cloud for building microservices.
+    I am knowledgeable about software design patterns and best practices.
+    I am comfortable working in Agile environments and following Scrum methodologies.
+    I am dedicated to writing clean, maintainable, and well-documented code.
+    I am experienced in mentoring junior developers and fostering a collaborative team environment.
+    I am committed to continuous learning and professional development.
+    I am passionate about technology and enjoy solving challenging problems.
+    I am excited about the opportunity to contribute my skills and experience to your organization.
+    I am eager to take on new challenges and grow as a backend developer.
+    I am confident that my skills and experience align well with the requirements of this role.
 
 ---
 ## Phrases to Use When You Face Difficulties in English During an Interview
-> "Sorry, could you please repeat that?"
-<br> "My English is a bit rusty — I haven’t practiced as much lately."
-<br> "But I’m following you."
-<br> "Could you please clarify that point?"
-<br> "Let me make sure I understand correctly."
-<br> "I’m not sure I caught that. Could you explain it again?"
-<br> "I apologize for any mistakes in my English; I’m working on improving it."
-<br> "Thank you for your patience as I express myself in English."
-<br> "Could you please speak a bit slower? I want to make sure I understand everything."
-<br> "I appreciate your understanding as I navigate this conversation in English."
+    "Sorry, could you please repeat that?"
+    "My English is a bit rusty — I haven’t practiced as much lately."
+    "But I’m following you."
+    "Could you please clarify that point?"
+    "Let me make sure I understand correctly."
+    "I’m not sure I caught that. Could you explain it again?"
+    "I apologize for any mistakes in my English; I’m working on improving it."
+    "Thank you for your patience as I express myself in English."
+    "Could you please speak a bit slower? I want to make sure I understand everything."
+    "I appreciate your understanding as I navigate this conversation in English."
 
 ----------------------------------
 
