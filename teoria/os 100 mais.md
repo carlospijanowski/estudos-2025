@@ -557,85 +557,236 @@ it was time to get over / get away my shyness
 * Preparing interviews helped me get over my shyness when speaking English.
 
 That’s why I got in / got back
-The team needed help with Kafka, that’s why I got in to support the migration.
-The incident escalated, that’s why I got back online during the night.
-They needed Java expertise, that’s why I got in on the project.
+* The team needed help with Kafka, that’s why I got in to support the migration.
+* The incident escalated, that’s why I got back online during the night.
+* They needed Java expertise, that’s why I got in on the project.
 
-Every week I carried out / looked up new stories and afterward I had a great time telling them
-Every week I carried out new stories about Kafka consumers and dead letters.
-Every week I looked up new stories related to performance tuning.
-Every week I carried out integration stories with external APIs.
+* Every week I carried out / looked up new stories and afterward I had a great time telling them
+* Every week I carried out new stories about Kafka consumers and dead letters.
+* Every week I looked up new stories related to performance tuning.
+* Every week I carried out integration stories with external APIs.
 
 as well
-We need to update the YAML files as well.
-The mapper needs adjustments, and the service layer as well.
-I fixed the Kafka config as well during the deployment.
+* We need to update the YAML files as well.
+* The mapper needs adjustments, and the service layer as well.
+* I fixed the Kafka config as well during the deployment.
 
 We get up / get along really well, and I don’t feel shy at all around them
-The backend team gets along really well, especially during refactoring sessions.
-We get along really well with the SRE team; deployments run smoothly.
-The Java and mobile teams get along really well for API design.
+* The backend team gets along really well, especially during refactoring sessions.
+* We get along really well with the SRE team; deployments run smoothly.
+* The Java and mobile teams get along really well for API design.
 
 silver bullet
-Caching is good, but it’s not a silver bullet for performance problems.
-Kotlin coroutines help, but they’re not a silver bullet for concurrency.
-Kafka is powerful, but it’s not a silver bullet for all async flows.
+* Caching is good, but it’s not a silver bullet for performance problems.
+* Kotlin coroutines help, but they’re not a silver bullet for concurrency.
+* Kafka is powerful, but it’s not a silver bullet for all async flows.
 
 increase
-We need to increase the consumer thread count to avoid lag.
-Autoscaling will increase the replicas during high traffic.
-Caching increased the throughput by 30%.
+* We need to increase the consumer thread count to avoid lag.
+* Autoscaling will increase the replicas during high traffic.
+* Caching increased the throughput by 30%.
 
 stuff
-The controller still does too much stuff; we need to refactor it.
-Let’s remove unused stuff from the YAML configurations.
-The CI pipeline had a bunch of old stuff that slowed it down.
+* The controller still does too much stuff; we need to refactor it.
+* Let’s remove unused stuff from the YAML configurations.
+* The CI pipeline had a bunch of old stuff that slowed it down.
 
 grooming sessions
-During grooming sessions, we define acceptance criteria more clearly.
-We identified several tech debts in the last grooming session.
-Grooming sessions help us estimate backend tasks more accurately.
+* During grooming sessions, we define acceptance criteria more clearly.
+* We identified several tech debts in the last grooming session.
+* Grooming sessions help us estimate backend tasks more accurately.
 
 Then he covered the topic of Spring knowledge
-Then he covered the topic of Spring knowledge, especially dependency injection.
-Then he covered the topic of Spring knowledge during the architecture interview.
-Then he covered the topic of Spring knowledge, focusing on WebFlux vs MVC.
+* Then he covered the topic of Spring knowledge, especially dependency injection.
+* Then he covered the topic of Spring knowledge during the architecture interview.
+* Then he covered the topic of Spring knowledge, focusing on WebFlux vs MVC.
 
 With that in mind
+* With that in mind, we should apply caching before scaling the pods.
+* With that in mind, let’s redesign the API to be fully idempotent.
+* With that in mind, the migration to Kafka Streams becomes the best option.
+
 throwble shotting
+* We spent the afternoon troubleshooting a memory leak in the mapper.
+* Troubleshooting the consumer lag showed a misconfigured partition key.
+* Most of our troubleshooting came from missing metrics in Prometheus.
+
 its very cute
+* The new UI for the Swagger docs is very cute, but the backend still needs fixes.
+* This Kotlin DSL is very cute — simple and expressive.
+* The feature flag dashboard looks very cute after the redesign.
+
 I could start by talking about....
+* I could start by talking about my experience with Java 21 and virtual threads.
+* I could start by talking about the multi-tenant architecture I implemented.
+* I could start by talking about how we redesigned the Kafka consumer logic.
+
 assesment
+* We did a performance assessment before rewriting the service.
+* Our reliability assessment showed missing retries in two APIs.
+* A security assessment revealed outdated libraries.
+
 reduce coupling
+* To reduce coupling, we isolated all business logic inside domain services.
+* Using events helps reduce coupling between checkout and payment services.
+* Adapters allow us to reduce coupling with external providers.
+
 let's keep rooling
+* The tests are passing; let’s keep rolling with the integration phase.
+* We fixed the retry logic — let’s keep rolling and deploy to QA.
+* Standup is quick today; let’s keep rolling with the backlog items.
+
 despite that
+* The API is slow; despite that, the system is still stable under load.
+* We hit a few errors yesterday; despite that, the feature is ready for QA.
+* Deployment took longer; despite that, the health checks passed.
+
 we might be talking about a few things
+* If we talk about scaling, we might be talking about a few things: load, memory, and throughput.
+* When dealing with caching, we might be talking about a few things like eviction strategy and TTL.
+* For observability, we might be talking about a few things such as logs, metrics, and traces.
+
 tightly
+* The controller and service were tightly coupled, so we refactored them.
+* The legacy module is tightly integrated with a SOAP provider.
+* The threads were tightly competing for the same lock.
+
 stackholders
+* We aligned the SLO changes with all stakeholders last week.
+* Stakeholders requested a rollback after the spike in latency.
+* I presented the architecture proposal to the stakeholders.
+
 concern
+* A major concern here is the lack of retries for external APIs.
+* My concern is how the cache invalidation will behave under load.
+* Another concern is how we guarantee ordering between events.
+
 let me put this way
-ensurance
+* Let me put it this way: without idempotency, the checkout flow is unsafe.
+* Let me put it this way: scaling solves symptoms, not the root cause.
+* Let me put it this way: if the mapper breaks, the whole domain breaks.
+
+“ensurance” (interpreting as “assurance” / “guarantee”)
+* We added extra logging as an assurance for debugging incidents.
+* Code reviews give us assurance that critical flows stay consistent.
+* The retry layer provides assurance during peak traffic.
+
 aproaches
+* There are two approaches: synchronous API or event-driven flow.
+* We evaluated different approaches before choosing Redis.
+* Reactive and imperative approaches both work depending on the load.
+
 He is thorough when reviewing pull requests.
+* He is thorough when reviewing pull requests, especially around threading issues.
+* He is thorough when reviewing pull requests related to domain rules.
+* He is thorough when reviewing pull requests involving database migrations.
+
 sometimes I get annoyed
+* Sometimes I get annoyed when the external API fails for no reason.
+* Sometimes I get annoyed with noisy logs flooding the console.
+* Sometimes I get annoyed when the pipeline breaks because of a plugin.
+
 otherwise
+* We need a unique ID; otherwise, events will not be idempotent.
+* Use backpressure; otherwise, the consumer will lag behind.
+* Add validation; otherwise, the request will break downstream services.
+
 I am eager to take on new challenges and grow as a backend developer.       
+* I am eager to take on new challenges like designing high-throughput systems.
+* I am eager to take on new challenges involving Kotlin coroutines.
+* I am eager to take on new challenges in distributed architecture.
+
 tight coupling
+* The service failed because of tight coupling between controller and repository.
+* We removed tight coupling by creating an adapter layer.
+* Tight coupling makes it harder to migrate to Kafka.
+
 besides
+* Besides fixing the unit tests, I also improved the mapper performance.
+* Besides the latency issue, we also found memory pressure in the heap.
+* Besides Kafka, we have to support SQS for legacy integration.
+
 pivotal
+* Caching played a pivotal role in reducing database load.
+* The retry layer is pivotal for keeping resilience under unstable networks.
+* Monitoring is pivotal to detecting slowdowns before they escalate
+
 purpose
+* The purpose of this service is to centralize authentication.
+* The purpose of the adapter is to isolate external APIs from the domain.
+* The purpose of this migration is to improve throughput.
+
 certanlyk  
+* This refactoring will certainly make the code easier to maintain.
+* Switching to WebFlux will certainly increase capacity for IO-bound requests.
+* Using Redis will certainly lower latency for hot endpoints
+
 he reinforced
-to police
+* He reinforced the importance of adding idempotency keys.
+* He reinforced the need to check metrics before scaling.
+* He reinforced that the mapper must stay pure and immutable.
+
+“to police” (no sentido de “vigiar”, “controlar”, “supervisionar”)
+* We added alerts to police CPU spikes in production.
+* Feature flags help police risky code paths.
+* We police API quotas to avoid overload from external partners.
+
 guarantee
+* We use transactions to guarantee consistency.
+* The partition key guarantees event ordering.
+* Retries guarantee delivery even when the partner API is unstable.
+
 in fact
+* In fact, the mapper wasn’t the problem — the payload was wrong.
+* In fact, Redis reduced latency more than scaling the pods.
+* In fact, the consumer was healthy; the issue was in the producer.
+
 international position
-acknologe
+* I’m preparing my English because I’m aiming for an international position.
+* An international position requires strong communication across time zones.
+* I handled architecture discussions as part of an international position in a previous project.
+
+“acknowledge” (corrigindo “acknologe”)
+* The API must acknowledge the event before persisting it.
+* Kafka consumers manually acknowledge messages in this flow.
+* The service didn’t acknowledge the 200 response because of a timeout.
+
 throughput
+* Increasing partitions usually raises the throughput of the consumer.
+* The new design achieved 5× more throughput.
+* Throughput dropped because of backpressure in the downstream API.
+
 back pressure
+* WebFlux applies back pressure automatically to avoid overload.
+* Back pressure prevents the consumer from crashing under high traffic.
+* Without back pressure, Kafka lag would grow uncontrollably.
+
 according to your needs
+* We can tune the retry policy according to your needs.
+* The API scales horizontally according to your needs.
+* We can choose between Postgres or DynamoDB according to your needs.
+
 Depending on his needs, he requests a piece of information.
+* Depending on his needs, he requests a piece of information from the user profile service.
+* Depending on his needs, he requests a piece of information from the cache or the database.
+* Depending on his needs, he requests a piece of information from the audit logs.
+
 expensive and cheap
+* Database reads are cheap, but cross-region writes are expensive.
+* Serializing small DTOs is cheap; transforming large JSON trees is expensive.
+* Horizontal scaling is cheap; vertical scaling is expensive.
+
 benchmarks
+* We ran benchmarks to compare WebFlux with MVC under heavy load.
+* Benchmarks showed that Redis outperforms the in-memory cache for large payloads.
+* Our benchmarks revealed that the mapper was the real bottleneck.
+
 upcoming
+* We’re preparing for the upcoming release and stabilizing all services.
+* Upcoming changes will affect how we handle authentication tokens.*
+* Upcoming load tests will validate the new scaling strategy.
+
 even under load
+* The service stayed stable even under load during Black Friday.
+* Redis kept latency low even under load.
+* Kafka processed events consistently even under load.
